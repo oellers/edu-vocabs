@@ -24,6 +24,7 @@ async function load() {
     const baseURL = process.env.VERCEL_URL 
     ? `https://${process.env.VERCEL_URL}`
     : "http://localhost:5173";
+    console.log("Base URL", baseURL)
 		data = await fetch(`${baseURL}/vocs.ttl`);
     const ttl = await data.text()
 		console.log('✅ RDF File Loaded');
