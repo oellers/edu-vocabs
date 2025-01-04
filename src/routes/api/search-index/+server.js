@@ -7,10 +7,13 @@ const { Document } = pkg;
 
 const index = new Document({
 	tokenize: 'forward',
-  depth: 3,
+	language: 'de',
+	encoder: 'advanced',
+	charset: 'latin',
 	document: {
 		id: 'id',
 		index: ['name', 'about'],
+		tag: 'tag',
 		store: true
 	}
 });
@@ -47,7 +50,13 @@ async function loadData() {
 			return obj;
 		});
 
-		docs.forEach((d) => index.add(d));
+		docs.forEach((d) => {
+			const tags = [d?.['about'], d?.['educationalLevel']].filter(Boolean);
+			index.add({
+				...d,
+				tag: tags
+			});
+		});
 	} catch (error) {
 		console.error('❌ Error loading RDF file:', error);
 	}

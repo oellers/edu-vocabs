@@ -5,12 +5,14 @@
 
 <http://example.org/1> sdo:name "Schulfächer"@de;
   sdo:description "Werteliste von Fächern im Schulbereich."@de;
+  sdo:educationalLevel "Grundschule"@de ;
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:issued "2021-03-03"^^xsd:date;
   wdt:P973 <http://w3id.org/kim/schulfaecher/> .
 
 <http://example.org/2> sdo:name "Schulfächer"@de;
   sdo:description "Werteliste von Fächern im Schulbereich."@de;
+  sdo:educationalLevel "Hochschule"@de ;
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:issued "2020-04-08"^^xsd:date;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/discipline/> .
