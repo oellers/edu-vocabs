@@ -1,4 +1,3 @@
-import fs from 'fs/promises';
 import $rdf from 'rdflib';
 import pkg from 'flexsearch';
 import { json } from '@sveltejs/kit';
@@ -20,9 +19,13 @@ const index = new Document({
 
 let data = null;
 
-async function loadData() {
+async function load() {
 	try {
-		data = await fs.readFile('static/vocs.ttl', 'utf-8');
+    const baseURL = process.env.VERCEL_URL 
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:5173";
+		data = await fetch(`${baseURL}/vocs.ttl`);
+    const ttl = await data.text()
 		console.log('✅ RDF File Loaded');
 
 		var mimeType = 'text/turtle';
@@ -30,7 +33,7 @@ async function loadData() {
 		var uri = 'https://example.org/resource.ttl';
 
 		try {
-			$rdf.parse(data, store, uri, mimeType);
+			$rdf.parse(ttl, store, uri, mimeType);
 		} catch (err) {
 			console.log(err);
 		}
@@ -62,7 +65,7 @@ async function loadData() {
 	}
 }
 
-await loadData();
+await load();
 
 export async function GET() {
 	if (!data) {
