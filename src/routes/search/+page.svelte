@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import Search from '$lib/icons/Search.svelte';
 	import pkg from 'flexsearch';
 	const { Document } = pkg;
 
@@ -21,7 +22,7 @@
 	let query = '';
 	let results = [];
 	let filters = {};
-	let selectedFilters = Object.fromEntries(filterKeys.map(e => [e, []]));
+	let selectedFilters = Object.fromEntries(filterKeys.map((e) => [e, []]));
 
 	async function loadFilterOptions() {
 		filterKeys.forEach((k) => {
@@ -51,11 +52,11 @@
 
 	function search(event) {
 		event.preventDefault();
-    const tags = Object.values(selectedFilters).flat()
+		const tags = Object.values(selectedFilters).flat();
 		const groupedResults = index.search(query, {
 			index: ['name', 'about'],
 			enrich: true,
-			tag: tags,
+			tag: tags
 		});
 		results = groupedResults.map((g) => g.result.map((r) => r.doc)).flat();
 	}
@@ -64,35 +65,41 @@
 		const indexInSelectedFilters = selectedFilters[key].indexOf(val);
 
 		if (indexInSelectedFilters > -1) {
-			selectedFilters = {...selectedFilters, [key]: selectedFilters[key].filter(e => e !== val)};
+			selectedFilters = {
+				...selectedFilters,
+				[key]: selectedFilters[key].filter((e) => e !== val)
+			};
 		} else {
-			selectedFilters = {...selectedFilters, [key]: [...selectedFilters[key], val]};
+			selectedFilters = { ...selectedFilters, [key]: [...selectedFilters[key], val] };
 		}
 
-    search({preventDefault: function() {}})
+		search({ preventDefault: function () {} });
 	}
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col w-3/4 ">
 	<form on:submit={search}>
 		<div class="flex flex-col">
 			<div>
-				<input type="text" bind:value={query} placeholder="Suche..." required />
-				<button type="submit">Search</button>
+				<label class="input input-bordered flex items-center gap-2">
+					<input class="grow" type="text" bind:value={query} placeholder="Suche..." required />
+					<Search />
+				</label>
 			</div>
-			<details class="dropdown">
-				<summary class="btn m-1">Themenfeld</summary>
-				<ul class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow">
+			<div class="dropdown">
+        <div tabindex="0" role="button" class="btn m-1">Themenfeld</div>
+				<ul tabindex="0" class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow">
 					{#each filters['about'] as filter}
-						<li 
-              class:bg-info={selectedFilters["about"].includes(filter)}
-              class:text-black={selectedFilters["about"].includes(filter)}
-              on:click={() => handleSelect(filter, 'about')}
-            >
-              <a>{filter}</a></li>
+						<li
+							class:bg-info={selectedFilters['about'].includes(filter)}
+							class:text-black={selectedFilters['about'].includes(filter)}
+							on:click={() => handleSelect(filter, 'about')}
+						>
+							<a>{filter}</a>
+						</li>
 					{/each}
 				</ul>
-			</details>
+			</div>
 		</div>
 	</form>
 

@@ -1,1 +1,1 @@
-<h1>Kontakt</h1>
+<h1 class="text-2xl">Kontakt</h1>
