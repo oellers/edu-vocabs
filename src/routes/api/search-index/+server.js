@@ -1,7 +1,7 @@
 import $rdf from 'rdflib';
 import pkg from 'flexsearch';
 import { json } from '@sveltejs/kit';
-import { VERCEL_URL } from '$env/static/private';
+import { VERCEL_URL, VERCEL_ENV } from '$env/static/private';
 
 const { Document } = pkg;
 
@@ -22,12 +22,11 @@ let data = null;
 
 async function load() {
 	try {
-    const baseURL = process.env.VERCEL_URL 
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:5173";
-    console.log("Base URL", baseURL)
-    console.log("Vercel Env Url", VERCEL_URL)
-		data = await fetch(`https://edu-vocabs.vercel.app/vocs.ttl`);
+
+    const baseURL = VERCEL_ENV === "production" 
+    ? `https://${VERCEL_URL}`
+    : `http://${VERCEL_URL}`;
+		data = await fetch(`${baseURL}/vocs.ttl`);
     const ttl = await data.text()
 		console.log('✅ RDF File Loaded');
 
