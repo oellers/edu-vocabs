@@ -17,7 +17,7 @@
 		}
 	});
 
-	const filterKeys = ['about'];
+	const filterKeys = ['about', 'educationalLevel'];
 
 	let query = '';
 	let results = [];
@@ -77,7 +77,7 @@
 	}
 </script>
 
-<div class="flex flex-col w-3/4 ">
+<div class="flex w-3/4 flex-col">
 	<form on:submit={search}>
 		<div class="flex flex-col">
 			<div>
@@ -86,28 +86,65 @@
 					<Search />
 				</label>
 			</div>
-			<div class="dropdown">
-        <div tabindex="0" role="button" class="btn m-1">Themenfeld</div>
-				<ul tabindex="0" class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow">
-					{#each filters['about'] as filter}
-						<li
-							class:bg-info={selectedFilters['about'].includes(filter)}
-							class:text-black={selectedFilters['about'].includes(filter)}
-							on:click={() => handleSelect(filter, 'about')}
-						>
-							<a>{filter}</a>
-						</li>
-					{/each}
-				</ul>
+
+			<div class="flex flex-row">
+				<div class="dropdown">
+					<div tabindex="0" role="button" class="btn m-1">Themenfeld</div>
+					<ul
+						tabindex="0"
+						class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
+					>
+						{#each filters['about'] as filter}
+							<li
+								class:bg-info={selectedFilters['about'].includes(filter)}
+								class:text-black={selectedFilters['about'].includes(filter)}
+								on:click={() => handleSelect(filter, 'about')}
+							>
+								<a>{filter}</a>
+							</li>
+						{/each}
+					</ul>
+				</div>
+
+				<div class="dropdown">
+					<div tabindex="0" role="button" class="btn m-1">Bildungsstufe</div>
+					<ul
+						tabindex="0"
+						class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
+					>
+						{#each filters['educationalLevel'] as filter}
+							<li
+								class:bg-info={selectedFilters['educationalLevel'].includes(filter)}
+								class:text-black={selectedFilters['educationalLevel'].includes(filter)}
+								on:click={() => handleSelect(filter, 'educationalLevel')}
+							>
+								<a>{filter}</a>
+							</li>
+						{/each}
+					</ul>
+				</div>
 			</div>
 		</div>
 	</form>
 
 	{#if results.length}
 		<ul>
-			{#each results as result}
-				<li>{result.name}</li>
-			{/each}
+			<div class="flex flex-col gap-4">
+				{#each results as result}
+					<li>
+						<div class="flex flex-row rounded border py-2">
+							<div class="w-3/4">
+								<p class="text-lg">{result.name}</p>
+								<p>{result.description}</p>
+							</div>
+
+							<div>
+								<div class="rounded-full bg-info p-2 text-center text-black">{result.about}</div>
+							</div>
+						</div>
+					</li>
+				{/each}
+			</div>
 		</ul>
 	{/if}
 </div>
