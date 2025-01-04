@@ -26,6 +26,7 @@ async function load() {
     const baseURL = VERCEL_ENV === "production" 
     ? `https://${VERCEL_URL}`
     : `http://${VERCEL_URL}`;
+    console.log(VERCEL_ENV)
 		data = await fetch(`${baseURL}/vocs.ttl`);
     const ttl = await data.text()
 		console.log('✅ RDF File Loaded');
