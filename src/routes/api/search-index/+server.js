@@ -3,9 +3,11 @@ import $rdf from 'rdflib';
 import pkg from 'flexsearch';
 import { json } from '@sveltejs/kit';
 
-const { Index, Document } = pkg;
+const { Document } = pkg;
 
 const index = new Document({
+	tokenize: 'forward',
+  depth: 3,
 	document: {
 		id: 'id',
 		index: ['name', 'about'],

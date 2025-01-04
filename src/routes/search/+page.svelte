@@ -4,6 +4,9 @@
 	const { Document } = pkg;
 
 	const index = new Document({
+		tokenize: 'forward',
+    preset: "match",
+    depth: 3,
 		document: {
 			id: 'id',
 			index: ['name', 'about'],
