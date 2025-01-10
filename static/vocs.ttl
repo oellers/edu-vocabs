@@ -7,6 +7,7 @@
   sdo:description "Werteliste von Fächern im Schulbereich."@de;
   sdo:educationalLevel "Grundschule"@de ;
   sdo:about "Fach- und Themenzuordnung"@de;
+  wdt:P126 "DINI-AG-KIM" ;
   dct:issued "2021-03-03"^^xsd:date;
   wdt:P973 <http://w3id.org/kim/schulfaecher/> .
 
@@ -14,11 +15,13 @@
   sdo:description "Werteliste von Fächern im Schulbereich."@de;
   sdo:educationalLevel "Hochschule"@de ;
   sdo:about "Fach- und Themenzuordnung"@de;
+  wdt:P126 "WirLernenOnline" ;
   dct:issued "2020-04-08"^^xsd:date;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/discipline/> .
 
 <http://example.org/3> sdo:name "Schulfächer"@de;
   sdo:about "Fach- und Themenzuordnung"@de;
+  wdt:P126 "SODIX" ;
   wdt:P973 <https://vocabs.sodix.de/index.html> .
 
 <http://example.org/4> sdo:name "Schulfächer"@de;
