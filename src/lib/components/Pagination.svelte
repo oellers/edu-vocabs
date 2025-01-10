@@ -2,7 +2,7 @@
 	import { db } from '$lib/db';
 
 	function goToPage(page) {
-		window.scrollTo({ top: 0, behavior: 'smooth' }); // 👈 Scrolls to the top smoothly
+		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
 
 	$: totalPages = Math.ceil($db.results.length / $db.resultsPerPage);
