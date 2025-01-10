@@ -4,7 +4,7 @@
 	export let key;
 </script>
 
-<div onclick={() => handleFilterSelect(key, val)} class="badge badge-info gap-2">
+<div onclick={() => handleFilterSelect(key, val)} class="badge badge-info select-none gap-2">
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		fill="none"
