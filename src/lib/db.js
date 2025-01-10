@@ -17,13 +17,14 @@ function initFilters() {
 }
 
 export function resetFilters() {
-  db.update(db => {
-    return {
-      ...db,
-      query: "",
-      selectedFilters: initFilters()}
-  })
-  fillResults();
+	db.update((db) => {
+		return {
+			...db,
+			query: '',
+			selectedFilters: initFilters()
+		};
+	});
+	fillResults();
 }
 
 export function fillResults() {
@@ -66,6 +67,6 @@ export function handleFilterSelect(key, val) {
 
 export function updateResults(results) {
 	db.update((db) => {
-		return { ...db, results };
+		return { ...db, results, activePage: 0 };
 	});
 }
