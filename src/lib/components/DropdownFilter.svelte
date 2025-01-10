@@ -37,7 +37,7 @@
 					class="overflow-hidden rounded"
 					class:bg-info={$db.selectedFilters[bereich].includes(filter)}
 					class:text-black={$db.selectedFilters[bereich].includes(filter)}
-					onclick={() => handleFilterSelect(filter, bereich)}
+					onclick={() => handleFilterSelect(bereich, filter)}
 				>
 					<a>{filter}</a>
 				</li>

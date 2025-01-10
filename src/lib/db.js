@@ -34,7 +34,7 @@ export function search(event) {
 	}
 }
 
-export function handleFilterSelect(val, key) {
+export function handleFilterSelect(key,val) {
 	db.update((db) => {
 		const indexInSelectedFilters = db.selectedFilters[key].indexOf(val);
 		let selectedFilters;

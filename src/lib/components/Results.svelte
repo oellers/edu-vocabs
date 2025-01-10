@@ -1,6 +1,7 @@
 <script>
 	import { db } from '$lib/db';
 	import Pagination from '$lib/components/Pagination.svelte';
+	import SelectedFilter from '$lib/components/SelectedFilter.svelte';
 
 	function getPaginatedResults() {
 		const startIndex = $db.activePage * $db.resultsPerPage;
@@ -12,8 +13,17 @@
 <div class="flex w-full flex-col items-center justify-center gap-2">
 	{#if $db.results.length}
 		<div class="mb-4 mt-2 w-full">
-			<p>Suchergebnisse: {$db.results.length}</p>
-			<ul>
+			<div class="flex flex-row justify-between">
+				<div class="flex flex-row flex-wrap gap-2 cursor-pointer">
+					{#each Object.entries($db.selectedFilters) as filter}
+						{#each filter[1] as f}
+							<SelectedFilter val={f} key={filter[0]} />
+						{/each}
+					{/each}
+				</div>
+				<p class="shrink-0">Suchergebnisse: {$db.results.length}</p>
+			</div>
+			<ul class="mt-2">
 				<div class="flex flex-col gap-4">
 					{#each getPaginatedResults() as result}
 						<li>
