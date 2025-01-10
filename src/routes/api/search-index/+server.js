@@ -1,35 +1,39 @@
 import $rdf from 'rdflib';
+import { ttlStore } from '$lib/db';
 import pkg from 'flexsearch';
 import { json } from '@sveltejs/kit';
 import { VERCEL_URL, VERCEL_ENV, VERCEL_PROJECT_PRODUCTION_URL } from '$env/static/private';
 
 const { Document } = pkg;
 
-const index = new Document({
-	tokenize: 'forward',
-	language: 'de',
-	encoder: 'advanced',
-	charset: 'latin',
-	document: {
-		id: 'id',
-		index: ['name', 'about'],
-		tag: 'tag',
-		store: true
-	}
-});
-
 let data = null;
 
 async function load() {
+	const index = new Document({
+		tokenize: 'forward',
+		language: 'de',
+		encoder: 'advanced',
+		charset: 'latin',
+		document: {
+			id: 'id',
+			index: ['name', 'about'],
+			tag: 'tag',
+			store: true
+		}
+	});
 	try {
-    const baseURL = VERCEL_ENV === "production" ? `https://${VERCEL_PROJECT_PRODUCTION_URL}`
-    : VERCEL_ENV === "preview" ? `https://${VERCEL_URL}`
-    : VERCEL_ENV === "development" ? `http://${VERCEL_URL}`
-    : "http://localhost:5173"
+		const baseURL =
+			VERCEL_ENV === 'production'
+				? `https://${VERCEL_PROJECT_PRODUCTION_URL}`
+				: VERCEL_ENV === 'preview'
+					? `https://${VERCEL_URL}`
+					: VERCEL_ENV === 'development'
+						? `http://${VERCEL_URL}`
+						: 'http://localhost:5173';
 		data = await fetch(`${baseURL}/vocs.ttl`, {
-      headers: { "Accept": "text/turtle" }
-    });
-    const ttl = await data.text()
+			headers: { Accept: 'text/turtle' }
+		});
+		const ttl = await data.text();
 		console.log('✅ RDF File Loaded');
 
 		var mimeType = 'text/turtle';
@@ -64,22 +68,30 @@ async function load() {
 				tag: tags
 			});
 		});
+    return index
 	} catch (error) {
 		console.error('❌ Error loading RDF file:', error);
 	}
 }
 
-await load();
+const index = await load();
 
-export async function GET() {
-	if (!data) {
-		return new Response('File not loaded', { status: 500 });
-	}
+async function exportedIndex(index) {
 	const exportedIndex = {};
 
 	await index.export((key, data) => {
 		exportedIndex[key] = data;
 	});
 
-	return json(exportedIndex);
+	return exportedIndex;
+}
+
+const exported = await exportedIndex(index)
+
+export async function GET() {
+	if (!exported) {
+		return new Response('Data not loaded', { status: 500 });
+	}
+
+	return json(exported);
 }
