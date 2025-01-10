@@ -10,17 +10,26 @@
 
 {#if $db.resultsPerPage < $db.results.length}
 	<div class="join mb-4">
-		{#each { length: totalPages }, p}
-			<button
-				onclick={() => {
-					db.update((db) => {
-						return { ...db, activePage: p };
-					});
-					goToPage();
-				}}
-				class="btn join-item"
-				class:btn-active={$db.activePage == p}>{p + 1}</button
-			>
-		{/each}
+		<button
+			disabled={$db.activePage === 0}
+			onclick={() => {
+				db.update((db) => {
+					return { ...db, activePage: db.activePage - 1 };
+				});
+				goToPage();
+			}}
+			class="btn join-item">«</button
+		>
+		<button class="btn join-item">{$db.activePage + 1}</button>
+		<button
+			disabled={$db.activePage + 1 === totalPages}
+			onclick={() => {
+				db.update((db) => {
+					return { ...db, activePage: db.activePage + 1 };
+				});
+				goToPage();
+			}}
+			class="btn join-item">»</button
+		>
 	</div>
 {/if}

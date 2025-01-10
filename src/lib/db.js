@@ -14,7 +14,7 @@ export const db = writable({
 });
 
 export function fillResults() {
-	const results = Object.values(get(db).index.store).slice(0, 10);
+	const results = Object.values(get(db).index.store);
 	updateResults(results);
 }
 
