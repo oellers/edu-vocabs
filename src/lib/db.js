@@ -1,16 +1,30 @@
 import { writable, get } from 'svelte/store';
-import { config } from "$lib/config";
+import { config } from '$lib/config';
 
 export const db = writable({
-  resultsPerPage: 10,
-  activePage: 0,
+	resultsPerPage: 10,
+	activePage: 0,
 	query: '',
 	results: [],
 	filters: {},
 	index: {},
 	filterKeys: config.filterKeys,
-	selectedFilters: Object.fromEntries(config.filterKeys.map((e) => [e, []]))
+	selectedFilters: initFilters()
 });
+
+function initFilters() {
+	return Object.fromEntries(config.filterKeys.map((e) => [e, []]));
+}
+
+export function resetFilters() {
+  db.update(db => {
+    return {
+      ...db,
+      query: "",
+      selectedFilters: initFilters()}
+  })
+  fillResults();
+}
 
 export function fillResults() {
 	const results = Object.values(get(db).index.store);
@@ -33,7 +47,7 @@ export function search(event) {
 	}
 }
 
-export function handleFilterSelect(key,val) {
+export function handleFilterSelect(key, val) {
 	db.update((db) => {
 		const indexInSelectedFilters = db.selectedFilters[key].indexOf(val);
 		let selectedFilters;

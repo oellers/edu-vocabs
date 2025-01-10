@@ -5,6 +5,7 @@
 	import DropdownFilter from '$lib/components/DropdownFilter.svelte';
 	import Results from '$lib/components/Results.svelte';
 	import Search from '$lib/icons/Search.svelte';
+	import ResetFilters from '$lib/components/ResetFilters.svelte';
 	import pkg from 'flexsearch';
 	const { Document } = pkg;
 
@@ -56,9 +57,12 @@
 					<Search />
 				</label>
 			</div>
-			<div class="flex flex-row gap-3">
+			<div class="flex flex-row gap-3 w-full">
 				<DropdownFilter title="Themenfeld" filterKey="about" />
 				<DropdownFilter title="Bildungsstufe" filterKey="educationalLevel" />
+				<div class="ml-auto">
+					<ResetFilters />
+				</div>
 			</div>
 		</div>
 	</form>
