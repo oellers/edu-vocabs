@@ -1,6 +1,5 @@
 import { writable, get } from 'svelte/store';
-
-const filterKeys = ['about', 'educationalLevel'];
+import { config } from "$lib/config";
 
 export const db = writable({
   resultsPerPage: 10,
@@ -9,8 +8,8 @@ export const db = writable({
 	results: [],
 	filters: {},
 	index: {},
-	filterKeys,
-	selectedFilters: Object.fromEntries(filterKeys.map((e) => [e, []]))
+	filterKeys: config.filterKeys,
+	selectedFilters: Object.fromEntries(config.filterKeys.map((e) => [e, []]))
 });
 
 export function fillResults() {

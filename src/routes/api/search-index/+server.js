@@ -1,5 +1,5 @@
 import $rdf from 'rdflib';
-import { ttlStore } from '$lib/db';
+import { config } from "$lib/config"
 import pkg from 'flexsearch';
 import { json } from '@sveltejs/kit';
 import { VERCEL_URL, VERCEL_ENV, VERCEL_PROJECT_PRODUCTION_URL } from '$env/static/private';
@@ -9,18 +9,7 @@ const { Document } = pkg;
 let data = null;
 
 async function load() {
-	const index = new Document({
-		tokenize: 'forward',
-		language: 'de',
-		encoder: 'advanced',
-		charset: 'latin',
-		document: {
-			id: 'id',
-			index: ['name', 'about'],
-			tag: 'tag',
-			store: true
-		}
-	});
+	const index = new Document({...config.index});
 	try {
 		const baseURL =
 			VERCEL_ENV === 'production'

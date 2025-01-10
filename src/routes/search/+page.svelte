@@ -1,25 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
+	import { config } from '$lib/config';
 	import { db, search, fillResults } from '$lib/db';
 	import DropdownFilter from '$lib/components/DropdownFilter.svelte';
-  import Results from '$lib/components/Results.svelte';
+	import Results from '$lib/components/Results.svelte';
 	import Search from '$lib/icons/Search.svelte';
 	import pkg from 'flexsearch';
 	const { Document } = pkg;
 
-	const index = new Document({
-		tokenize: 'forward',
-		language: 'de',
-		encoder: 'advanced',
-		charset: 'latin',
-		document: {
-			id: 'id',
-			index: ['name', 'about'],
-			tag: 'tag',
-			store: true
-		}
-	});
-
+	const index = new Document({ ...config.index });
 	const filterKeys = $db.filterKeys;
 
 	async function loadFilterOptions() {
@@ -63,7 +52,7 @@
 		<div class="flex flex-col">
 			<div>
 				<label class="input input-bordered flex items-center gap-2">
-					<input class="grow" type="text" bind:value={$db.query} placeholder="Suche..." required />
+					<input class="grow" type="text" bind:value={$db.query} placeholder="Suche..." />
 					<Search />
 				</label>
 			</div>
@@ -74,6 +63,5 @@
 		</div>
 	</form>
 
-  <Results />
-
+	<Results />
 </div>
