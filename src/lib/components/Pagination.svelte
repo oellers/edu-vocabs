@@ -1,7 +1,7 @@
 <script>
 	import { db } from '$lib/db';
 
-	function goToPage(page) {
+	function goToPage() {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
 
