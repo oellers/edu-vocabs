@@ -3,6 +3,8 @@ import { writable, get } from 'svelte/store';
 const filterKeys = ['about', 'educationalLevel'];
 
 export const db = writable({
+  resultsPerPage: 10,
+  activePage: 0,
 	query: '',
 	results: [],
 	filters: {},

@@ -3,28 +3,26 @@
 	import CaretDown from '$lib/icons/CaretDown.svelte';
 
 	export let title;
-  export let bereich;
+	export let bereich;
 </script>
 
 <div class="dropdown">
 	<div
 		tabindex="0"
 		role="button"
-		class="
-            mt-2
-            w-52
-            rounded-lg
-            border
-            border-gray-300
-            bg-white
-            px-2
-            py-2
-            text-gray-700
-            shadow-sm
-            focus:outline-none
-            focus:ring-2
-            focus:ring-gray-300
-            "
+		class="mt-2
+           w-52
+           rounded-lg
+           border
+           border-gray-300
+           bg-white
+           px-2
+           py-2
+           text-gray-700
+           shadow-sm
+           focus:outline-none
+           focus:ring-2
+           focus:ring-gray-300"
 	>
 		<div class="flex flex-row items-center justify-between">
 			<span>{title}</span>
@@ -39,7 +37,7 @@
 					class="overflow-hidden rounded"
 					class:bg-info={$db.selectedFilters[bereich].includes(filter)}
 					class:text-black={$db.selectedFilters[bereich].includes(filter)}
-					on:click={() => handleFilterSelect(filter, bereich)}
+					onclick={() => handleFilterSelect(filter, bereich)}
 				>
 					<a>{filter}</a>
 				</li>

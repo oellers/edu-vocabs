@@ -1,17 +1,26 @@
 <script>
-import { db } from "$lib/db"
+	import { db } from '$lib/db';
+	import Pagination from '$lib/components/Pagination.svelte';
+
+	function getPaginatedResults() {
+		const startIndex = $db.activePage * $db.resultsPerPage;
+		const endIndex = startIndex + $db.resultsPerPage;
+		return $db.results.slice(startIndex, endIndex);
+	}
 </script>
 
+<div class="flex w-full flex-col items-center justify-center gap-2">
 	{#if $db.results.length}
-		<div class="mt-2">
+		<div class="mb-4 mt-2 w-full">
+			<p>Suchergebnisse: {$db.results.length}</p>
 			<ul>
 				<div class="flex flex-col gap-4">
-					{#each $db.results as result}
+					{#each getPaginatedResults() as result}
 						<li>
 							<div class="flex flex-row rounded border border-slate-600 py-2">
 								<div class="m-2 w-3/4">
 									<p class="text-lg font-bold">
-										{result.name}
+										<a class="hover:underline" href={result.P973}>{result.name}</a>
 										{result.P126 ? `(${result.P126})` : ''}
 									</p>
 									<p>{result.description}</p>
@@ -41,3 +50,5 @@ import { db } from "$lib/db"
 		</div>
 	{/if}
 
+	<Pagination />
+</div>
