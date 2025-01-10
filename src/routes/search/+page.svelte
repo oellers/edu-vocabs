@@ -37,6 +37,10 @@
 		});
 	}
 
+	function fillResults() {
+		results = Object.values(index.store).slice(0, 10);
+	}
+
 	async function loadIndex() {
 		const res = await fetch('/api/search-index');
 		const keys = await res.json();
@@ -44,6 +48,7 @@
 			await index.import(key, keys[key]);
 		}
 		loadFilterOptions();
+		fillResults();
 	}
 
 	onMount(() => {
@@ -128,23 +133,25 @@
 	</form>
 
 	{#if results.length}
-		<ul>
-			<div class="flex flex-col gap-4">
-				{#each results as result}
-					<li>
-						<div class="flex flex-row rounded border py-2">
-							<div class="w-3/4">
-								<p class="text-lg">{result.name}</p>
-								<p>{result.description}</p>
-							</div>
+		<div class="mt-2">
+			<ul>
+				<div class="flex flex-col gap-4">
+					{#each results as result}
+						<li>
+							<div class="flex flex-row rounded border border-slate-600 py-2">
+								<div class="m-2 w-3/4">
+									<p class="text-lg font-bold">{result.name} ({result.P126})</p>
+									<p>{result.description}</p>
+								</div>
 
-							<div>
-								<div class="rounded-full bg-info p-2 text-center text-black">{result.about}</div>
+								<div>
+									<div class="rounded-full bg-info p-2 text-center text-black">{result.about}</div>
+								</div>
 							</div>
-						</div>
-					</li>
-				{/each}
-			</div>
-		</ul>
+						</li>
+					{/each}
+				</div>
+			</ul>
+		</div>
 	{/if}
 </div>
