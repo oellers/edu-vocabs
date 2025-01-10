@@ -57,8 +57,8 @@
 				</label>
 			</div>
 			<div class="flex flex-row gap-3">
-				<DropdownFilter title="Themenfeld" bereich="about" />
-				<DropdownFilter title="Bildungsstufe" bereich="educationalLevel" />
+				<DropdownFilter title="Themenfeld" filterKey="about" />
+				<DropdownFilter title="Bildungsstufe" filterKey="educationalLevel" />
 			</div>
 		</div>
 	</form>

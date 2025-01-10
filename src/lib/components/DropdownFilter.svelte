@@ -3,7 +3,7 @@
 	import CaretDown from '$lib/icons/CaretDown.svelte';
 
 	export let title;
-	export let bereich;
+	export let filterKey;
 </script>
 
 <div class="dropdown">
@@ -32,14 +32,14 @@
 			tabindex="0"
 			class="menu dropdown-content z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
 		>
-			{#each $db.filters[bereich] as filter}
+			{#each $db.filters[filterKey] as filterVal}
 				<li
 					class="overflow-hidden rounded"
-					class:bg-info={$db.selectedFilters[bereich].includes(filter)}
-					class:text-black={$db.selectedFilters[bereich].includes(filter)}
-					onclick={() => handleFilterSelect(bereich, filter)}
+					class:bg-info={$db.selectedFilters[filterKey].includes(filterVal)}
+					class:text-black={$db.selectedFilters[filterKey].includes(filterVal)}
+					onclick={() => handleFilterSelect(filterKey, filterVal)}
 				>
-					<a>{filter}</a>
+					<a>{filterVal}</a>
 				</li>
 			{/each}
 		</ul>
