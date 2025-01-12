@@ -1,5 +1,5 @@
 <script>
-	import { db, search, fillResults, createFilterOptions, createIndex } from '$lib/db';
+	import { db, search } from '$lib/db';
 	import DropdownFilter from '$lib/components/DropdownFilter.svelte';
 	import Results from '$lib/components/Results.svelte';
 	import Search from '$lib/icons/Search.svelte';
@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex w-3/4 flex-col">
-	<form on:submit={(e) => search(e)}>
+	<form onsubmit={(e) => search(e)}>
 		<div class="flex flex-col">
 			<div>
 				<label class="input input-bordered flex items-center gap-2">
