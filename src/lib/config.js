@@ -7,7 +7,7 @@ export const config = {
 		charset: 'latin',
 		document: {
 			id: 'id',
-			index: ['name', 'about'],
+			index: ['id', 'name', 'about'],
 			tag: 'tag',
 			store: true
 		}

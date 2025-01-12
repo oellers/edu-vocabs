@@ -1,5 +1,6 @@
 import { writable, get } from 'svelte/store';
 import { config } from '$lib/config';
+import pkg from 'flexsearch';
 
 export const db = writable({
 	resultsPerPage: 10,
@@ -11,6 +12,10 @@ export const db = writable({
 	filterKeys: config.filterKeys,
 	selectedFilters: initFilters()
 });
+
+const { Document } = pkg;
+const index = new Document({ ...config.index });
+const filterKeys = get(db).filterKeys;
 
 function initFilters() {
 	return Object.fromEntries(config.filterKeys.map((e) => [e, []]));
@@ -68,4 +73,36 @@ export function updateResults(results) {
 	db.update((db) => {
 		return { ...db, results };
 	});
+}
+
+export async function createFilterOptions() {
+	let filters = {};
+	filterKeys.forEach((k) => {
+		filters = {
+			...filters,
+			[k]: new Set(
+				Object.values(index.store)
+					.map((e) => e[k])
+					.filter((e) => e !== undefined)
+			)
+		};
+	});
+	return filters;
+}
+
+export async function createIndex() {
+	const res = await fetch('/api/search-index');
+	const keys = await res.json();
+	
+	for (const key in keys) {
+		await index.import(key, keys[key]);
+	}
+	const filters = await createFilterOptions();
+	db.update((db) => {
+		return { ...db, filters };
+	});
+	db.update((db) => {
+		return { ...db, index };
+	});
+	fillResults();
 }
