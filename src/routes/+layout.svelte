@@ -1,6 +1,13 @@
 <script>
 	import '../app.css';
+	import { onMount } from 'svelte';
+	import { createIndex } from '$lib/db';
 	let { children } = $props();
+
+	// Initialize the search index
+	onMount(() => {
+		createIndex();
+	});
 </script>
 
 <div class="flex flex-row">
