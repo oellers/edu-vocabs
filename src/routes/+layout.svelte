@@ -2,6 +2,7 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { createIndex } from '$lib/db';
+	import Sidebar from '$lib/components/Sidebar.svelte';
 	let { children } = $props();
 
 	// Initialize the search index
@@ -12,11 +13,7 @@
 
 <div class="flex flex-row">
 	<div class="mt-8 basis-1/4 pl-4">
-		<nav class="flex flex-col gap-4">
-			<a href="/">EduVocs</a>
-			<a href="/search">Suche</a>
-			<a href="/contact">Kontakt</a>
-		</nav>
+		<Sidebar />
 	</div>
 	<div class="mt-8 w-full">
 		{@render children()}
