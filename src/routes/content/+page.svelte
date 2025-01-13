@@ -5,5 +5,5 @@
 </script>
 
 <main>
-    <ContentItemList contentItems={data.contentItems} extended={true} />
+    <ContentItemList contentItems={data.contentItems} />
 </main>

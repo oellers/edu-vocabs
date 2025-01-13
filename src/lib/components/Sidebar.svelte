@@ -11,7 +11,7 @@
     <nav class="flex flex-col gap-4 p-4">
         <a href="/" class="btn btn-ghost">EduVocs</a>
         <a href="/search" class="btn btn-ghost">Suche</a>
-        <a href="/contact" class="btn btn-ghost">Kontakt</a>
+        <a href="/content/contact" class="btn btn-ghost">Kontakt</a>
     </nav>
 </div>
 
