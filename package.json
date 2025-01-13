@@ -33,6 +33,8 @@
 	},
 	"dependencies": {
 		"flexsearch": "^0.7.43",
-		"rdflib": "^2.2.35"
+		"fusionable": "^0.1.3",
+		"rdflib": "^2.2.35",
+		"showdown": "^2.1.0"
 	}
 }

@@ -1,5 +1,6 @@
 export const config = {
 	filterKeys: ['about', 'educationalLevel'],
+	contentPath: 'static/content',
 	index: {
 		tokenize: 'forward',
 		language: 'de',
