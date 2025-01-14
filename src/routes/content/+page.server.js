@@ -1,11 +1,8 @@
 import FusionCollection from 'fusionable/FusionCollection';
-import { config } from '$lib/config';
+import { error } from '@sveltejs/kit';
 
 export function load() {
-  const collection = new FusionCollection()
-    .loadFromDir(config.contentPath)
-    .orderBy('date', 'desc');
-
-  const contentItems = collection.getItemsArray();
-  return { contentItems };
+  error(404, {
+    message: 'Content list not yet implemented'
+  });
 }
