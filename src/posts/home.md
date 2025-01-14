@@ -1,9 +1,9 @@
 ---
 title: "Vokabulardatenbank"
+description: "Beschreibung"
 author: "Manuel"
 date: "2025-01-01"
 slug: "home"
-highlight: true
 ---
 
 ## Herausforderungen in einer vernetzten Bildungslandschaft

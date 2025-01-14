@@ -1,13 +1,19 @@
 <script>
-    import Showdown from 'showdown';
-	let { contentItem, extended = true } = $props();
-    const converter = new Showdown.Converter();
-    const htmlContent = converter.makeHtml(contentItem.content);
+	let { item, extended = true } = $props();
 </script>
-<article>
-    <h1><a href={`/content/${contentItem.fields.slug}`}>{contentItem.fields.title}</a></h1>
-    <p>{contentItem.fields.date}</p>
+
+<svelte:head>
+	<title>{item.title}</title>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={item.title} />
+</svelte:head>
+
+<article class="item">
+    <h1><a href={`/content/${item.slug}`}>{item.title}</a></h1>
+    <p>{item.date}</p>
     {#if extended}
-        <p>{@html htmlContent}</p>
+    <div class="item-description">
+        <item.content />
+    </div>
     {/if}
 </article>
