@@ -1,11 +1,14 @@
 <script>
     import ContentItem from './ContentItem.svelte';
-	let { contentItems, extended = false } = $props();
+	let { items, extended = false } = $props();
 </script>
-<ul>
-    {#each contentItems as item}
-    <li>
-        <ContentItem contentItem={item} extended={extended} />
-    </li>
-    {/each}
-</ul>
+
+<section>
+	<ul class="posts">
+		{#each items as item}
+			<li class="post">
+                <ContentItem item={item} extended={extended} />
+			</li>
+		{/each}
+	</ul>
+</section>

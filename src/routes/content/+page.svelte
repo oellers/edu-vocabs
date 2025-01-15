@@ -1,9 +1,8 @@
 <script lang="ts">
-    import type { PageData } from './$types';
     import ContentItemList from '$lib/components/ContentItemList.svelte';
-    let { data }: { data: PageData } = $props();
+    let { data } = $props();
 </script>
 
 <main>
-    <ContentItemList contentItems={data.contentItems} />
+    <ContentItemList items={data.items} />
 </main>
