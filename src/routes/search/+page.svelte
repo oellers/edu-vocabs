@@ -15,7 +15,7 @@
 					<Search />
 				</label>
 			</div>
-			<div class="flex flex-row gap-3 w-full">
+			<div class="flex w-full flex-row gap-3">
 				<DropdownFilter title="Themenfeld" filterKey="about" />
 				<DropdownFilter title="Bildungsstufe" filterKey="educationalLevel" />
 				<div class="ml-auto">

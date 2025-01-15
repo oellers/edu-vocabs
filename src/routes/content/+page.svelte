@@ -1,8 +1,8 @@
 <script lang="ts">
-    import ContentItemList from '$lib/components/ContentItemList.svelte';
-    let { data } = $props();
+	import ContentItemList from '$lib/components/ContentItemList.svelte';
+	let { data } = $props();
 </script>
 
 <main>
-    <ContentItemList items={data.items} />
+	<ContentItemList items={data.items} />
 </main>

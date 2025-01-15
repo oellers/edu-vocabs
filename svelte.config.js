@@ -1,11 +1,11 @@
 import adapter from '@sveltejs/adapter-vercel';
 import { mdsvex } from 'mdsvex';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-	extensions: ['.md'],
-}
+	extensions: ['.md']
+};
 
 export default {
 	extensions: ['.svelte', '.md'],
@@ -25,4 +25,3 @@ export default {
 		}
 	}
 };
-
