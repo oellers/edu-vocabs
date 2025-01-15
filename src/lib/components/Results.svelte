@@ -30,7 +30,9 @@
 							<div class="flex flex-row justify-between rounded border border-slate-600 py-2">
 								<div class="m-2 w-3/4">
 									<p class="text-lg font-bold">
-										<a class="hover:underline" href=/voc/{encodeURIComponent(result.id)}>{result.name}</a>
+										<a class="hover:underline" href="/voc/{encodeURIComponent(result.id)}"
+											>{result.name}</a
+										>
 										{result.P126 ? `(${result.P126})` : ''}
 									</p>
 									<p>{result.description}</p>

@@ -9,11 +9,13 @@
 </svelte:head>
 
 <article class="item">
-    <h1><a href={`/content/${item.slug}`}>{item.title}</a></h1>
-    <p>{item.date}</p>
-    {#if extended}
-    <div class="item-description">
-        <item.content />
-    </div>
-    {/if}
+	<hgroup>
+		<h1><a href={`/content/${item.slug}`}>{item.title}</a></h1>
+		<p>{item.date}</p>
+	</hgroup>
+	{#if extended}
+		<div class="item-description">
+			<item.content />
+		</div>
+	{/if}
 </article>

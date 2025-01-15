@@ -94,7 +94,7 @@ export async function createFilterOptions() {
 export async function createIndex() {
 	const res = await fetch('/api/search-index');
 	const keys = await res.json();
-	
+
 	for (const key in keys) {
 		await index.import(key, keys[key]);
 	}
