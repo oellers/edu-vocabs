@@ -44,6 +44,14 @@
   sdo:name "Schulfächer"@de;
   sdo:about "Fach- und Themenzuordnung"@de;
   wdt:P126 "SODIX" ;
+  sdo:rawVocab """
+Eintrag 1
+Eintrag 2
+  Eintrag 3
+  Eintrag 4
+    Eintrag 6
+Eintrag 5
+  """;
   wdt:P973 <https://vocabs.sodix.de/index.html> .
 
 <http://example.org/4>   a wd:Q1469824 ;

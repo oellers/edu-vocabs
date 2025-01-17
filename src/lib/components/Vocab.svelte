@@ -1,5 +1,6 @@
 <script>
 	import { db } from '$lib/db';
+	import { parseToSkos } from '$lib/utils';
 	import VocabConcept from '$lib/components/VocabConcept.svelte';
 
 	let { id } = $props();
@@ -7,6 +8,7 @@
 	const result = $db.index?.store?.[id] ?? {};
 
 	const distribution = $derived(result?.distribution?.map((e) => $db.index.store[e]));
+	const rawVocab = $derived(result?.rawVocab?.[0] ?? '');
 
 	if (distribution && distribution.length) {
 		const jsonLink = distribution.find((d) => d.encodingFormat.includes('application/json'));
@@ -15,6 +17,8 @@
 				vocabData = data;
 			});
 		}
+	} else if (rawVocab.length) {
+		vocabData = parseToSkos(rawVocab);
 	}
 
 	async function getVocabs(uri) {
@@ -24,7 +28,7 @@
 	}
 </script>
 
-{#if vocabData && vocabData.hasTopConcept}
+{#if vocabData}
 	<div>
 		<h1>Vokabular-Vorschau</h1>
 		{#each vocabData.hasTopConcept as topConcept}
