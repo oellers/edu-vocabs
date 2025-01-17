@@ -1,4 +1,4 @@
-import $rdf from 'rdflib';
+import { Parser, Store } from 'n3';
 import { config } from '$lib/config';
 import pkg from 'flexsearch';
 import { json } from '@sveltejs/kit';
@@ -7,6 +7,22 @@ import { VERCEL_URL, VERCEL_ENV, VERCEL_PROJECT_PRODUCTION_URL } from '$env/stat
 const { Document } = pkg;
 
 let data = null;
+const store = new Store();
+
+function processSubject(subjectNode) {
+	const properties = store.getQuads(subjectNode, null, null, null);
+	const obj = { id: subjectNode.value };
+	properties.forEach(({ predicate, object }) => {
+		let key = predicate.value.split('/').pop();
+		if (key.includes('#type')) key = 'type';
+		if (!obj[key]) {
+			obj[key] = [];
+		}
+		obj[key].push(object.value); // Add the value to the array
+	});
+
+	return obj;
+}
 
 async function load() {
 	const index = new Document({ ...config.index });
@@ -25,29 +41,18 @@ async function load() {
 		const ttl = await data.text();
 		console.log('✅ RDF File Loaded');
 
-		var mimeType = 'text/turtle';
-		var store = $rdf.graph();
-		var uri = 'https://example.org/resource.ttl';
+		const parser = new Parser();
+		console.log('Parsing Turtle...');
+		const quads = parser.parse(ttl);
+		store.addQuads(quads);
 
-		try {
-			$rdf.parse(ttl, store, uri, mimeType);
-		} catch (err) {
-			console.log(err);
-		}
+		const subjects = new Set(store.getQuads(null, null, null, null).map((quad) => quad.subject));
 
-		const subjects = new Set(store.statements.map((statement) => statement.subject.value));
-
-		const docs = [...subjects].map((subjectURI) => {
-			const subjectNode = $rdf.sym(subjectURI);
-			const properties = store.match(subjectNode, null, null);
-
-			const obj = { id: subjectURI };
-			properties.forEach(({ predicate, object }) => {
-				const key = predicate.value.split('/').pop();
-				obj[key] = object.value;
-			});
-
-			return obj;
+		const docs = [...subjects].map((subject) => {
+			return {
+				id: subject.id,
+				...processSubject(subject)
+			};
 		});
 
 		docs.forEach((d) => {

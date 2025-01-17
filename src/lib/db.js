@@ -33,7 +33,9 @@ export function resetFilters() {
 }
 
 export function fillResults() {
-	const results = Object.values(get(db).index.store);
+	const results = Object.values(get(db).index.store).filter((e) =>
+		e.type.includes('http://www.wikidata.org/entity/Q1469824')
+	);
 	updateResults(results);
 }
 
@@ -94,7 +96,6 @@ export async function createFilterOptions() {
 export async function createIndex() {
 	const res = await fetch('/api/search-index');
 	const keys = await res.json();
-
 	for (const key in keys) {
 		await index.import(key, keys[key]);
 	}

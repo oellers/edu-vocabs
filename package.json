@@ -34,6 +34,6 @@
 	},
 	"dependencies": {
 		"flexsearch": "^0.7.43",
-		"rdflib": "^2.2.35"
+		"n3": "^1.23.1"
 	}
 }
