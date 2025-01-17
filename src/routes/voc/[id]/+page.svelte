@@ -1,5 +1,6 @@
 <script>
 	import Result from '$lib/components/Result.svelte';
+	import Vocab from '$lib/components/Vocab.svelte';
 	let { data } = $props();
 </script>
 
@@ -7,4 +8,5 @@
 
 <div class="flex w-3/4 flex-col">
 	<Result id={data.id} />
+	<Vocab id={data.id} />
 </div>

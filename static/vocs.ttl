@@ -70,6 +70,21 @@
   sdo:description "Diese SKOS-Klassifikation basiert auf der Destatis-\"Systematik der Fächergruppen, Studienbereiche und Studienfächer\"."@de;
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:issued "2019-12-11"^^xsd:date;
+    sdo:distribution [
+      a sdo:DataDownload ;
+      sdo:name "Download JSON"@de ;
+      sdo:fileFormat "application/json" ;
+      sdo:contentUrl <https://w3id.org/kim/hochschulfaechersystematik/scheme.json> ;
+      sdo:encodingFormat "application/json" ;
+      sdo:inLanguage "en"
+  ], [
+      a sdo:DataDownload ;
+      sdo:name "Download Turtle"@de ;
+      sdo:fileFormat "text/turtle" ;
+      sdo:contentUrl <https://example.com/download/sample.ttl> ;
+      sdo:encodingFormat "text/turtle" ;
+      sdo:inLanguage "en"
+  ];
   wdt:P973 <https://w3id.org/kim/hochschulfaechersystematik/scheme> .
 
 <http://example.org/8> a wd:Q1469824 ;
