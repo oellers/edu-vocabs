@@ -86,6 +86,7 @@ export async function createFilterOptions() {
 			[k]: new Set(
 				Object.values(index.store)
 					.map((e) => e[k])
+					.flat()
 					.filter((e) => e !== undefined)
 			)
 		};
