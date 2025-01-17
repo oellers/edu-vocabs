@@ -16,7 +16,7 @@
         a sdo:DataDownload ;
         sdo:name "Download JSON"@de ;
         sdo:fileFormat "application/json" ;
-        sdo:contentUrl <http://w3id.org/kim/schulfaecher/index.json> ;
+        sdo:contentUrl <https://w3id.org/kim/schulfaecher/index.json> ;
         sdo:encodingFormat "application/json" ;
         sdo:inLanguage "en"
     ], [
