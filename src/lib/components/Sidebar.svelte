@@ -1,5 +1,6 @@
 <script>
 	import MenuIcon from '$lib/icons/MenuIcon.svelte';
+	import Logo from '$lib/icons/Logo.svelte';
 	let open = false;
 </script>
 
@@ -17,7 +18,7 @@
 	class={`fixed inset-y-0 left-0 z-50 w-64 transform bg-white shadow-md transition-transform lg:static lg:inset-0 lg:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'}`}
 >
 	<nav class="flex flex-col gap-4 p-4">
-		<a href="/" class="btn btn-ghost">EduVocs</a>
+		<a href="/"><Logo /></a>
 		<a href="/search" class="btn btn-ghost">Suche</a>
 		<a href="/content/contact" class="btn btn-ghost">Kontakt</a>
 	</nav>
