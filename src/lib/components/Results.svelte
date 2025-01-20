@@ -1,5 +1,5 @@
 <script>
-	import { db } from '$lib/db';
+	import { db, paginatedResults } from '$lib/db';
 	import Pagination from '$lib/components/Pagination.svelte';
 	import SelectedFilter from '$lib/components/SelectedFilter.svelte';
 	import Result from '$lib/components/Result.svelte';
@@ -18,7 +18,7 @@
 				</div>
 				<p class="shrink-0">Suchergebnisse: {$db.results.length}</p>
 			</div>
-			{#each $db.paginatedResults as result (result.id)}
+			{#each $paginatedResults as result (result.id)}
 				<Result externalLink={true} id={result.id} />
 			{/each}
 		</div>

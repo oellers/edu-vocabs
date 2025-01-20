@@ -7,20 +7,23 @@ export const db = writable({
 	activePage: 1,
 	query: '',
 	results: [],
-	paginatedResults: [],
 	filters: {},
 	index: {},
 	filterKeys: config.filterKeys,
 	selectedFilters: initFilters()
 });
 
+export const paginatedResults = derived(db, ($db) => {
+	const startIndex = $db.activePage * $db.resultsPerPage;
+	const endIndex = startIndex + $db.resultsPerPage;
+	const paginatedResults = $db.results.slice(startIndex, endIndex);
+	return paginatedResults;
+});
+
 export function updatePagination(direction) {
 	db.update((db) => {
 		const activePage = db.activePage + direction;
-		const startIndex = activePage * db.resultsPerPage;
-		const endIndex = startIndex + db.resultsPerPage;
-		const paginatedResults = db.results.slice(startIndex, endIndex);
-		return { ...db, activePage, paginatedResults };
+		return { ...db, activePage };
 	});
 }
 
@@ -48,7 +51,6 @@ export function fillResults() {
 		e.type.includes('http://www.wikidata.org/entity/Q1469824')
 	);
 	updateResults(results);
-	updatePagination(0);
 }
 
 export function search(event) {
