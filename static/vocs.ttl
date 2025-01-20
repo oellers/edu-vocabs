@@ -7,14 +7,13 @@
 
 <http://example.org/1> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P1324 "https://github.com/dini-ag-kim/schulfaecher"@de;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <http://w3id.org/kim/schulfaecher/>;
   dct:issued "2021-03-03"^^xsd:date;
   sdo:about "Fach- und Themenzuordnung"@de;
   sdo:description "Werteliste von Fächern im Schulbereich."@de;
-  sdo:educationalLevel "Schule"@de ;
   sdo:name "Schulfächer"@de;
   sdo:distribution _:G__2365, _:G__2366 .
 
@@ -28,7 +27,7 @@ _:G__2366 a sdo:DataDownload;
 
 <http://example.org/2> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P1324 "https://github.com/openeduhub/oeh-metadata-vocabs"@de;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/discipline/>;
@@ -47,7 +46,7 @@ _:G__2368 a sdo:DataDownload;
   sdo:fileFormat "text/turtle" .
 
 <http://example.org/3> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "FWU"@de;
   wdt:P973 <https://vocabs.sodix.de/index.html>;
   sdo:about "Fach- und Themenzuordnung"@de;
@@ -55,7 +54,7 @@ _:G__2368 a sdo:DataDownload;
 
 <http://example.org/4> a wd:Q1469824;
   wdt:P5009 "Web-API"@de;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "Digital Learning Tools"@de;
   wdt:P973 <https://digitallearningtools.de/api/subjects?q=>;
   sdo:about "Fach- und Themenzuordnung"@de;
@@ -64,7 +63,7 @@ _:G__2368 a sdo:DataDownload;
 
 <http://example.org/5> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "European Schoolnet Vocabulary Bank for Education (VBE)"@de;
   wdt:P973 <http://europeanschoolnet-vbe.lexaurus.net/vbe/browse>;
   sdo:about "Fach- und Themenzuordnung"@de;
@@ -72,7 +71,7 @@ _:G__2368 a sdo:DataDownload;
   sdo:name "EUN Fächer Werte"@de .
 
 <http://example.org/6> a wd:Q1469824;
-  wdt:P7374 "Ausbildung"@de;
+  sdo:educationalLevel "Ausbildung"@de;
   wdt:P126 "Bundesinstitut für Berufsbildung"@de;
   wdt:P973 <https://www.bibb.de/dienst/publikationen/de/19128>;
   dct:issued "2023-03-01"^^xsd:date;
@@ -82,11 +81,10 @@ _:G__2368 a sdo:DataDownload;
 
 <http://example.org/7> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
-  wdt:P7374 "Hochschule"@de;
+  sdo:educationalLevel "Hochschule"@de;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/hochschulfaechersystematik/scheme>;
   dct:issued "2019-12-11"^^xsd:date;
-  sdo:educationalLevel "Hochschule"@de ;
   sdo:about "Fach- und Themenzuordnung"@de;
   sdo:description "Diese SKOS-Klassifikation basiert auf der Destatis-\"Systematik der Fächergruppen, Studienbereiche und Studienfächer\"."@de;
   sdo:name "Hochschulfächersystematik"@de;
@@ -101,7 +99,7 @@ _:G__2370 a sdo:DataDownload;
   sdo:fileFormat "text/turtle" .
 
 <http://example.org/8> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "DIPF"@de;
   wdt:P973 <https://web.archive.org/web/20221006161235/https://www.bildungsserver.de/elixier/elixiersystematikliste.php>;
   sdo:about "Fach- und Themenzuordnung"@de;
@@ -109,7 +107,7 @@ _:G__2370 a sdo:DataDownload;
   sdo:name "ELIXIER-Systematik"@de .
 
 <http://example.org/9> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "SODIX/FWU"@de;
   wdt:P973 <https://vocabs.sodix.de/sodix/educational/sachgebietssystematik/sachgebietssystematik>;
   sdo:about "Fach- und Themenzuordnung"@de;
@@ -122,7 +120,7 @@ _:G__2371 a sdo:DataDownload;
   sdo:fileFormat "application/json" .
 
 <http://example.org/10> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P1324 "https://github.com/openeduhub/oeh-metadata-vocabs"@de;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/oeh-topics/5e40e372-735c-4b17-bbf7-e827a5702b57>;
@@ -136,7 +134,7 @@ _:G__2372 a sdo:DataDownload;
   sdo:fileFormat "application/json" .
 
 <http://example.org/11> a wd:Q1469824;
-  wdt:P7374 "Bildungsbereichsübergreifend"@de;
+  sdo:educationalLevel "Bildungsbereichsübergreifend"@de;
   wdt:P126 "re3data"@de;
   wdt:P973 <https://www.re3data.org/browse/by-subject/>;
   sdo:about "Fach- und Themenzuordnung"@de;
@@ -144,7 +142,7 @@ _:G__2372 a sdo:DataDownload;
   sdo:name "Subjects: Re3Data.org"@de .
 
 <http://example.org/12> a wd:Q1469824;
-  wdt:P7374 "Bildungsbereichsübergreifend"@de;
+  sdo:educationalLevel "Bildungsbereichsübergreifend"@de;
   wdt:P126 "Library Of Congress"@de;
   wdt:P973 <http://id.loc.gov/authorities/subjects>;
   sdo:about "Fach- und Themenzuordnung"@de;
@@ -152,7 +150,7 @@ _:G__2372 a sdo:DataDownload;
   sdo:name "Subjects MARC21"@de .
 
 <http://example.org/13> a wd:Q1469824;
-  wdt:P7374 "Bildungsbereichsübergreifend"@de;
+  sdo:educationalLevel "Bildungsbereichsübergreifend"@de;
   wdt:P126 "Europäische Union"@de;
   wdt:P973 <https://eur-lex.europa.eu/browse/eurovoc.html>;
   sdo:about "Fach- und Themenzuordnung"@de;
@@ -160,7 +158,7 @@ _:G__2372 a sdo:DataDownload;
   sdo:name "EuroVoc"@de .
 
 <http://example.org/14> a wd:Q1469824;
-  wdt:P7374 "Bildungsbereichsübergreifend"@de;
+  sdo:educationalLevel "Bildungsbereichsübergreifend"@de;
   wdt:P126 "UNESCO"@de;
   wdt:P973 <https://vocabularies.unesco.org/browser/thesaurus/en/>;
   sdo:about "Fach- und Themenzuordnung"@de;
@@ -169,7 +167,7 @@ _:G__2372 a sdo:DataDownload;
 
 <http://example.org/15> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
-  wdt:P7374 "Bildungsbereichsübergreifend"@de;
+  sdo:educationalLevel "Bildungsbereichsübergreifend"@de;
   wdt:P126 "Universität für angewandte Kunst Wien"@de;
   wdt:P973 <https://voc.uni-ak.ac.at/skosmos/disciplines/de/>;
   dct:issued "-"^^xsd:date;
@@ -179,7 +177,7 @@ _:G__2372 a sdo:DataDownload;
 
 <http://example.org/16> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
-  wdt:P7374 "Hochschule"@de;
+  sdo:educationalLevel "Hochschule"@de;
   wdt:P126 "Universität für angewandte Kunst Wien"@de;
   wdt:P973 <http://base.uni-ak.ac.at/vocabulary/study_programmes>;
   dct:issued "-"^^xsd:date;
@@ -189,7 +187,7 @@ _:G__2372 a sdo:DataDownload;
 
 <http://example.org/17> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
-  wdt:P7374 "Hochschule"@de;
+  sdo:educationalLevel "Hochschule"@de;
   wdt:P1324 "https://voc.uni-ak.ac.at/skosmos/rest/v1/basevoc/data?uri=http%3A%2F%2Fbase.uni-ak.ac.at%2Fvocabulary%2Fstudy_programmes&format=text/turtle"@de;
   wdt:P126 "Universität für angewandte Kunst Wien"@de;
   wdt:P973 <https://voc.uni-ak.ac.at/skosmos/basevoc/en/page/historic_study_programmes>;
@@ -199,14 +197,14 @@ _:G__2372 a sdo:DataDownload;
   sdo:name "Historische Studienrichtungen"@de .
 
 <http://example.org/18> a wd:Q1469824;
-  wdt:P7374 "Bildungsbereichsübergreifend"@de;
+  sdo:educationalLevel "Bildungsbereichsübergreifend"@de;
   wdt:P126 "Europäische Union"@de;
   wdt:P973 <https://esco.ec.europa.eu/de>;
   sdo:about "Fach- und Themenzuordnung"@de;
   sdo:name "European Skills Competencies, and Occupations (ESCO)"@de .
 
 <http://example.org/19> a wd:Q1469824;
-  wdt:P7374 "Bildungsbereichsübergreifend"@de;
+  sdo:educationalLevel "Bildungsbereichsübergreifend"@de;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/languageLevel/>;
   sdo:about "Sprachen"@de;
@@ -214,7 +212,7 @@ _:G__2372 a sdo:DataDownload;
   sdo:name "Sprachniveaustufen"@de .
 
 <http://example.org/20> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/digCompEdu/>;
   sdo:about "Kompetenzen"@de;
@@ -236,7 +234,7 @@ Berufsausbildungen"""@de;
   sdo:name "Orientierungsrahmen für die Lehrerausbildung und Lehrerfortbildung in NRW,"@de .
 
 <http://example.org/22> a wd:Q1469824;
-  wdt:P7374 "Bildungsbereichsübergreifend"@de;
+  sdo:educationalLevel "Bildungsbereichsübergreifend"@de;
   wdt:P1324 "welches Kompetenzen im Zeitalter der KI definiert, v1.2"@de;
   wdt:P126 "Centre for Curriculum Redesign"@de;
   wdt:P973 <https://curriculumredesign.org/framework/>;
@@ -307,7 +305,7 @@ auswirkt."""@de;
   sdo:name "DaZKom: Ein Modell professioneller Kompetenzen angehender Lehrkräfte im Bereich Deutsch als Zweitsprache,"@de .
 
 <http://example.org/29> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "Institut für Qualitätsentwicklung im Bildungswesen"@de;
   wdt:P973 <https://github.com/iqb-vocabs/iqb-vocabs.github.io>;
   sdo:about "Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten"@de;
@@ -315,7 +313,7 @@ auswirkt."""@de;
   sdo:name "Bildungsstandards (IQB)"@de .
 
 <http://example.org/30> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "Schulcampus Rheinland-Pfalz"@de;
   wdt:P973 <https://cloud.schulcampus-rlp.de/edu-sharing/components/search>;
   sdo:about "Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten"@de;
@@ -323,7 +321,7 @@ auswirkt."""@de;
   sdo:name "Schulcampus RLP"@de .
 
 <http://example.org/31> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "Institut für Schulqualität der Länder Berlin und Brandenburg e.V."@de;
   wdt:P973 <https://kompetenzbrowser.de/>;
   sdo:about "Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten"@de;
@@ -331,14 +329,14 @@ auswirkt."""@de;
   sdo:name "Kompetenzbrowser des Instituts für Schulqualität der Länder Berlin und Brandenburg e. V. (ISQ)"@de .
 
 <http://example.org/32> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "Mebis"@de;
   wdt:P973 <https://mk-navi.mebis.bycs.de/mctool/schooltypes>;
   sdo:about "Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten"@de;
   sdo:name "Medienkompetenz-Navigator"@de .
 
 <http://example.org/> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "Mebis"@de;
   wdt:P973 <https://www.lehrplanplus.bayern.de/>;
   sdo:about "Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten"@de;
@@ -346,7 +344,7 @@ auswirkt."""@de;
   sdo:name "Lehrplan Plus Bayern"@de .
 
 <http://example.org/33> a wd:Q1469824;
-  wdt:P7374 "Hochschule"@de;
+  sdo:educationalLevel "Hochschule"@de;
   wdt:P126 "Hochschulrektorenkonferenz"@de;
   wdt:P973 <https://www.hochschulkompass.de/>;
   sdo:about "Hochschule: Standards und Modulkataloge"@de;
@@ -354,7 +352,7 @@ auswirkt."""@de;
   sdo:name "Hochschulkompass"@de .
 
 <http://example.org/34> a wd:Q1469824;
-  wdt:P7374 "Lehrerbildung"@de;
+  sdo:educationalLevel "Lehrerbildung"@de;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <http://w3id.org/kim/kmk-vocabs/bildungswissenschaften/>;
   sdo:about "Hochschule: Standards und Modulkataloge"@de;
@@ -368,7 +366,7 @@ und die Berufspraxis."""@de;
   sdo:name "KMK: Standards für die Lehrerbildung: Bildungswissenschaften (vom 16.12.2004 i.d.F. vom 16.05.2019)"@de .
 
 <http://example.org/35> a wd:Q1469824;
-  wdt:P7374 "Primarbereich"@de;
+  sdo:educationalLevel "Primarbereich"@de;
   wdt:P126 "Martin R. Textor"@de;
   wdt:P973 <https://www.kindergartenpaedagogik.de/fachartikel/bildung-erziehung-betreuung/1951/>;
   sdo:about "Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten"@de;
@@ -571,7 +569,7 @@ und die Berufspraxis."""@de;
   sdo:name "SIF Data Model (UK, AU, NZ, NA)"@de .
 
 <http://example.org/64> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "XSchule"@de;
   wdt:P973 <https://xhochschule.de/def/xhochschule/0.92/spec/spezifikation_0.92.pdf>;
   sdo:about "Abschlüsse"@de;
@@ -579,7 +577,7 @@ und die Berufspraxis."""@de;
   sdo:name "Schulabschlüsse"@de .
 
 <http://example.org/65> a wd:Q1469824;
-  wdt:P7374 "Schule"@de;
+  sdo:educationalLevel "Schule"@de;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/schulabschluesse/>;
   sdo:about "Abschlüsse"@de;
@@ -587,7 +585,7 @@ und die Berufspraxis."""@de;
   sdo:name "Schulabschlüsse"@de .
 
 <http://example.org/66> a wd:Q1469824;
-  wdt:P7374 "Hochschule"@de;
+  sdo:educationalLevel "Hochschule"@de;
   wdt:P126 "XHochschule"@de;
   wdt:P973 <https://xhochschule.de/def/xhochschule/0.92/spec/spezifikation_0.92.pdf>;
   sdo:about "Abschlüsse"@de;
@@ -595,7 +593,7 @@ und die Berufspraxis."""@de;
   sdo:name "Hochschulabschlüsse"@de .
 
 <http://example.org/67> a wd:Q1469824;
-  wdt:P7374 "Hochschule"@de;
+  sdo:educationalLevel "Hochschule"@de;
   wdt:P1324 "https://github.com/dini-ag-kim/destatis-schluesseltabellen"@de;
   wdt:P126 "Destatis"@de;
   wdt:P973 <https://erhebungsportal.estatistik.de/Erhebungsportal/informationen/statistik-der-studenten-372>;
@@ -604,7 +602,7 @@ und die Berufspraxis."""@de;
   sdo:name "Destatis Schlüsseltabellen für Abschlüsse im Erhebungsportal"@de .
 
 <http://example.org/68> a wd:Q1469824;
-  wdt:P7374 "Hochschule"@de;
+  sdo:educationalLevel "Hochschule"@de;
   wdt:P126 "Hochschulrektorenkonferenz"@de;
   wdt:P973 <https://www.hochschulkompass.de/>;
   sdo:about "Abschlüsse"@de;
@@ -612,7 +610,7 @@ und die Berufspraxis."""@de;
   sdo:name "Abschlüsse"@de .
 
 <http://example.org/69> a wd:Q1469824;
-  wdt:P7374 "Hochschule"@de;
+  sdo:educationalLevel "Hochschule"@de;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <http://w3id.org/kim/kmk-vocabs/lehramtstypen/>;
   sdo:about "Abschlüsse"@de;
@@ -620,7 +618,7 @@ und die Berufspraxis."""@de;
   sdo:name "Lehramtstypen"@de .
 
 <http://example.org/70> a wd:Q1469824;
-  wdt:P7374 "Ausbildung"@de;
+  sdo:educationalLevel "Ausbildung"@de;
   wdt:P126 "Bundesinstitut für Berufsbildung"@de;
   wdt:P973 <https://www.bibb.de/dienst/publikationen/de/suche?publication_search_result_voe%5Bseries%5D=verzeichnis%20der%20anerkannten%20ausbildungsberufe&publication_search_result_voe%5BentriesPerPage%5D=10&publication_search_result_voe%5Bsorting%5D=newest_desc>;
   sdo:about "Abschlüsse"@de;
@@ -642,7 +640,7 @@ und die Berufspraxis."""@de;
   sdo:name "Thema / Trainings"@de .
 
 <http://example.org/73> a wd:Q1469824;
-  wdt:P7374 "Bildungsbereichsübergreifend"@de;
+  sdo:educationalLevel "Bildungsbereichsübergreifend"@de;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/graduation/>;
   sdo:about "Abschlüsse"@de;
@@ -977,7 +975,7 @@ ISO 639-1 Sprachthesaurus"""@de .
   sdo:name "Content Types"@de .
 
 <http://example.org/121> a wd:Q1469824;
-  wdt:P7374 "Hochschule"@de;
+  sdo:educationalLevel "Hochschule"@de;
   wdt:P126 "ORCID"@de;
   wdt:P973 <https://web.archive.org/web/20231219115237/https://info.orcid.org/ufaqs/what-work-types-does-orcid-support/>;
   sdo:about "Ressourcentyp, Medientyp"@de;
