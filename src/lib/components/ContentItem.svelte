@@ -8,7 +8,7 @@
 	<meta property="og:title" content={item.title} />
 </svelte:head>
 
-<article class="item">
+<article class="item prose max-w-5xl">
 	<hgroup>
 		<h1><a href={`/content/${item.slug}`}>{item.title}</a></h1>
 		<p>{item.date}</p>

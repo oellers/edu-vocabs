@@ -2,10 +2,10 @@
 	import { resetFilters } from '$lib/db';
 </script>
 
-<div
+<button
 	onclick={resetFilters}
+	onkeydown={(e) => e.key === 'Enter' && resetFilters()}
 	tabindex="0"
-	role="button"
 	class="mt-2
   w-52
   select-none
@@ -23,4 +23,4 @@
   focus:ring-gray-300"
 >
 	Filter zurücksetzen
-</div>
+</button>
