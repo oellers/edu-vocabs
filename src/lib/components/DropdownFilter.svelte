@@ -30,17 +30,22 @@
 			<CaretDown />
 		</div>
 		<ul
-			tabindex="0"
-			class="menu dropdown-content z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+			class="menu dropdown-content z-[1] mt-3 max-h-96 w-64 flex-nowrap overflow-y-auto rounded-box bg-base-100 p-2 shadow"
 		>
 			{#each $db.filters[filterKey] as filterVal}
 				<li
 					class="overflow-hidden rounded"
 					class:bg-info={$db.selectedFilters[filterKey].includes(filterVal)}
 					class:text-black={$db.selectedFilters[filterKey].includes(filterVal)}
-					onclick={() => handleFilterSelect(filterKey, filterVal)}
 				>
-					<a>{filterVal}</a>
+					<button
+						type="button"
+						role="option"
+						aria-selected={$db.selectedFilters[filterKey].includes(filterVal)}
+						onclick={() => handleFilterSelect(filterKey, filterVal)}
+					>
+						{filterVal}
+					</button>
 				</li>
 			{/each}
 		</ul>

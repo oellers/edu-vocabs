@@ -4,7 +4,11 @@
 	export let key;
 </script>
 
-<div onclick={() => handleFilterSelect(key, val)} class="badge badge-info select-none gap-2">
+<button
+	aria-label="Filter {val} entfernen"
+	onclick={() => handleFilterSelect(key, val)}
+	class="badge badge-info select-none gap-2"
+>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		fill="none"
@@ -15,4 +19,4 @@
 		></path>
 	</svg>
 	{val}
-</div>
+</button>
