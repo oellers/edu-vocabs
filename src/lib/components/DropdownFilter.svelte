@@ -29,7 +29,9 @@
 			<span>{title}</span>
 			<CaretDown />
 		</div>
-		<ul class="menu dropdown-content z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
+		<ul
+			class="menu dropdown-content z-[1] mt-3 max-h-96 w-64 flex-nowrap overflow-y-auto rounded-box bg-base-100 p-2 shadow"
+		>
 			{#each $db.filters[filterKey] as filterVal}
 				<li
 					class="overflow-hidden rounded"
