@@ -1,17 +1,28 @@
-import { writable, get } from 'svelte/store';
+import { writable, get, derived } from 'svelte/store';
 import { config } from '$lib/config';
 import pkg from 'flexsearch';
 
 export const db = writable({
 	resultsPerPage: 10,
-	activePage: 0,
+	activePage: 1,
 	query: '',
 	results: [],
+	paginatedResults: [],
 	filters: {},
 	index: {},
 	filterKeys: config.filterKeys,
 	selectedFilters: initFilters()
 });
+
+export function updatePagination(direction) {
+	db.update((db) => {
+		const activePage = db.activePage + direction;
+		const startIndex = activePage * db.resultsPerPage;
+		const endIndex = startIndex + db.resultsPerPage;
+		const paginatedResults = db.results.slice(startIndex, endIndex);
+		return { ...db, activePage, paginatedResults };
+	});
+}
 
 const { Document } = pkg;
 const index = new Document({ ...config.index });
@@ -37,6 +48,7 @@ export function fillResults() {
 		e.type.includes('http://www.wikidata.org/entity/Q1469824')
 	);
 	updateResults(results);
+	updatePagination(0);
 }
 
 export function search(event) {
