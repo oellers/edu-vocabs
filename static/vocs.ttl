@@ -14,6 +14,7 @@
   dct:issued "2021-03-03"^^xsd:date;
   sdo:about "Fach- und Themenzuordnung"@de;
   sdo:description "Werteliste von Fächern im Schulbereich."@de;
+  sdo:educationalLevel "Schule"@de ;
   sdo:name "Schulfächer"@de;
   sdo:distribution _:G__2365, _:G__2366 .
 
@@ -85,6 +86,7 @@ _:G__2368 a sdo:DataDownload;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/hochschulfaechersystematik/scheme>;
   dct:issued "2019-12-11"^^xsd:date;
+  sdo:educationalLevel "Hochschule"@de ;
   sdo:about "Fach- und Themenzuordnung"@de;
   sdo:description "Diese SKOS-Klassifikation basiert auf der Destatis-\"Systematik der Fächergruppen, Studienbereiche und Studienfächer\"."@de;
   sdo:name "Hochschulfächersystematik"@de;
