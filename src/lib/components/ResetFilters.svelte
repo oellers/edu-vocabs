@@ -4,6 +4,7 @@
 
 <button
 	onclick={resetFilters}
+	type="button"
 	onkeydown={(e) => e.key === 'Enter' && resetFilters()}
 	tabindex="0"
 	class="mt-2
