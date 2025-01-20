@@ -11,7 +11,7 @@
 	const rawVocab = $derived(result?.rawVocab?.[0] ?? '');
 
 	if (distribution && distribution.length) {
-		const jsonLink = distribution.find((d) => d.encodingFormat.includes('application/json'));
+		const jsonLink = distribution.find((d) => d.fileFormat.includes('application/json'));
 		if (jsonLink) {
 			getVocabs(jsonLink.contentUrl).then((data) => {
 				vocabData = data;

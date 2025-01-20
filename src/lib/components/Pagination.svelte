@@ -1,5 +1,5 @@
 <script>
-	import { db } from '$lib/db';
+	import { db, updatePagination } from '$lib/db';
 
 	function goToPage() {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -13,9 +13,7 @@
 		<button
 			disabled={$db.activePage === 0}
 			onclick={() => {
-				db.update((db) => {
-					return { ...db, activePage: db.activePage - 1 };
-				});
+				updatePagination(-1);
 				goToPage();
 			}}
 			class="btn join-item">«</button
@@ -24,9 +22,7 @@
 		<button
 			disabled={$db.activePage + 1 === totalPages}
 			onclick={() => {
-				db.update((db) => {
-					return { ...db, activePage: db.activePage + 1 };
-				});
+				updatePagination(1);
 				goToPage();
 			}}
 			class="btn join-item">»</button
