@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 765 748">
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	xml:space="preserve"
+	viewBox="0 0 765 748"
+	fill="currentColor"
+>
 	<path
 		d="m479 511 4-1h-1zm-328 41c-26 0-38 0-38 2h25c37-1 43-2 13-2zm140 44 10 3c-11-6-23-11-35-15-46-11-93-17-140-16l-8 1 15 1 27 2-23 3-22 2h16c54-6 109 1 160 19z"
 	/>
