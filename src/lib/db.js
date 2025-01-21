@@ -1,10 +1,10 @@
-import { writable, get } from 'svelte/store';
+import { writable, get, derived } from 'svelte/store';
 import { config } from '$lib/config';
 import pkg from 'flexsearch';
 
 export const db = writable({
 	resultsPerPage: 10,
-	activePage: 0,
+	activePage: 1,
 	query: '',
 	results: [],
 	filters: {},
@@ -12,6 +12,20 @@ export const db = writable({
 	filterKeys: config.filterKeys,
 	selectedFilters: initFilters()
 });
+
+export const paginatedResults = derived(db, ($db) => {
+	const startIndex = $db.activePage * $db.resultsPerPage;
+	const endIndex = startIndex + $db.resultsPerPage;
+	const paginatedResults = $db.results.slice(startIndex, endIndex);
+	return paginatedResults;
+});
+
+export function updatePagination(direction) {
+	db.update((db) => {
+		const activePage = db.activePage + direction;
+		return { ...db, activePage };
+	});
+}
 
 const { Document } = pkg;
 const index = new Document({ ...config.index });
