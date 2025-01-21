@@ -2,15 +2,16 @@
 	import { db } from '$lib/db';
 	import { parseToSkos } from '$lib/utils';
 	import VocabConcept from '$lib/components/VocabConcept.svelte';
+	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
 
 	let { id } = $props();
 	let vocabData = $state(null);
 	const result = $db.index?.store?.[id] ?? {};
 
-	const distribution = $derived(result?.distribution?.map((e) => $db.index.store[e]));
-	const jsonLink = distribution?.find((d) => d.fileFormat.includes('application/json'));
-	const ttlLink = distribution?.find((d) => d.fileFormat.includes('text/turtle'));
-	const rawVocab = $derived(result?.rawVocab?.[0] ?? '');
+	const distribution = $derived(result[vp.distribution]?.map((e) => $db.index.store[e]));
+	const jsonLink = distribution?.find((d) => d[vp.fileFormat].includes('application/json'));
+	const ttlLink = distribution?.find((d) => d[vp.fileFormat].includes('text/turtle'));
+	const rawVocab = $derived(result[vp.rawVocab]?.[0] ?? '');
 
 	if (distribution && distribution.length) {
 		if (jsonLink) {
