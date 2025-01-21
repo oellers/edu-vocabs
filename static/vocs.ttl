@@ -18,7 +18,7 @@
   sdo:distribution _:G__2365, _:G__2366 .
 
 _:G__2365 a sdo:DataDownload;
-  sdo:contentUrl <http://w3id.org/kim/schulfaecher/index.json>;
+  sdo:contentUrl <https://w3id.org/kim/schulfaecher/index.json>;
   sdo:fileFormat "application/json" .
 
 _:G__2366 a sdo:DataDownload;
@@ -130,7 +130,7 @@ _:G__2371 a sdo:DataDownload;
   sdo:distribution _:G__2372 .
 
 _:G__2372 a sdo:DataDownload;
-  sdo:contentUrl <http://w3id.org/openeduhub/vocabs/oeh-topics/5e40e372-735c-4b17-bbf7-e827a5702b57.json>;
+  sdo:contentUrl <https://w3id.org/openeduhub/vocabs/oeh-topics/5e40e372-735c-4b17-bbf7-e827a5702b57.json>;
   sdo:fileFormat "application/json" .
 
 <http://example.org/11> a wd:Q1469824;
