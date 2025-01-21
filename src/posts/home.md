@@ -28,14 +28,6 @@ Die Einführung dieser Datenbank zielt darauf ab:
 
 Durch die erhöhte Sichtbarkeit und Nachnutzbarkeit der Vokabulare bietet unsere Datenbank eine wertvolle Ressource für die Recherche kontrollierter Vokabulare aus nationalen, europäischen und internationalen Bildungsprojekten.
 
-## Entstehungshintergrund
-
-Die Datenbank entstand im Forschungs- und Entwicklungsprojekt Bildungsraum Digital (BIRD). BIRD verfolgt das Ziel, eine digitale Infrastruktur zu schaffen, die es verschiedenen Akteuren der Bildungslandschaft ermöglicht, digitale Bildungsplattformen effizient zu vernetzen.
-
-In diesem Kontext wurde diese Vokabulardatenbank für den Bildungsbereich entwickelt, die bestehende kontrollierte Vokabulare sammelt, strukturiert und für die Wiederverwendung und Nachnutzung zugänglich macht.
-
-Diese Datenbank soll die Kommunikation zwischen Zielgruppen und Stakeholdern erleichtern und harmonisierende Effekte in der Bildungslandschaft fördern, so dass Dienste interoperabler gestaltet sowie Mehraufwände bei der Entwicklung von Vokabularen reduziert werden können, indem diese sichtbarer werden und somit eine Nachnutzung wahrscheinlicher wird.
-
 ## Eduvocs - Die interaktive Vokabulardatenbank
 
 ✅ minimiert fragmentierte Insellösungen einer heterogenen Bildungslandschaft
