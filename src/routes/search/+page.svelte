@@ -2,7 +2,7 @@
 	import { db, search } from '$lib/db';
 	import DropdownFilter from '$lib/components/DropdownFilter.svelte';
 	import Results from '$lib/components/Results.svelte';
-	import Search from '$lib/icons/Search.svelte';
+	import Search from '$lib/icons/SearchIcon.svelte';
 	import ResetFilters from '$lib/components/ResetFilters.svelte';
 </script>
 
