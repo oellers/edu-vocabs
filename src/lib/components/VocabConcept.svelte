@@ -4,7 +4,7 @@
 </script>
 
 {#if concept}
-	<div>
+	<div class="my-1">
 		<p>{concept.prefLabel?.de}</p>
 
 		{#if concept.narrower && concept.narrower.length}
