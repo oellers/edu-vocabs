@@ -19,7 +19,7 @@ async function getPost(slug) {
 		const fileSlug = path.split('/').at(-1)?.replace('.md', '');
 
 		if (file && typeof file === 'object' && 'metadata' in file && fileSlug === slug) {
-			const metadata = file.metadata;
+			const metadata = file.metadata || {};
 			post = { ...(typeof metadata === 'object' ? metadata : {}), slug };
 			return post;
 		}
