@@ -5,15 +5,15 @@
 	let open = false;
 </script>
 
-<button class="btn btn-primary lg:hidden" on:click={() => (open = !open)}>
+<button class="btn btn-primary lg:hidden" onclick={() => (open = !open)}>
 	<MenuIcon />
 </button>
 <button
 	type="button"
 	class={`fixed inset-0 z-40 bg-gray-800 bg-opacity-75 transition-opacity lg:hidden ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
-	on:click={() => (open = false)}
+	onclick={() => (open = false)}
 	aria-label="Close sidebar"
-	on:keydown={(e) => e.key === 'Enter' && (open = false)}
+	onkeydown={(e) => e.key === 'Enter' && (open = false)}
 ></button>
 <div
 	class={`fixed inset-y-0 left-0 z-50 w-64 transform bg-base-100 shadow-md transition-transform lg:static lg:inset-0 lg:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'}`}

@@ -2,8 +2,7 @@
 	import { db, handleFilterSelect } from '$lib/db';
 	import CaretDown from '$lib/icons/CaretDown.svelte';
 
-	export let title;
-	export let filterKey;
+	let { title, filterKey } = $props();
 </script>
 
 <div class="dropdown">
