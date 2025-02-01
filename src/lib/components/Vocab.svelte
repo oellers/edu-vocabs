@@ -3,17 +3,17 @@
 	import { parseToSkos } from '$lib/utils';
 	import VocabConcept from '$lib/components/VocabConcept.svelte';
 	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
+	import VocabDownload from './VocabDownload.svelte';
 
 	let { id } = $props();
 	let vocabData = $state(null);
-	const result = $db.index?.store?.[id] ?? {};
 
-	const distribution = $derived(result[vp.distribution]?.map((e) => $db.index.store[e]));
-	const jsonLink = distribution?.find((d) => d[vp.fileFormat].includes('application/json'));
-	const ttlLink = distribution?.find((d) => d[vp.fileFormat].includes('text/turtle'));
+	const result = $db.index?.store?.[id] ?? {};
+	const vocabDistribution = $derived(result[vp.distribution]?.map((e) => $db.index.store[e]));
+	const jsonLink = vocabDistribution?.find((d) => d[vp.fileFormat].includes('application/json'));
 	const rawVocab = $derived(result[vp.rawVocab]?.[0] ?? '');
 
-	if (distribution && distribution.length) {
+	if (vocabDistribution && vocabDistribution.length) {
 		if (jsonLink) {
 			getVocabs(jsonLink.contentUrl).then((data) => {
 				vocabData = data;
@@ -30,21 +30,18 @@
 	}
 </script>
 
-{#if vocabData}
-	<div class="mt-1 flex flex-row justify-between">
-		<div class="flex flex-col">
+<div class="mt-1 flex flex-row justify-between">
+	<div class="flex flex-col">
+		{#if vocabData}
 			<h1 class="text-xl">Vokabular-Vorschau</h1>
 			{#each vocabData.hasTopConcept as topConcept}
 				<VocabConcept concept={topConcept} />
 			{/each}
-		</div>
-		<div>
-			{#if jsonLink}
-				<a href={jsonLink.contentUrl} class="btn">JSON</a>
-			{/if}
-			{#if ttlLink}
-				<a href={ttlLink.contentUrl} class="btn">Turtle</a>
-			{/if}
-		</div>
+		{/if}
 	</div>
-{/if}
+	<div class="flex flex-col">
+		{#if vocabDistribution}
+			<VocabDownload {vocabDistribution} />
+		{/if}
+	</div>
+</div>

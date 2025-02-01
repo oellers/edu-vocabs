@@ -21,10 +21,6 @@ EduVocs is a resource for exploring vocabularies from national and international
 
 Every interested party is encouraged to contribute to this project.
 
-### Frameworks
-
-- [Svelte](https://svelte.dev/)
-
 ### Local server
 
 Run the local development server:
@@ -70,6 +66,11 @@ Deploy the app, e.g. with Vercel by using the `@sveltejs/adapter-vercel` (see [D
 - **`check:watch`**: Runs `check` in watch mode to dynamically validate changes.
 - **`format`**: Formats the project files using Prettier.
 - **`lint`**: Checks the project files for style and syntax issues using Prettier and ESLint.
+
+### Frameworks and Libraries
+
+- [Svelte](https://svelte.dev/)
+- [FlexSearch](https://github.com/nextapps-de/flexsearch)
 
 ## Contributions
 
