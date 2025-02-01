@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import ContentItemList from '$lib/components/ContentItemList.svelte';
 	let { data } = $props();
 </script>

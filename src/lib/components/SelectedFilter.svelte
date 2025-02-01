@@ -1,7 +1,6 @@
 <script>
 	import { handleFilterSelect } from '$lib/db';
-	export let val;
-	export let key;
+	let { val, key } = $props();
 </script>
 
 <button

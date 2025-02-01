@@ -1,5 +1,6 @@
 <script>
 	import { db } from '$lib/db';
+	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
 	let { id, externalLink = false } = $props();
 	const result = $db.index?.store?.[id] ?? {};
 
@@ -17,15 +18,16 @@
 								<p class="text-lg font-bold">
 									<a
 										class="hover:underline"
-										href={externalLink ? `/voc/${encodeURIComponent(result.id)}` : result.P973}
-										>{result.name}</a
+										href={externalLink
+											? `/voc/${encodeURIComponent(result[vp.id])}`
+											: result[vp.describedAt]}>{result[vp.name]}</a
 									>
-									{result.P126 ? `(${result.P126})` : ''}
+									{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
 								</p>
-								<p>{result.description}</p>
+								<p>{result[vp.description]}</p>
 							</div>
 
-							{#if result.about}
+							{#if result[vp.about]}
 								<div class="m-2">
 									<div
 										class="
@@ -37,11 +39,11 @@
 											font-bold
 											text-white"
 									>
-										{result.about}
+										{result[vp.about]}
 									</div>
 								</div>
 							{/if}
-							{#if result.educationalLevel}
+							{#if result[vp.educationalLevel]}
 								<div class="m-2">
 									<div
 										class="
@@ -53,7 +55,7 @@
 											font-bold
 											text-white"
 									>
-										{result.educationalLevel}
+										{result[vp.educationalLevel]}
 									</div>
 								</div>
 							{/if}

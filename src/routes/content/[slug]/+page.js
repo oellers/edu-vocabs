@@ -1,5 +1,4 @@
 import { error } from '@sveltejs/kit';
-import type { Post } from '$lib/types/Post';
 
 export async function load({ params }) {
 	try {
