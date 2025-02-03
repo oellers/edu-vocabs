@@ -26,7 +26,7 @@
 	});
 </script>
 
-<button class="btn btn-square btn-ghost">
+<button onclick={toggleTheme} class="btn btn-square btn-ghost">
 	<label class="swap swap-rotate h-12 w-12">
 		<input type="checkbox" onchange={toggleTheme} checked={!isDarkMode} />
 		<span class="swap-on" title="Zum Light Mode wechseln"><MoonIcon /></span>
