@@ -18,9 +18,11 @@
 				</div>
 				<p class="shrink-0">Suchergebnisse: {$db.results.length}</p>
 			</div>
-			{#each $paginatedResults as result (result.id)}
-				<Result externalLink={true} id={result.id} />
-			{/each}
+			<div class="flex flex-col items-center justify-center">
+				{#each $paginatedResults as result (result.id)}
+					<Result externalLink={true} id={result.id} />
+				{/each}
+			</div>
 		</div>
 	{/if}
 

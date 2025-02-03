@@ -15,7 +15,7 @@
 </script>
 
 {#if $db.resultsPerPage < $db.results.length}
-	<div class="pagination">
+	<div class="pagination join m-2">
 		<!-- First page -->
 		<button
 			disabled={$db.activePage === 0}
