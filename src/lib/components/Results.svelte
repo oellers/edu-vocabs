@@ -5,7 +5,7 @@
 	import Result from '$lib/components/Result.svelte';
 </script>
 
-<div class="flex w-full flex-col items-center justify-center gap-2">
+<div class="flex w-full flex-col">
 	{#if $db.results.length}
 		<div class="mb-4 mt-2 w-full">
 			<div class="flex flex-row justify-between">
@@ -25,6 +25,5 @@
 			</div>
 		</div>
 	{/if}
-
 	<Pagination />
 </div>
