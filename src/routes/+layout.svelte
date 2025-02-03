@@ -11,11 +11,11 @@
 	});
 </script>
 
-<div class="flex flex-row">
-	<div class="mt-8 basis-1/4 pl-4">
+<div class="mt-8 flex flex-row">
+	<div class="px-4">
 		<Sidebar />
 	</div>
-	<div class="mt-8 w-full">
+	<div class="w-full">
 		{@render children()}
 	</div>
 </div>

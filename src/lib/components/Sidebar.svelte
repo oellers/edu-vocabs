@@ -1,6 +1,6 @@
 <script>
 	import MenuIcon from '$lib/icons/MenuIcon.svelte';
-	import Logo from '$lib/icons/Logo.svelte';
+	import BrandIcon from '$lib/icons/BrandIcon.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	let open = false;
 </script>
@@ -18,8 +18,8 @@
 <div
 	class={`fixed inset-y-0 left-0 z-50 w-64 transform bg-base-100 shadow-md transition-transform lg:static lg:inset-0 lg:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'}`}
 >
-	<nav class="flex flex-col gap-4 p-4">
-		<a href="/"><Logo /></a>
+	<nav class="flex flex-col gap-2 p-4">
+		<a href="/"><BrandIcon /></a>
 		<div class="flex justify-center">
 			<ThemeToggle />
 		</div>

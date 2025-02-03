@@ -6,7 +6,7 @@
 <button
 	aria-label="Filter {val} entfernen"
 	onclick={() => handleFilterSelect(key, val)}
-	class="badge badge-info select-none gap-2"
+	class="btn btn-outline btn-primary btn-xs mb-1 mr-1 h-auto p-1"
 >
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
