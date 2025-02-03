@@ -5,22 +5,22 @@
 	import Result from '$lib/components/Result.svelte';
 </script>
 
-<div class="flex w-full flex-col">
+<div class="flex flex-col">
 	{#if $db.results.length}
-		<div class="mb-4 mt-2 w-full">
-			<div class="flex flex-row justify-between">
-				<div class="flex cursor-pointer flex-row flex-wrap gap-2">
+		<div class="my-2">
+			<div>
+				<div>
 					{#each Object.entries($db.selectedFilters) as filter}
 						{#each filter[1] as f}
 							<SelectedFilter val={f} key={filter[0]} />
 						{/each}
 					{/each}
 				</div>
-				<p class="shrink-0">Suchergebnisse: {$db.results.length}</p>
+				<p>Suchergebnisse: {$db.results.length}</p>
 			</div>
-			<div class="flex flex-col items-center justify-center">
+			<div>
 				{#each $paginatedResults as result (result.id)}
-					<Result externalLink={true} id={result.id} />
+					<Result externalLink={false} id={result.id} />
 				{/each}
 			</div>
 		</div>

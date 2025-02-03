@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>{item.title}</title>
+	<title>EduVocs: {item.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={item.title} />
 </svelte:head>
