@@ -1,9 +1,10 @@
 <script>
+	import { t } from 'svelte-i18n';
 	let { item, extended = true } = $props();
 </script>
 
 <svelte:head>
-	<title>EduVocs: {item.title}</title>
+	<title>{$t('brand')}: {item.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={item.title} />
 </svelte:head>

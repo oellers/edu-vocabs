@@ -1,12 +1,17 @@
 <script>
 	import VocabConcept from '$lib/components/VocabConcept.svelte';
 	let { concept } = $props();
+	import { locale } from 'svelte-i18n';
 </script>
 
 {#if concept}
 	<div class="my-1">
-		<p>{concept.prefLabel?.de}</p>
-
+		<p>
+			{concept.prefLabel?.[$locale] ||
+				concept.prefLabel?.[$locale.slice(0, 2)] ||
+				concept.prefLabel?.de ||
+				concept.prefLabel?.en}
+		</p>
 		{#if concept.narrower && concept.narrower.length}
 			<div style="margin-left: 20px;">
 				{#each concept.narrower as narrower}

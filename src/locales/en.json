@@ -1,0 +1,78 @@
+{
+	"brand": "EduVocs",
+	"search": "Search",
+	"results": "Suchergebnisse",
+	"download": "Download",
+	"preview": "Vorschau",
+	"info": "Info",
+	"format": {
+		"application/json": "JSON",
+		"text/turtle": "Turtle"
+	},
+	"buttons": {
+		"external": "Zum Anbieter"
+	},
+	"pagination": {
+		"previous": "Zurück",
+		"to": "Seite {pageNumber}",
+		"next": "Weiter",
+		"first": "Erste Seite",
+		"last": "Letzte Seite"
+	},
+	"md": {
+		"issued": "Veröffentlicht",
+		"compliesWith": "Kompatibel mit"
+	},
+	"filter": {
+		"reset": "Filter zurücksetzen",
+		"remove": "Filter {filterName} entfernen",
+		"about": "Themenfeld",
+		"educationalLevel": "Bildungsstufe"
+	},
+	"terms": {
+		"Fach- und Themenzuordnung": "Fach- und Themenzuordnung",
+		"Hochschule: Standards und Modulkataloge": "Hochschule: Standards und Modulkataloge",
+		"Lernkontrollen": "Lernkontrollen",
+		"Zielgruppe": "Zielgruppe",
+		"Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten": "Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten",
+		"Lehr-/Lernform (Interaktivitätstyp)": "Lehr-/Lernform (Interaktivitätstyp)",
+		"Sprachen": "Sprachen",
+		"Abschlüsse": "Abschlüsse",
+		"Schularten, Schultypen, Schulformen": "Schularten, Schultypen, Schulformen",
+		"Klassenstufen, Jahrgangsstufen oder Fachsemester": "Klassenstufen, Jahrgangsstufen oder Fachsemester",
+		"Barrierearmut": "Barrierearmut",
+		"Ressourcentyp, Medientyp": "Ressourcentyp, Medientyp",
+		"Granularität": "Granularität",
+		"Didaktische Kontextualisierung": "Didaktische Kontextualisierung",
+		"Lizenzen": "Lizenzen",
+		"Ausbildung": "Ausbildung",
+		"Lehrformat, Veranstaltungsformat, Lehrmodus": "Lehrformat, Veranstaltungsformat, Lehrmodus",
+		"Kompetenzen": "Kompetenzen",
+		"Hochschule": "Hochschule",
+		"Lehrerbildung": "Lehrkräftebildung",
+		"Primarbereich": "Primarbereich",
+		"Schule": "Schule",
+		"Bildungsbereichsübergreifend": "Bildungsbereichsübergreifend",
+		"digitalisierungsbezogene Kompetenzen": "Digitalisierungsbezogene Kompetenzen"
+	},
+	"menu": {
+		"home": "Startseite",
+		"contact": "Kontakt",
+		"search": "Suche"
+	},
+	"sidebar": {
+		"close": "Seitenmenü schließen",
+		"top": "Nach oben scrollen"
+	},
+	"switch": {
+		"darkmode": "Zum Dark Mode wechseln",
+		"lightmode": "Zum Light Mode wechseln"
+	},
+	"voc": {
+		"view": "Vokabular: Detailansicht",
+		"preview": "Vokabular-Vorschau"
+	},
+	"error": {
+		"404": "Could not find content"
+	}
+}

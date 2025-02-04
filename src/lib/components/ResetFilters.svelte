@@ -1,5 +1,6 @@
 <script>
 	import { resetFilters } from '$lib/db';
+	import { t } from 'svelte-i18n';
 </script>
 
 <button
@@ -9,5 +10,5 @@
 	tabindex="0"
 	class="btn mt-2"
 >
-	Filter zurücksetzen
+	{$t('filter.reset')}
 </button>

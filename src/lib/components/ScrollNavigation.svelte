@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { t } from 'svelte-i18n';
 	import ArrowUpIcon from '$lib/icons/ArrowUpIcon.svelte';
 
 	let showScrollButton = false;
@@ -23,8 +24,9 @@
 
 {#if showScrollButton}
 	<button
+		aria-label={$t('sidebar.top')}
 		transition:fade
-		class="btn btn-outline btn-accent fixed bottom-4 shadow-lg max-lg:left-4 lg:right-4"
+		class="btn btn-outline btn-accent fixed bottom-6 shadow-lg max-lg:left-4 lg:right-4"
 		on:click={scrollToTop}
 	>
 		<ArrowUpIcon />
