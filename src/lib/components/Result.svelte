@@ -7,6 +7,7 @@
 	let { id } = $props();
 	const result = $db.index?.store?.[id] ?? {};
 	$state.snapshot(result);
+	let isOpen = $state(false);
 </script>
 
 {#if result}
@@ -14,14 +15,18 @@
 		<ul class="mt-2 flex flex-col">
 			<li class="flex flex-row flex-wrap rounded border border-slate-400">
 				<div class="w-3/4 lg:pr-5">
-					<div class="collapse collapse-open">
-						<input type="checkbox" />
-						<div class="collapse-title text-lg font-medium">
-							{result[vp.name]}
-							{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
+					<div class="class:collapse-open={isOpen} collapse">
+						<input type="checkbox" bind:checked={isOpen} />
+						<div class="collapse-title">
+							<p class="mb-1 text-lg font-medium">
+								{result[vp.name]}
+								{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
+							</p>
+							<p class={!isOpen ? 'line-clamp-3' : ''}>{result[vp.description]}</p>
 						</div>
 						<div class="collapse-content">
-							<p>{result[vp.description]}</p>
+							<!-- Additional space for content -->
+							<!-- Alternative place for badges -->
 						</div>
 					</div>
 				</div>
