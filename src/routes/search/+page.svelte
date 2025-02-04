@@ -4,6 +4,7 @@
 	import Results from '$lib/components/Results.svelte';
 	import SearchIcon from '$lib/icons/SearchIcon.svelte';
 	import ResetFilters from '$lib/components/ResetFilters.svelte';
+	import ScrollNavigation from '$lib/components/ScrollNavigation.svelte';
 </script>
 
 <svelte:head>
@@ -36,4 +37,5 @@
 	</form>
 
 	<Results />
+	<ScrollNavigation />
 </div>
