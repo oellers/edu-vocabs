@@ -13,26 +13,36 @@
 {#if result}
 	<div>
 		<ul class="mt-2 flex flex-col">
-			<li class="flex flex-row flex-wrap rounded border border-slate-400">
+			<!-- Card -->
+			<li class="flex flex-row flex-wrap rounded border border-slate-400 bg-base-100 shadow-md">
 				<div class="w-3/4 lg:pr-5">
+					<!-- Card title -->
+					<p class="pb- ml-4 mt-2 text-lg font-medium">
+						{result[vp.name]}
+						{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
+						{#if result[vp.issued]}
+							<span class="badge badge-ghost">
+								{new Date(result[vp.issued]).getFullYear()}
+							</span>
+						{/if}
+					</p>
+					<!-- Card content -->
 					<div class="class:collapse-open={isOpen} collapse">
 						<input type="checkbox" bind:checked={isOpen} />
 						<div class="collapse-title">
-							<p class="mb-1 text-lg font-medium">
-								{result[vp.name]}
-								{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
-							</p>
 							<p class={!isOpen ? 'line-clamp-3' : ''}>{result[vp.description]}</p>
 						</div>
 						<div class="collapse-content">
 							<!-- Additional space for content -->
-							<!-- Alternative place for badges -->
+							<!-- Alternative place for metadata badges -->
 						</div>
 					</div>
 				</div>
+				<!-- Card menu -->
 				<div class="mt-2 flex w-1/4 flex-wrap content-start justify-end p-2">
 					<ResultMenu {result} />
 				</div>
+				<!-- Card footer -->
 				<div class="flex w-full flex-wrap content-start p-2">
 					<div class="divider !m-0 w-full"></div>
 					{#each config.filterKeys as key}
