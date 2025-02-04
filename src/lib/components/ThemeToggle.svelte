@@ -4,7 +4,7 @@
 	import MoonIcon from '$lib/icons/MoonIcon.svelte';
 
 	const themeAttribute = 'data-theme';
-	const lightTheme = 'light';
+	const lightTheme = 'fantasy';
 	const darkTheme = 'night';
 
 	let theme = $state(lightTheme);
