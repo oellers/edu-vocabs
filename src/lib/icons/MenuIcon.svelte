@@ -5,6 +5,7 @@
 	stroke="currentColor"
 	class="h-6 w-6"
 >
+	<title>Menu Icon</title>
 	<path
 		stroke-linecap="round"
 		stroke-linejoin="round"

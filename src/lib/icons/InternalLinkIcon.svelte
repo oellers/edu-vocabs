@@ -6,6 +6,7 @@
 	stroke="currentColor"
 	class="size-6"
 >
+	<title>Internal Link Icon</title>
 	<path
 		stroke-linecap="round"
 		stroke-linejoin="round"

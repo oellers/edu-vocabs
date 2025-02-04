@@ -19,11 +19,11 @@
 	class={`fixed inset-y-0 left-0 z-50 w-64 transform bg-base-100 shadow-md transition-transform lg:static lg:inset-0 lg:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'}`}
 >
 	<nav class="flex flex-col gap-2 p-4">
-		<a href="/"><BrandIcon /></a>
+		<a aria-label="Zur Startseite" href="/"><BrandIcon /></a>
 		<div class="flex justify-center">
 			<ThemeToggle />
 		</div>
-		<a href="/search" class="btn btn-ghost">Suche</a>
-		<a href="/content/contact" class="btn btn-ghost">Kontakt</a>
+		<a aria-label="Zur Vokabularsuche" href="/search" class="btn btn-ghost">Suche</a>
+		<a aria-label="Zur Kontaktseite" href="/content/contact" class="btn btn-ghost">Kontakt</a>
 	</nav>
 </div>
