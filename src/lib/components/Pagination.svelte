@@ -18,18 +18,24 @@
 	<div class="pagination join m-2">
 		<!-- First page -->
 		<button
+			aria-label="Erste Seite aufrufen"
 			disabled={$db.activePage === 0}
 			onclick={() => updatePage(-$db.activePage)}
 			class="btn join-item">&laquo;</button
 		>
 		<!-- Previous page -->
-		<button disabled={$db.activePage === 0} onclick={() => updatePage(-1)} class="btn join-item"
-			>&lsaquo;</button
+
+		<button
+			aria-label="Vorherige Seite aufrufen"
+			disabled={$db.activePage === 0}
+			onclick={() => updatePage(-1)}
+			class="btn join-item">&lsaquo;</button
 		>
 		<!-- Pagination buttons -->
 		{#each [-2, -1, 0, 1, 2] as offset (offset)}
 			{#if $db.activePage + offset >= 0 && $db.activePage + offset < totalPages}
 				<button
+					aria-label="Seite {$db.activePage + offset + 1} aufrufen"
 					class="btn join-item {offset === 0 ? 'btn-disabled btn-active' : ''}"
 					disabled={offset === 0}
 					onclick={() => updatePage(offset)}
@@ -40,12 +46,14 @@
 		{/each}
 		<!-- Next page -->
 		<button
+			aria-label="Nächste Seite aufrufen"
 			disabled={$db.activePage + 1 === totalPages}
 			onclick={() => updatePage(1)}
 			class="btn join-item">&rsaquo;</button
 		>
 		<!-- Last page -->
 		<button
+			aria-label="Letzte Seite aufrufen"
 			disabled={$db.activePage + 1 === totalPages}
 			onclick={() => updatePage(totalPages - $db.activePage - 1)}
 			class="btn join-item">&raquo;</button

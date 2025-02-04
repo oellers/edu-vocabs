@@ -4,6 +4,7 @@
 	import { config } from '$lib/config';
 	import Badge from '$lib/components/Badge.svelte';
 	import ResultMenu from './ResultMenu.svelte';
+	import ResultInfo from './ResultInfo.svelte';
 	let { id } = $props();
 	const result = $db.index?.store?.[id] ?? {};
 	$state.snapshot(result);
@@ -17,14 +18,10 @@
 			<li class="flex flex-row flex-wrap rounded border border-slate-400 bg-base-100 shadow-md">
 				<div class="w-3/4 lg:pr-5">
 					<!-- Card title -->
-					<p class="pb- ml-4 mt-2 text-lg font-medium">
+					<p class="ml-4 mt-2 text-lg font-medium">
 						{result[vp.name]}
 						{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
-						{#if result[vp.issued]}
-							<span class="badge badge-ghost">
-								{new Date(result[vp.issued]).getFullYear()}
-							</span>
-						{/if}
+						<span class="stroke-red-500"><ResultInfo {result} /></span>
 					</p>
 					<!-- Card content -->
 					<div class="class:collapse-open={isOpen} collapse">
