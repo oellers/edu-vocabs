@@ -24,6 +24,8 @@
 				{/each}
 			</div>
 		</div>
+		<div class="flex justify-center">
+			<Pagination />
+		</div>
 	{/if}
-	<Pagination />
 </div>
