@@ -12,7 +12,7 @@
 	type="button"
 	class={`fixed inset-0 z-40 bg-gray-800 bg-opacity-75 transition-opacity lg:hidden ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
 	onclick={() => (open = false)}
-	aria-label="Close sidebar"
+	aria-label="Seitenmenü schließen"
 	onkeydown={(e) => e.key === 'Enter' && (open = false)}
 ></button>
 <div

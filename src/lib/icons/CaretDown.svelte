@@ -5,6 +5,7 @@
 	fill="currentColor"
 	class="bi bi-caret-down-fill"
 	viewBox="0 0 16 16"
+	role="img"
 >
 	<title>Caret Down Icon</title>
 	<path

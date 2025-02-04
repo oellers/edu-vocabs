@@ -8,6 +8,7 @@
 	stroke-width="2"
 	stroke-linecap="round"
 	stroke-linejoin="round"
+	role="img"
 >
 	<title>Light Mode Icon</title>
 	<circle cx="12" cy="12" r="5" />

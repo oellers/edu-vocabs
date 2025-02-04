@@ -5,6 +5,7 @@
 	stroke-width="1.5"
 	stroke="currentColor"
 	class="size-6"
+	role="img"
 >
 	<title>External Link Icon</title>
 	<path

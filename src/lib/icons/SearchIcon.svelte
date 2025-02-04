@@ -3,6 +3,7 @@
 	viewBox="0 0 16 16"
 	fill="currentColor"
 	class="h-4 w-4 opacity-70"
+	role="img"
 >
 	<title>Search Icon</title>
 	<path

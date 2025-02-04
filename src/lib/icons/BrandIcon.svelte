@@ -3,6 +3,7 @@
 	xml:space="preserve"
 	viewBox="0 0 765 748"
 	fill="currentColor"
+	role="img"
 >
 	<title>EduVocs</title>
 	<desc>EduVocs - The interactive vocabular database (Brand Icon)</desc>
