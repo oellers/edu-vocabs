@@ -3,8 +3,6 @@
 	import { parseToSkos } from '$lib/utils';
 	import VocabConcept from '$lib/components/VocabConcept.svelte';
 	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
-	import VocabDownload from './VocabDownload.svelte';
-
 	let { id } = $props();
 	let vocabData = $state(null);
 
@@ -37,11 +35,6 @@
 			{#each vocabData.hasTopConcept as topConcept}
 				<VocabConcept concept={topConcept} />
 			{/each}
-		{/if}
-	</div>
-	<div class="flex flex-col">
-		{#if vocabDistribution}
-			<VocabDownload {vocabDistribution} />
 		{/if}
 	</div>
 </div>

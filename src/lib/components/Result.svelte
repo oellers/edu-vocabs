@@ -3,9 +3,8 @@
 	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
 	import { config } from '$lib/config';
 	import Badge from '$lib/components/Badge.svelte';
-	import ExternalLinkIcon from '$lib/icons/ExternalLinkIcon.svelte';
-	import InternalLinkIcon from '$lib/icons/InternalLinkIcon.svelte';
-	let { id, externalLink = false } = $props();
+	import ResultMenu from './ResultMenu.svelte';
+	let { id } = $props();
 	const result = $db.index?.store?.[id] ?? {};
 	$state.snapshot(result);
 </script>
@@ -27,13 +26,7 @@
 					</div>
 				</div>
 				<div class="mt-2 flex w-1/4 flex-wrap content-start justify-end p-2">
-					<a
-						class="btn btn-ghost"
-						href={externalLink
-							? result[vp.describedAt]
-							: `/voc/${encodeURIComponent(result[vp.id])}`}
-						>{#if externalLink}<ExternalLinkIcon />{:else}<InternalLinkIcon />{/if}</a
-					>
+					<ResultMenu {result} />
 				</div>
 				<div class="flex w-full flex-wrap content-start p-2">
 					<div class="divider !m-0 w-full"></div>

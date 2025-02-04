@@ -20,7 +20,7 @@
 			</div>
 			<div>
 				{#each $paginatedResults as result (result.id)}
-					<Result externalLink={false} id={result.id} />
+					<Result id={result.id} />
 				{/each}
 			</div>
 		</div>

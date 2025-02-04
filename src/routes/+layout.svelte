@@ -15,7 +15,7 @@
 	<div class="px-4">
 		<Sidebar />
 	</div>
-	<div class="w-full">
+	<div class="mr-1 w-full">
 		{@render children()}
 	</div>
 </div>
