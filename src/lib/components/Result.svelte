@@ -2,7 +2,7 @@
 	import { db } from '$lib/db';
 	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
 	import { config } from '$lib/config';
-	import Badge from '$lib/components/Badge.svelte';
+	import ResultBadge from '$lib/components/ResultBadge.svelte';
 	import ResultMenu from './ResultMenu.svelte';
 	import ResultInfo from './ResultInfo.svelte';
 	let { id } = $props();
@@ -18,11 +18,21 @@
 			<li class="flex flex-row flex-wrap rounded border border-slate-400 bg-base-100 shadow-md">
 				<div class="w-3/4 lg:pr-5">
 					<!-- Card title -->
-					<p class="ml-4 mt-2 text-lg font-medium">
-						{result[vp.name]}
-						{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
-						<span class="stroke-red-500"><ResultInfo {result} /></span>
-					</p>
+					<div class="ml-4 mt-2">
+						<p class="text-lg font-medium">
+							<!-- Name of vocabulary and maintainer -->
+							{result[vp.name]}
+							{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
+							<!-- Year issued (Year "last updated" would be better)-->
+							{#if result[vp.issued]}
+								<ResultBadge
+									badgeStyle="badge-xs"
+									badgeLabel={new Date(result[vp.issued]).getFullYear()}
+								/>
+							{/if}
+							<ResultInfo {result} />
+						</p>
+					</div>
 					<!-- Card content -->
 					<div class="class:collapse-open={isOpen} collapse">
 						<input type="checkbox" bind:checked={isOpen} />
@@ -44,7 +54,7 @@
 					<div class="divider !m-0 w-full"></div>
 					{#each config.filterKeys as key}
 						{#if result[vp[key]]}
-							<Badge badgeLabel={result[vp[key]]} />
+							<ResultBadge badgeLabel={result[vp[key]]} />
 						{/if}
 					{/each}
 				</div>
