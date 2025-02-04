@@ -24,7 +24,7 @@
 {#if showScrollButton}
 	<button
 		transition:fade
-		class="btn btn-circle btn-accent fixed bottom-4 shadow-lg max-lg:left-4 lg:right-4"
+		class="btn btn-outline btn-accent fixed bottom-4 shadow-lg max-lg:left-4 lg:right-4"
 		on:click={scrollToTop}
 	>
 		<ArrowUpIcon />

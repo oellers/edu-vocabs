@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { createIndex } from '$lib/db';
 	import Sidebar from '$lib/components/Sidebar.svelte';
+	import ScrollNavigation from '$lib/components/ScrollNavigation.svelte';
 	let { children } = $props();
 
 	// Initialize the search index
@@ -18,4 +19,5 @@
 	<div class="mr-1 w-full">
 		{@render children()}
 	</div>
+	<ScrollNavigation />
 </div>
