@@ -3,8 +3,7 @@
 	import { parseToSkos } from '$lib/utils';
 	import VocabConcept from '$lib/components/VocabConcept.svelte';
 	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
-	import VocabDownload from './VocabDownload.svelte';
-
+	import { t } from 'svelte-i18n';
 	let { id } = $props();
 	let vocabData = $state(null);
 
@@ -33,15 +32,10 @@
 <div class="mt-1 flex flex-row justify-between">
 	<div class="flex flex-col">
 		{#if vocabData}
-			<h1 class="text-xl">Vokabular-Vorschau</h1>
+			<h1 class="text-xl">{$t('voc.preview')}</h1>
 			{#each vocabData.hasTopConcept as topConcept}
 				<VocabConcept concept={topConcept} />
 			{/each}
-		{/if}
-	</div>
-	<div class="flex flex-col">
-		{#if vocabDistribution}
-			<VocabDownload {vocabDistribution} />
 		{/if}
 	</div>
 </div>

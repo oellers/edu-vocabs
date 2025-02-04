@@ -1,7 +1,7 @@
 (function initTheme() {
 	const themeAttribute = 'data-theme';
 	const darkTheme = 'night';
-	const lightTheme = 'light';
+	const lightTheme = 'fantasy';
 
 	const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 	const preferredTheme = prefersDarkMode ? darkTheme : lightTheme;

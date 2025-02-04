@@ -1,5 +1,6 @@
 <script>
 	import { db, updatePagination } from '$lib/db';
+	import { t } from 'svelte-i18n';
 
 	/**
 	 * Update the active page
@@ -18,18 +19,24 @@
 	<div class="pagination join m-2">
 		<!-- First page -->
 		<button
+			aria-label={$t('pagination.first')}
 			disabled={$db.activePage === 0}
 			onclick={() => updatePage(-$db.activePage)}
 			class="btn join-item">&laquo;</button
 		>
 		<!-- Previous page -->
-		<button disabled={$db.activePage === 0} onclick={() => updatePage(-1)} class="btn join-item"
-			>&lsaquo;</button
+
+		<button
+			aria-label={$t('pagination.previous')}
+			disabled={$db.activePage === 0}
+			onclick={() => updatePage(-1)}
+			class="btn join-item">&lsaquo;</button
 		>
 		<!-- Pagination buttons -->
 		{#each [-2, -1, 0, 1, 2] as offset (offset)}
 			{#if $db.activePage + offset >= 0 && $db.activePage + offset < totalPages}
 				<button
+					aria-label={$t('pagination.to', { values: { pageNumber: $db.activePage + offset + 1 } })}
 					class="btn join-item {offset === 0 ? 'btn-disabled btn-active' : ''}"
 					disabled={offset === 0}
 					onclick={() => updatePage(offset)}
@@ -40,12 +47,14 @@
 		{/each}
 		<!-- Next page -->
 		<button
+			aria-label={$t('pagination.next')}
 			disabled={$db.activePage + 1 === totalPages}
 			onclick={() => updatePage(1)}
 			class="btn join-item">&rsaquo;</button
 		>
 		<!-- Last page -->
 		<button
+			aria-label={$t('pagination.kast')}
 			disabled={$db.activePage + 1 === totalPages}
 			onclick={() => updatePage(totalPages - $db.activePage - 1)}
 			class="btn join-item">&raquo;</button

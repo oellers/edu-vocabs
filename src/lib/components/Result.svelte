@@ -2,44 +2,59 @@
 	import { db } from '$lib/db';
 	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
 	import { config } from '$lib/config';
-	import Badge from '$lib/components/Badge.svelte';
-	import ExternalLinkIcon from '$lib/icons/ExternalLinkIcon.svelte';
-	import InternalLinkIcon from '$lib/icons/InternalLinkIcon.svelte';
-	let { id, externalLink = false } = $props();
+	import ResultBadge from '$lib/components/ResultBadge.svelte';
+	import ResultMenu from './ResultMenu.svelte';
+	import ResultInfo from './ResultInfo.svelte';
+	let { id } = $props();
 	const result = $db.index?.store?.[id] ?? {};
 	$state.snapshot(result);
+	let isOpen = $state(false);
 </script>
 
 {#if result}
 	<div>
 		<ul class="mt-2 flex flex-col">
-			<li class="flex flex-row flex-wrap rounded border border-slate-400">
+			<!-- Card -->
+			<li class="flex flex-row flex-wrap rounded border border-slate-400 bg-base-100 shadow-md">
 				<div class="w-3/4 lg:pr-5">
-					<div class="collapse collapse-open">
-						<input type="checkbox" />
-						<div class="collapse-title text-lg font-medium">
+					<!-- Card title -->
+					<div class="ml-4 mt-2">
+						<p class="text-lg font-medium">
+							<!-- Name of vocabulary and maintainer -->
 							{result[vp.name]}
 							{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
+							<!-- Year issued (Year "last updated" would be better)-->
+							{#if result[vp.issued]}
+								<ResultBadge
+									badgeStyle="badge-xs"
+									badgeLabel={new Date(result[vp.issued]).getFullYear()}
+								/>
+							{/if}
+							<ResultInfo {result} />
+						</p>
+					</div>
+					<!-- Card content -->
+					<div class="class:collapse-open={isOpen} collapse">
+						<input type="checkbox" bind:checked={isOpen} />
+						<div class="collapse-title">
+							<p class={!isOpen ? 'line-clamp-3' : ''}>{result[vp.description]}</p>
 						</div>
 						<div class="collapse-content">
-							<p>{result[vp.description]}</p>
+							<!-- Additional space for content -->
+							<!-- Alternative place for metadata badges -->
 						</div>
 					</div>
 				</div>
+				<!-- Card menu -->
 				<div class="mt-2 flex w-1/4 flex-wrap content-start justify-end p-2">
-					<a
-						class="btn btn-ghost"
-						href={externalLink
-							? result[vp.describedAt]
-							: `/voc/${encodeURIComponent(result[vp.id])}`}
-						>{#if externalLink}<ExternalLinkIcon />{:else}<InternalLinkIcon />{/if}</a
-					>
+					<ResultMenu {result} />
 				</div>
+				<!-- Card footer -->
 				<div class="flex w-full flex-wrap content-start p-2">
 					<div class="divider !m-0 w-full"></div>
 					{#each config.filterKeys as key}
 						{#if result[vp[key]]}
-							<Badge badgeLabel={result[vp[key]]} />
+							<ResultBadge badgeLabel={result[vp[key]]} />
 						{/if}
 					{/each}
 				</div>

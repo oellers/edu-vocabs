@@ -3,6 +3,7 @@
 	import Pagination from '$lib/components/Pagination.svelte';
 	import SelectedFilter from '$lib/components/SelectedFilter.svelte';
 	import Result from '$lib/components/Result.svelte';
+	import { t } from 'svelte-i18n';
 </script>
 
 <div class="flex flex-col">
@@ -16,14 +17,16 @@
 						{/each}
 					{/each}
 				</div>
-				<p>Suchergebnisse: {$db.results.length}</p>
+				<p>{$t('results')}: {$db.results.length}</p>
 			</div>
 			<div>
 				{#each $paginatedResults as result (result.id)}
-					<Result externalLink={false} id={result.id} />
+					<Result id={result.id} />
 				{/each}
 			</div>
 		</div>
+		<div class="flex justify-center">
+			<Pagination />
+		</div>
 	{/if}
-	<Pagination />
 </div>

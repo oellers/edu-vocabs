@@ -1,21 +1,24 @@
 <script>
+	import { t } from 'svelte-i18n';
 	let { item, extended = true } = $props();
 </script>
 
 <svelte:head>
-	<title>EduVocs: {item.title}</title>
+	<title>{$t('brand')}: {item.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={item.title} />
 </svelte:head>
 
-<article class="item prose max-w-5xl">
-	<hgroup>
-		<h1><a href={`/content/${item.slug}`}>{item.title}</a></h1>
-		<p>{item.date}</p>
-	</hgroup>
-	{#if extended}
-		<div class="item-description">
-			<item.content />
-		</div>
-	{/if}
+<article class="card prose mb-5 max-w-5xl bg-base-100 shadow-md">
+	<div class="card-body">
+		<hgroup>
+			<h1 class="card-title"><a href={`/content/${item.slug}`}>{item.title}</a></h1>
+			<p>{item.date}</p>
+		</hgroup>
+		{#if extended}
+			<div>
+				<item.content />
+			</div>
+		{/if}
+	</div>
 </article>

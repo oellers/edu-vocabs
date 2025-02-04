@@ -2,9 +2,10 @@
 	import { onMount } from 'svelte';
 	import SunIcon from '$lib/icons/SunIcon.svelte';
 	import MoonIcon from '$lib/icons/MoonIcon.svelte';
+	import { t } from 'svelte-i18n';
 
 	const themeAttribute = 'data-theme';
-	const lightTheme = 'light';
+	const lightTheme = 'fantasy';
 	const darkTheme = 'night';
 
 	let theme = $state(lightTheme);
@@ -29,7 +30,7 @@
 <button onclick={toggleTheme} class="btn btn-square btn-ghost">
 	<label class="swap swap-rotate h-12 w-12">
 		<input type="checkbox" onchange={toggleTheme} checked={!isDarkMode} />
-		<span class="swap-on" title="Zum Light Mode wechseln"><MoonIcon /></span>
-		<span class="swap-off" title="Zum Dark Mode wechseln"><SunIcon /></span>
+		<span class="swap-on" title={$t('switch.lightmode')}><MoonIcon /></span>
+		<span class="swap-off" title={$t('switch.darkmode')}><SunIcon /></span>
 	</label>
 </button>
