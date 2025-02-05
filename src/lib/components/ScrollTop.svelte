@@ -26,7 +26,7 @@
 	<button
 		aria-label={$t('sidebar.top')}
 		transition:fade
-		class="btn btn-circle btn-outline fixed bottom-4 right-1 shadow-lg max-lg:btn-sm lg:btn-md"
+		class="btn btn-circle btn-outline fixed bottom-5 right-2 shadow-lg max-lg:btn-sm lg:btn-md"
 		on:click={scrollToTop}
 	>
 		<ArrowUpIcon />
