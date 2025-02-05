@@ -27,7 +27,7 @@
 	});
 </script>
 
-<button onclick={toggleTheme} class="btn btn-square btn-ghost">
+<button aria-label={$t('switch.colormode')} onclick={toggleTheme} class="btn btn-square btn-ghost">
 	<label class="swap swap-rotate h-12 w-12">
 		<input type="checkbox" onchange={toggleTheme} checked={!isDarkMode} />
 		<span class="swap-on" title={$t('switch.lightmode')}><MoonIcon /></span>

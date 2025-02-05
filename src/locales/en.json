@@ -1,16 +1,28 @@
 {
 	"brand": "EduVocs",
-	"search": "Search",
-	"results": "Suchergebnisse",
+	"claim": "Vokabulardatenbank für den Bildungsbereich",
+	"search": "Suche",
+	"searchresults": "Suchergebnisse",
 	"download": "Download",
 	"preview": "Vorschau",
+	"details": "Details",
 	"info": "Info",
 	"format": {
 		"application/json": "JSON",
 		"text/turtle": "Turtle"
 	},
 	"buttons": {
-		"external": "Zum Anbieter"
+		"external": "Zum Anbieter",
+		"internal": "Details",
+		"download": "Download"
+	},
+	"dropdown": {
+		"sort": "Sortieren nach {sortName}",
+		"filter": "Filtern nach {filterName}"
+	},
+	"result": {
+		"info": "Weitere Informationen anzeigen",
+		"expand": "Weiteren Inhalt anzeigen"
 	},
 	"pagination": {
 		"previous": "Zurück",

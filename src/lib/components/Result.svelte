@@ -42,7 +42,7 @@
 					</div>
 					<!-- Card content -->
 					<div class="class:collapse-open={isOpen} collapse">
-						<input type="checkbox" bind:checked={isOpen} />
+						<input aria-label={$t('result.expand')} type="checkbox" bind:checked={isOpen} />
 						<div class="collapse-title">
 							<p class={!isOpen ? 'line-clamp-3' : ''}>{result[vp.description]}</p>
 						</div>
