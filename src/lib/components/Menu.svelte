@@ -8,7 +8,7 @@
 
 <!--- Top Navigation -->
 <nav class="navbar sticky top-0 z-30 mb-4 bg-base-100 shadow-md">
-	<button class="btn btn-primary" onclick={() => (open = !open)}>
+	<button aria-label={$t('menu.home')} class="btn btn-primary" onclick={() => (open = !open)}>
 		<MenuIcon />
 	</button>
 	<div class="ml-auto">
@@ -17,7 +17,7 @@
 		</p>
 		<div class="divider divider-horizontal max-sm:hidden"></div>
 		<p class="text-md tracking-wide antialiased">
-			<a class="font-bold hover:text-primary" href="/"><BrandIcon /> {$t('brand')}</a>
+			<a class="font-bold hover:text-primary" href="/"><BrandIcon />{$t('brand')}</a>
 		</p>
 	</div>
 </nav>

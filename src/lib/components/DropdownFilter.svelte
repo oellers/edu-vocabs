@@ -1,12 +1,18 @@
 <script>
 	import { db, handleFilterSelect } from '$lib/db';
+	import { t } from 'svelte-i18n';
 	import CaretDown from '$lib/icons/CaretDown.svelte';
 
 	let { title, filterKey } = $props();
 </script>
 
 <div class="dropdown">
-	<div tabindex="0" role="button" class="my-3 select-none rounded-md border p-2">
+	<div
+		tabindex="0"
+		aria-label={$t('dropdown.filter', { values: { filterName: title } })}
+		role="button"
+		class="my-3 select-none rounded-md border p-2"
+	>
 		<div class="flex flex-row items-center justify-between gap-2">
 			<span>{title}</span>
 			<CaretDown />

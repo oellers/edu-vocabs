@@ -6,7 +6,12 @@
 </script>
 
 <div class="dropdown">
-	<div tabindex="0" role="button" class="btn btn-circle btn-ghost btn-xs text-secondary">
+	<div
+		tabindex="0"
+		aria-label={$t('result.info')}
+		role="button"
+		class="btn btn-circle btn-ghost btn-xs text-secondary"
+	>
 		<InfoIcon />
 	</div>
 	<div class="card dropdown-content compact z-[1] w-64 rounded-box bg-base-100 shadow">

@@ -17,7 +17,7 @@
 						{/each}
 					{/each}
 				</div>
-				<p>{$t('results')}: {$db.results.length}</p>
+				<p>{$t('searchresults')}: {$db.results.length}</p>
 			</div>
 			<div>
 				{#each $paginatedResults as result (result.id)}
