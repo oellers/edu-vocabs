@@ -26,7 +26,12 @@
 					<div class="ml-4 mt-2">
 						<div class="text-lg font-medium">
 							<!-- Name of vocabulary and maintainer -->
-							{result[vp.name]}
+							<a
+								class="hover:text-accent"
+								aria-label={$t('voc.preview')}
+								href={`/voc/${encodeURIComponent(result[vp.id])}`}
+								>{result[vp.name]}
+							</a>
 							{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
 							<!-- Year issued (Year "last updated" would be better) -->
 							{#if result[vp.issued] && !isNaN(new Date(result[vp.issued]).getFullYear())}

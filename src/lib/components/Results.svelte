@@ -1,5 +1,6 @@
 <script>
 	import { db, paginatedResults } from '$lib/db';
+	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
 	import Pagination from '$lib/components/Pagination.svelte';
 	import SelectedFilter from '$lib/components/SelectedFilter.svelte';
 	import Result from '$lib/components/Result.svelte';
@@ -21,7 +22,7 @@
 			</div>
 			<div>
 				{#each $paginatedResults as result (result.id)}
-					<Result id={result.id} />
+					<Result id={result.id} hideButtons={[vp.repo, vp.distribution]} />
 				{/each}
 			</div>
 		</div>
