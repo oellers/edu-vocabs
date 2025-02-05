@@ -11,7 +11,7 @@
 	<title>{$t('brand')}: {$t('search')}</title>
 </svelte:head>
 
-<div class="flex w-full flex-col lg:w-3/4">
+<div class="flex flex-col">
 	<form onsubmit={(e) => search(e)}>
 		<div>
 			<div>

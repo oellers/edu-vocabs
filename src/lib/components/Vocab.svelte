@@ -29,10 +29,10 @@
 	}
 </script>
 
-<div class="mt-1 flex flex-row justify-between">
-	<div class="flex flex-col">
+<div class="card mt-1 flex flex-row justify-between bg-base-100 shadow-md">
+	<div class="card-body flex flex-col">
 		{#if vocabData}
-			<h1 class="text-xl">{$t('voc.preview')}</h1>
+			<h1 class="card-title text-xl">{$t('voc.preview')}</h1>
 			{#each vocabData.hasTopConcept as topConcept}
 				<VocabConcept concept={topConcept} />
 			{/each}

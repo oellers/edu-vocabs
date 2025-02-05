@@ -1,9 +1,11 @@
 {
 	"brand": "EduVocs",
+	"claim": "Vokabulardatenbank für den Bildungsbereich",
 	"search": "Suche",
 	"results": "Suchergebnisse",
 	"download": "Download",
 	"preview": "Vorschau",
+	"details": "Details",
 	"info": "Info",
 	"format": {
 		"application/json": "JSON",

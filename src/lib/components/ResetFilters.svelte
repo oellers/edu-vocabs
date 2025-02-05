@@ -8,7 +8,7 @@
 	type="button"
 	onkeydown={(e) => e.key === 'Enter' && resetFilters()}
 	tabindex="0"
-	class="btn mt-2"
+	class="btn btn-outline btn-sm my-4"
 >
 	{$t('filter.reset')}
 </button>

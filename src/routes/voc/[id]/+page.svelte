@@ -11,7 +11,7 @@
 
 <h1 class="text-2xl">{$t('voc.view')}</h1>
 
-<div class="flex w-full flex-col pr-1 lg:w-3/4">
-	<Result id={data.id} />
+<div class="flex w-full flex-col">
+	<Result id={data.id} hideButtons={['details']} />
 	<Vocab id={data.id} />
 </div>

@@ -9,7 +9,7 @@
 	<meta property="og:title" content={item.title} />
 </svelte:head>
 
-<article class="card prose mb-5 max-w-5xl bg-base-100 shadow-md">
+<article class="card prose mb-5 max-w-full bg-base-100 shadow-md">
 	<div class="card-body">
 		<hgroup>
 			<h1 class="card-title"><a href={`/content/${item.slug}`}>{item.title}</a></h1>
