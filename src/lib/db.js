@@ -9,6 +9,7 @@ export const db = writable({
 	results: [],
 	filters: {},
 	index: {},
+	initizialized: false,
 	filterKeys: config.filterKeys,
 	selectedFilters: initFilters()
 });
@@ -154,6 +155,9 @@ export async function createIndex() {
 	});
 	db.update((db) => {
 		return { ...db, index };
+	});
+	db.update((db) => {
+		return { ...db, initialized: true };
 	});
 	fillResults();
 }
