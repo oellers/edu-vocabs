@@ -15,17 +15,17 @@
 
 {#if $db.initialized}
 	<div class="flex w-full flex-col">
-		<div class="text-md breadcrumbs">
-			<ul>
-				<li>
-					<a aria-label={$t('menu.search')} href="/search">{$t('menu.search')}</a>
-				</li>
-				<li>
-					<span>{$t('voc.label')}: {result[vp.name]}</span>
-				</li>
-			</ul>
-		</div>
 		{#if result}
+			<div class="text-md breadcrumbs">
+				<ul>
+					<li>
+						<a aria-label={$t('menu.search')} href="/search">{$t('menu.search')}</a>
+					</li>
+					<li>
+						<span>{$t('voc.label')}: {result[vp.name]}</span>
+					</li>
+				</ul>
+			</div>
 			<h1 class="text-2xl">{$t('voc.detailview')}</h1>
 			<Result id={data.id} hideButtons={[vp.id]} />
 			<Vocab id={data.id} />
