@@ -1,14 +1,19 @@
 <script>
 	import { db } from '$lib/db';
-	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
+	import { VOCAB_PROPERTIES as vp, METADATA_KEYS as mdk } from '$lib/constants';
 	import { config } from '$lib/config';
+	import { t } from 'svelte-i18n';
 	import ResultBadge from '$lib/components/ResultBadge.svelte';
 	import ResultMenu from './ResultMenu.svelte';
 	import ResultInfo from './ResultInfo.svelte';
-	let { id } = $props();
+	let { id, hideButtons = [] } = $props();
 	const result = $db.index?.store?.[id] ?? {};
 	$state.snapshot(result);
 	let isOpen = $state(false);
+
+	function hasResultInfo() {
+		return mdk.some((key) => result[vp[key]]);
+	}
 </script>
 
 {#if result}
@@ -19,19 +24,21 @@
 				<div class="w-3/4 lg:pr-5">
 					<!-- Card title -->
 					<div class="ml-4 mt-2">
-						<p class="text-lg font-medium">
+						<div class="text-lg font-medium">
 							<!-- Name of vocabulary and maintainer -->
 							{result[vp.name]}
 							{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
-							<!-- Year issued (Year "last updated" would be better)-->
-							{#if result[vp.issued]}
+							<!-- Year issued (Year "last updated" would be better) -->
+							{#if result[vp.issued] && !isNaN(new Date(result[vp.issued]).getFullYear())}
 								<ResultBadge
 									badgeStyle="badge-xs"
 									badgeLabel={new Date(result[vp.issued]).getFullYear()}
 								/>
 							{/if}
-							<ResultInfo {result} />
-						</p>
+							{#if hasResultInfo()}
+								<ResultInfo {result} />
+							{/if}
+						</div>
 					</div>
 					<!-- Card content -->
 					<div class="class:collapse-open={isOpen} collapse">
@@ -47,7 +54,7 @@
 				</div>
 				<!-- Card menu -->
 				<div class="mt-2 flex w-1/4 flex-wrap content-start justify-end p-2">
-					<ResultMenu {result} />
+					<ResultMenu {result} {hideButtons} />
 				</div>
 				<!-- Card footer -->
 				<div class="flex w-full flex-wrap content-start p-2">

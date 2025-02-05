@@ -6,7 +6,7 @@
 </script>
 
 <div class="dropdown">
-	<div tabindex="0" role="button" class="my-2 select-none rounded-lg border p-2">
+	<div tabindex="0" role="button" class="my-3 select-none rounded-md border p-2">
 		<div class="flex flex-row items-center justify-between gap-2">
 			<span>{title}</span>
 			<CaretDown />

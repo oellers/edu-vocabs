@@ -1,9 +1,8 @@
 <script>
 	import InfoIcon from '$lib/icons/InfoIcon.svelte';
-	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
+	import { VOCAB_PROPERTIES as vp, METADATA_KEYS as mdk } from '$lib/constants';
 	import { t } from 'svelte-i18n';
 	let { result } = $props();
-	const metadataKeys = ['issued', 'compliesWith'];
 </script>
 
 <div class="dropdown">
@@ -14,7 +13,7 @@
 		<div class="card-body">
 			<h2 class="card-title">{$t('info')}</h2>
 			<ul>
-				{#each metadataKeys as key}
+				{#each mdk as key}
 					{#if result[vp[key]]}
 						<li>{$t('md.' + key)}: {result[vp[key]]}</li>
 					{/if}

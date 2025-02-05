@@ -17,3 +17,5 @@ export const VOCAB_PROPERTIES = {
 	rawVocab: 'rawVocab',
 	contentUrl: 'contentUrl' // https://schema.org/contentUrl
 };
+
+export const METADATA_KEYS = ['issued', 'compliesWith'];
