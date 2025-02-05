@@ -1,12 +1,13 @@
 <script>
 	import { handleFilterSelect } from '$lib/db';
+	import { t } from 'svelte-i18n';
 	let { val, key } = $props();
 </script>
 
 <button
-	aria-label="Filter {val} entfernen"
+	aria-label={$t('filter.remove', { values: { filterName: val } })}
 	onclick={() => handleFilterSelect(key, val)}
-	class="badge badge-info select-none gap-2"
+	class="btn btn-outline btn-primary btn-xs mb-1 mr-1 h-auto p-1"
 >
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -17,5 +18,5 @@
 		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"
 		></path>
 	</svg>
-	{val}
+	{$t('terms.' + val)}
 </button>

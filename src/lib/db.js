@@ -20,6 +20,14 @@ export const paginatedResults = derived(db, ($db) => {
 	return paginatedResults;
 });
 
+const { Document } = pkg;
+const index = new Document({ ...config.index });
+const filterKeys = get(db).filterKeys;
+
+/**
+ * Updates pagination from currently active page based on direction
+ * @param {number} direction - The direction to change the page (-1 for previous, 1 for next)
+ */
 export function updatePagination(direction) {
 	db.update((db) => {
 		const activePage = db.activePage + direction;
@@ -27,14 +35,17 @@ export function updatePagination(direction) {
 	});
 }
 
-const { Document } = pkg;
-const index = new Document({ ...config.index });
-const filterKeys = get(db).filterKeys;
-
+/**
+ * Initializes filter object with empty arrays
+ * @returns {Object} Initialized filter object
+ */
 function initFilters() {
 	return Object.fromEntries(config.filterKeys.map((e) => [e, []]));
 }
 
+/**
+ * Resets filters and query, then refills results
+ */
 export function resetFilters() {
 	db.update((db) => {
 		return {
@@ -46,6 +57,9 @@ export function resetFilters() {
 	fillResults();
 }
 
+/**
+ * Populates search results from the index
+ */
 export function fillResults() {
 	const results = Object.values(get(db).index.store).filter((e) =>
 		e.type.includes('http://www.wikidata.org/entity/Q1469824')
@@ -53,6 +67,10 @@ export function fillResults() {
 	updateResults(results);
 }
 
+/**
+ * Handles search queries, applying selected filters
+ * @param {Event} event - The search event
+ */
 export function search(event) {
 	event.preventDefault();
 	const tags = Object.values(get(db).selectedFilters).flat();
@@ -69,6 +87,11 @@ export function search(event) {
 	}
 }
 
+/**
+ * Handles selection of filters and triggers search
+ * @param {string} key - The filter category
+ * @param {string} val - The filter value
+ */
 export function handleFilterSelect(key, val) {
 	db.update((db) => {
 		const indexInSelectedFilters = db.selectedFilters[key].indexOf(val);
@@ -86,12 +109,20 @@ export function handleFilterSelect(key, val) {
 	search({ preventDefault: function () {} });
 }
 
+/**
+ * Updates search results and resets pagination
+ * @param {Array} results - The search results
+ */
 export function updateResults(results) {
 	db.update((db) => {
 		return { ...db, results, activePage: 0 };
 	});
 }
 
+/**
+ * Creates filter options based on available index data
+ * @returns {Promise<Object>} Filter options
+ */
 export async function createFilterOptions() {
 	let filters = {};
 	filterKeys.forEach((k) => {
@@ -108,6 +139,9 @@ export async function createFilterOptions() {
 	return filters;
 }
 
+/**
+ * Creates and populates the search index
+ */
 export async function createIndex() {
 	const res = await fetch('/api/search-index');
 	const keys = await res.json();

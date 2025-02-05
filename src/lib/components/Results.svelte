@@ -3,26 +3,30 @@
 	import Pagination from '$lib/components/Pagination.svelte';
 	import SelectedFilter from '$lib/components/SelectedFilter.svelte';
 	import Result from '$lib/components/Result.svelte';
+	import { t } from 'svelte-i18n';
 </script>
 
-<div class="flex w-full flex-col items-center justify-center gap-2">
+<div class="flex flex-col">
 	{#if $db.results.length}
-		<div class="mb-4 mt-2 w-full">
-			<div class="flex flex-row justify-between">
-				<div class="flex cursor-pointer flex-row flex-wrap gap-2">
+		<div class="my-2">
+			<div>
+				<div>
 					{#each Object.entries($db.selectedFilters) as filter}
 						{#each filter[1] as f}
 							<SelectedFilter val={f} key={filter[0]} />
 						{/each}
 					{/each}
 				</div>
-				<p class="shrink-0">Suchergebnisse: {$db.results.length}</p>
+				<p>{$t('results')}: {$db.results.length}</p>
 			</div>
-			{#each $paginatedResults as result (result.id)}
-				<Result externalLink={true} id={result.id} />
-			{/each}
+			<div>
+				{#each $paginatedResults as result (result.id)}
+					<Result id={result.id} />
+				{/each}
+			</div>
+		</div>
+		<div class="flex justify-center">
+			<Pagination />
 		</div>
 	{/if}
-
-	<Pagination />
 </div>
