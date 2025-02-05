@@ -78,7 +78,8 @@
 	},
 	"switch": {
 		"darkmode": "Zum Dark Mode wechseln",
-		"lightmode": "Zum Light Mode wechseln"
+		"lightmode": "Zum Light Mode wechseln",
+		"colormode": "Den Farbmodus wechseln"
 	},
 	"voc": {
 		"view": "Vokabular: Detailansicht",

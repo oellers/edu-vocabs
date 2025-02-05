@@ -53,7 +53,7 @@
 		>
 		<!-- Last page -->
 		<button
-			aria-label={$t('pagination.kast')}
+			aria-label={$t('pagination.last')}
 			disabled={$db.activePage + 1 === totalPages}
 			onclick={() => updatePage(totalPages - $db.activePage - 1)}
 			class="btn btn-outline join-item">&raquo;</button

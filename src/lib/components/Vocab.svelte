@@ -32,7 +32,7 @@
 <div class="card mt-1 flex flex-row justify-between bg-base-100 shadow-md">
 	<div class="card-body flex flex-col">
 		{#if vocabData}
-			<h1 class="card-title text-xl">{$t('voc.preview')}</h1>
+			<h2 class="card-title text-xl">{$t('voc.preview')}</h2>
 			{#each vocabData.hasTopConcept as topConcept}
 				<VocabConcept concept={topConcept} />
 			{/each}
