@@ -4,8 +4,8 @@
 	import { isLoading } from 'svelte-i18n';
 	import { onMount } from 'svelte';
 	import { createIndex } from '$lib/db';
-	import Sidebar from '$lib/components/Sidebar.svelte';
-	import ScrollNavigation from '$lib/components/ScrollNavigation.svelte';
+	import Menu from '$lib/components/Menu.svelte';
+	import ScrollTop from '$lib/components/ScrollTop.svelte';
 	let { children } = $props();
 
 	// Initialize the search index
@@ -14,14 +14,12 @@
 	});
 </script>
 
-<div class="mt-8 flex flex-row">
+<div class="mt-4 flex flex-row overflow-x-hidden max-lg:px-2 lg:px-8">
 	{#if !$isLoading}
-		<div class="px-4">
-			<Sidebar />
-		</div>
-		<div class="mr-1 w-full">
+		<div class="w-full max-lg:pr-8 lg:w-3/4">
+			<Menu />
 			{@render children()}
 		</div>
-		<ScrollNavigation />
+		<ScrollTop />
 	{/if}
 </div>
