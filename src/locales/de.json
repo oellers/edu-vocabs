@@ -83,7 +83,8 @@
 	},
 	"voc": {
 		"view": "Vokabular: Detailansicht",
-		"preview": "Vokabular-Vorschau"
+		"preview": "Vokabular-Vorschau",
+		"notfound": "Vokabular nicht gefunden"
 	},
 	"error": {
 		"404": "Could not find content"
