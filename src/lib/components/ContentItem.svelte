@@ -8,7 +8,18 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={item.title} />
 </svelte:head>
-
+{#if extended}
+	<div class="text-md breadcrumbs">
+		<ul>
+			<li>
+				<a aria-label={$t('menu.content')} href="/content">{$t('menu.content')}</a>
+			</li>
+			<li>
+				{item.title}
+			</li>
+		</ul>
+	</div>
+{/if}
 <article class="card prose mb-5 max-w-full bg-base-100 shadow-md">
 	<div class="card-body">
 		<hgroup>
