@@ -6,6 +6,7 @@
 	"download": "Download",
 	"preview": "Vorschau",
 	"details": "Details",
+	"vocab": "Vokabular",
 	"info": "Info",
 	"format": {
 		"application/json": "JSON",
@@ -14,7 +15,8 @@
 	"buttons": {
 		"external": "Zum Anbieter",
 		"internal": "Details",
-		"download": "Download"
+		"download": "Download",
+		"repo": "Repositorium"
 	},
 	"dropdown": {
 		"sort": "Sortieren nach {sortName}",
@@ -82,7 +84,8 @@
 		"colormode": "Den Farbmodus wechseln"
 	},
 	"voc": {
-		"view": "Vokabular: Detailansicht",
+		"label": "Vokabular",
+		"detailview": "Vokabular: Detailansicht",
 		"preview": "Vokabular-Vorschau",
 		"notfound": "Vokabular nicht gefunden"
 	},
