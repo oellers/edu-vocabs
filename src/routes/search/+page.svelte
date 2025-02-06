@@ -19,6 +19,7 @@
 					<input
 						class="grow"
 						type="text"
+						name="searchbox"
 						onkeyup={(e) => search(e)}
 						bind:value={$db.query}
 						placeholder="{$t('search')}..."
