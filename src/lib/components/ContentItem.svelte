@@ -1,6 +1,7 @@
 <script>
 	import { t } from 'svelte-i18n';
 	let { item, extended = true } = $props();
+	import { locale } from 'svelte-i18n';
 </script>
 
 <svelte:head>
@@ -12,7 +13,9 @@
 	<div class="text-md breadcrumbs">
 		<ul>
 			<li>
-				<a aria-label={$t('menu.content')} href="/content">{$t('menu.content')}</a>
+				<a aria-label={$t('menu.content')} href={`/content/${$locale.slice(0, 2)}`}
+					>{$t('menu.content')}</a
+				>
 			</li>
 			<li>
 				{item.title}
@@ -23,7 +26,9 @@
 <article class="card prose mb-5 max-w-full bg-base-100 shadow-md">
 	<div class="card-body">
 		<hgroup>
-			<h1 class="card-title"><a href={`/content/${item.slug}`}>{item.title}</a></h1>
+			<h1 class="card-title">
+				<a href={`/content/${$locale.slice(0, 2)}/${item.slug}`}>{item.title}</a>
+			</h1>
 			<p>{item.date}</p>
 		</hgroup>
 		{#if extended}

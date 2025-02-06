@@ -1,95 +1,95 @@
 {
 	"brand": "EduVocs",
-	"claim": "Vokabulardatenbank für den Bildungsbereich",
-	"search": "Suche",
-	"searchresults": "Suchergebnisse",
+	"claim": "Vocabulary database for the education sector",
+	"search": "Search",
+	"searchresults": "Search results",
 	"download": "Download",
-	"preview": "Vorschau",
+	"preview": "Preview",
 	"details": "Details",
-	"article": "Artikel",
-	"vocab": "Vokabular",
+	"article": "Article",
+	"vocab": "Vocabulary",
 	"info": "Info",
 	"format": {
 		"application/json": "JSON",
 		"text/turtle": "Turtle"
 	},
 	"buttons": {
-		"external": "Zum Anbieter",
+		"external": "To provider",
 		"internal": "Details",
 		"download": "Download",
-		"repo": "Repositorium"
+		"repo": "Repository"
 	},
 	"dropdown": {
-		"sort": "Sortieren nach {sortName}",
-		"filter": "Filtern nach {filterName}"
+		"sort": "Sort by {sortName}",
+		"filter": "Filter by {filterName}"
 	},
 	"result": {
-		"info": "Weitere Informationen anzeigen",
-		"expand": "Weiteren Inhalt anzeigen"
+		"info": "Show more information",
+		"expand": "Show more content"
 	},
 	"pagination": {
-		"previous": "Zurück",
-		"to": "Seite {pageNumber}",
-		"next": "Weiter",
-		"first": "Erste Seite",
-		"last": "Letzte Seite"
+		"previous": "Previous",
+		"to": "Page {pageNumber}",
+		"next": "Next",
+		"first": "First page",
+		"last": "Last page"
 	},
 	"md": {
-		"issued": "Veröffentlicht",
-		"compliesWith": "Kompatibel mit"
+		"issued": "Published",
+		"compliesWith": "Compatible with"
 	},
 	"filter": {
-		"reset": "Filter zurücksetzen",
-		"remove": "Filter {filterName} entfernen",
-		"about": "Themenfeld",
-		"educationalLevel": "Bildungsstufe"
+		"reset": "Reset filter",
+		"remove": "Remove filter {filterName}",
+		"about": "Subject area",
+		"educationalLevel": "Educational level"
 	},
 	"terms": {
-		"Fach- und Themenzuordnung": "Fach- und Themenzuordnung",
-		"Hochschule: Standards und Modulkataloge": "Hochschule: Standards und Modulkataloge",
-		"Lernkontrollen": "Lernkontrollen",
-		"Zielgruppe": "Zielgruppe",
-		"Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten": "Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten",
-		"Lehr-/Lernform (Interaktivitätstyp)": "Lehr-/Lernform (Interaktivitätstyp)",
-		"Sprachen": "Sprachen",
-		"Abschlüsse": "Abschlüsse",
-		"Schularten, Schultypen, Schulformen": "Schularten, Schultypen, Schulformen",
-		"Klassenstufen, Jahrgangsstufen oder Fachsemester": "Klassenstufen, Jahrgangsstufen oder Fachsemester",
-		"Barrierearmut": "Barrierearmut",
-		"Ressourcentyp, Medientyp": "Ressourcentyp, Medientyp",
-		"Granularität": "Granularität",
-		"Didaktische Kontextualisierung": "Didaktische Kontextualisierung",
-		"Lizenzen": "Lizenzen",
-		"Ausbildung": "Ausbildung",
-		"Lehrformat, Veranstaltungsformat, Lehrmodus": "Lehrformat, Veranstaltungsformat, Lehrmodus",
-		"Kompetenzen": "Kompetenzen",
-		"Hochschule": "Hochschule",
-		"Lehrerbildung": "Lehrkräftebildung",
-		"Primarbereich": "Primarbereich",
-		"Schule": "Schule",
-		"Bildungsbereichsübergreifend": "Bildungsbereichsübergreifend",
-		"digitalisierungsbezogene Kompetenzen": "Digitalisierungsbezogene Kompetenzen"
+		"Fach- und Themenzuordnung": "Subject and topic classification",
+		"Hochschule: Standards und Modulkataloge": "University: Standards and module catalogs",
+		"Lernkontrollen": "Learning assessments",
+		"Zielgruppe": "Target group",
+		"Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten": "Educational standards and curriculum-oriented value lists",
+		"Lehr-/Lernform (Interaktivitätstyp)": "Teaching/learning format (interactivity type)",
+		"Sprachen": "Languages",
+		"Abschlüsse": "Degrees",
+		"Schularten, Schultypen, Schulformen": "School types, categories, and forms",
+		"Klassenstufen, Jahrgangsstufen oder Fachsemester": "Grade levels, academic years, or semesters",
+		"Barrierearmut": "Accessibility",
+		"Ressourcentyp, Medientyp": "Resource type, media type",
+		"Granularität": "Granularity",
+		"Didaktische Kontextualisierung": "Didactic contextualization",
+		"Lizenzen": "Licenses",
+		"Ausbildung": "Training",
+		"Lehrformat, Veranstaltungsformat, Lehrmodus": "Teaching format, event format, teaching mode",
+		"Kompetenzen": "Competencies",
+		"Hochschule": "University",
+		"Lehrerbildung": "Teacher education",
+		"Primarbereich": "Primary education",
+		"Schule": "School",
+		"Bildungsbereichsübergreifend": "Cross-educational sector",
+		"digitalisierungsbezogene Kompetenzen": "Digital-related competencies"
 	},
 	"menu": {
-		"home": "Startseite",
-		"contact": "Kontakt",
-		"search": "Suche",
-		"content": "Artikel"
+		"home": "Home",
+		"contact": "Contact",
+		"search": "Search",
+		"content": "Article"
 	},
 	"sidebar": {
-		"close": "Seitenmenü schließen",
-		"top": "Nach oben scrollen"
+		"close": "Close side menu",
+		"top": "Scroll to top"
 	},
 	"switch": {
-		"darkmode": "Zum Dark Mode wechseln",
-		"lightmode": "Zum Light Mode wechseln",
-		"colormode": "Den Farbmodus wechseln"
+		"darkmode": "Switch to dark mode",
+		"lightmode": "Switch to light mode",
+		"colormode": "Change color mode"
 	},
 	"voc": {
-		"label": "Vokabular",
-		"detailview": "Vokabular: Detailansicht",
-		"preview": "Vokabular-Vorschau",
-		"notfound": "Vokabular nicht gefunden"
+		"label": "Vocabulary",
+		"detailview": "Vocabulary: Detail view",
+		"preview": "Vocabulary preview",
+		"notfound": "Vocabulary not found"
 	},
 	"error": {
 		"404": "Could not find content"

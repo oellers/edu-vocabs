@@ -5,7 +5,7 @@
 </script>
 
 <button
-	aria-label={$t('filter.remove', { values: { filterName: val } })}
+	aria-label={$t('filter.remove', { values: { filterName: $t('terms.' + val) } })}
 	onclick={() => handleFilterSelect(key, val)}
 	class="btn btn-outline btn-primary btn-xs mb-1 mr-1 h-auto p-1"
 >

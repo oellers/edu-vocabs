@@ -7,8 +7,10 @@
 	import ResultMenu from './ResultMenu.svelte';
 	import ResultInfo from './ResultInfo.svelte';
 	let { id, hideButtons = [] } = $props();
+
 	const result = $db.index?.store?.[id] ?? {};
 	$state.snapshot(result);
+
 	let isOpen = $state(false);
 
 	function hasResultInfo() {
@@ -47,7 +49,12 @@
 					</div>
 					<!-- Card content -->
 					<div class="class:collapse-open={isOpen} collapse">
-						<input aria-label={$t('result.expand')} type="checkbox" bind:checked={isOpen} />
+						<input
+							aria-label={$t('result.expand')}
+							name="card-content"
+							type="checkbox"
+							bind:checked={isOpen}
+						/>
 						<div class="collapse-title">
 							<p class={!isOpen ? 'line-clamp-3' : ''}>{result[vp.description]}</p>
 						</div>
@@ -66,7 +73,7 @@
 					<div class="divider !m-0 w-full"></div>
 					{#each config.filterKeys as key}
 						{#if result[vp[key]]}
-							<ResultBadge badgeLabel={result[vp[key]]} />
+							<ResultBadge badgeLabel={$t('terms.' + result[vp[key]])} />
 						{/if}
 					{/each}
 				</div>
