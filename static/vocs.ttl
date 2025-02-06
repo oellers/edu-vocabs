@@ -15,13 +15,13 @@
   sdo:about "Fach- und Themenzuordnung"@de;
   sdo:description "Werteliste von Fächern im Schulbereich."@de;
   sdo:name "Schulfächer"@de;
-  sdo:distribution _:G__2365, _:G__2366 .
+  sdo:distribution _:G__2366, _:G__2367 .
 
-_:G__2365 a sdo:DataDownload;
+_:G__2366 a sdo:DataDownload;
   sdo:contentUrl <https://w3id.org/kim/schulfaecher/index.json>;
   sdo:fileFormat "application/json" .
 
-_:G__2366 a sdo:DataDownload;
+_:G__2367 a sdo:DataDownload;
   sdo:contentUrl <https://raw.githubusercontent.com/dini-ag-kim/schulfaecher/refs/heads/main/schulfaecher.ttl>;
   sdo:fileFormat "text/turtle" .
 
@@ -35,13 +35,13 @@ _:G__2366 a sdo:DataDownload;
   sdo:about "Fach- und Themenzuordnung"@de;
   sdo:description "Werteliste von Fächern im Schulbereich."@de;
   sdo:name "Schulfächer"@de;
-  sdo:distribution _:G__2367, _:G__2368 .
+  sdo:distribution _:G__2368, _:G__2369 .
 
-_:G__2367 a sdo:DataDownload;
+_:G__2368 a sdo:DataDownload;
   sdo:contentUrl <https://w3id.org/openeduhub/vocabs/discipline/index.json>;
   sdo:fileFormat "application/json" .
 
-_:G__2368 a sdo:DataDownload;
+_:G__2369 a sdo:DataDownload;
   sdo:contentUrl <https://raw.githubusercontent.com/openeduhub/oeh-metadata-vocabs/refs/heads/master/discipline.ttl>;
   sdo:fileFormat "text/turtle" .
 
@@ -88,13 +88,13 @@ _:G__2368 a sdo:DataDownload;
   sdo:about "Fach- und Themenzuordnung"@de;
   sdo:description "Diese SKOS-Klassifikation basiert auf der Destatis-\"Systematik der Fächergruppen, Studienbereiche und Studienfächer\"."@de;
   sdo:name "Hochschulfächersystematik"@de;
-  sdo:distribution _:G__2369, _:G__2370 .
+  sdo:distribution _:G__2370, _:G__2371 .
 
-_:G__2369 a sdo:DataDownload;
+_:G__2370 a sdo:DataDownload;
   sdo:contentUrl <https://w3id.org/kim/hochschulfaechersystematik/scheme.json>;
   sdo:fileFormat "application/json" .
 
-_:G__2370 a sdo:DataDownload;
+_:G__2371 a sdo:DataDownload;
   sdo:contentUrl <https://raw.githubusercontent.com/dini-ag-kim/hochschulfaechersystematik/refs/heads/master/hochschulfaechersystematik.ttl>;
   sdo:fileFormat "text/turtle" .
 
@@ -113,9 +113,9 @@ _:G__2370 a sdo:DataDownload;
   sdo:about "Fach- und Themenzuordnung"@de;
   sdo:description "Die bundeseinheitliche Sachgebietssystematik ordnet die Medien den wesentlichen Schulfächern und anderen wichtigen Bildungszielen und -bereichen zu. SachgebietssystematikIhre hierarchische Gliederung erlaubt die Selektion und den Ausdruck von Medienlisten und Verzeichnissen mit unterschiedlicher Informationsdichte. Für Medienzentren und Schulen ist sie zur Strukturierung des eigenen Bestands unverzichtbar. Die bundeseinheitliche Sachgebietssystematik wurde in den 1990er Jahren von der AG Mediendistribution und Dokumentation entwickelt und wird ständig aktualisiert."@de;
   sdo:name "Sachgebietssystematik AG-MUD"@de;
-  sdo:distribution _:G__2371 .
+  sdo:distribution _:G__2372 .
 
-_:G__2371 a sdo:DataDownload;
+_:G__2372 a sdo:DataDownload;
   sdo:contentUrl <https://vocabs.sodix.de/sodix/educational/sachgebietssystematik/sachgebietssystematik.json>;
   sdo:fileFormat "application/json" .
 
@@ -127,9 +127,9 @@ _:G__2371 a sdo:DataDownload;
   sdo:about "Fach- und Themenzuordnung"@de;
   sdo:description "Themenbaum von Lehrplanthemen."@de;
   sdo:name "Taxonomie von Lehrplanthemen"@de;
-  sdo:distribution _:G__2372 .
+  sdo:distribution _:G__2373 .
 
-_:G__2372 a sdo:DataDownload;
+_:G__2373 a sdo:DataDownload;
   sdo:contentUrl <https://w3id.org/openeduhub/vocabs/oeh-topics/5e40e372-735c-4b17-bbf7-e827a5702b57.json>;
   sdo:fileFormat "application/json" .
 
@@ -514,7 +514,7 @@ und die Berufspraxis."""@de;
 <http://example.org/56> a wd:Q1469824;
   wdt:P126 "FWU / SODIX"@de;
   wdt:P973 <https://mundo.schule/>;
-  sdo:about "\"Schularten, Schultypen, Schulformen\""@de;
+  sdo:about "Schularten, Schultypen, Schulformen"@de;
   sdo:description "Wertelisten von Schularten bei mundo.schule"@de;
   sdo:name "Schularten Mundo"@de .
 
@@ -657,13 +657,13 @@ und die Berufspraxis."""@de;
 <http://example.org/75> a wd:Q1469824;
   wdt:P126 "ACTFL"@de;
   wdt:P973 <https://www.actfl.org/educator-resources/actfl-proficiency-guidelines>;
-  sdo:about "Sprache"@de;
+  sdo:about "Sprachen"@de;
   sdo:name "ACTFL-Leitlinien zur Sprachbeherrschung "@de .
 
 <http://example.org/76> a wd:Q1469824;
   wdt:P126 "Universität für angewandte Kunst Wien"@de;
   wdt:P973 <https://voc.uni-ak.ac.at/skosmos/languages/de/>;
-  sdo:about "Sprache"@de;
+  sdo:about "Sprachen"@de;
   sdo:description "Sprachthesaurus gemäß ISO 639-1"@de;
   sdo:name """
 ISO 639-1 Sprachthesaurus"""@de .
@@ -671,82 +671,82 @@ ISO 639-1 Sprachthesaurus"""@de .
 <http://example.org/77> a wd:Q1469824;
   wdt:P126 "Library of Congress"@de;
   wdt:P973 <http://id.loc.gov/vocabulary/languages>;
-  sdo:about "Sprache"@de;
+  sdo:about "Sprachen"@de;
   sdo:description "Die MARC-Liste für Sprachen enthält dreistellige, klein geschriebene Buchstabenfolgen, die als Bezeichner für Sprachen und Sprachgruppen dienen. Die Codes basieren in der Regel auf den ersten drei Buchstaben der englischen Form oder, in einigen Fällen, der landessprachlichen Form des entsprechenden Sprachnamens. Die Codes werden bei Bedarf variiert, um Konflikte zu lösen, und sind nicht als Abkürzungen für einen Sprachnamen gedacht. Wenn der Name einer Sprache in der Liste geändert wird, wird der ursprüngliche Code im Allgemeinen beibehalten. Die Codes in dieser Liste entsprechen den Codes der ISO 639-2 (bibliografische Codes) und einigen Codes der ISO 639-5, auch wenn die Bezeichnungen der Sprachnamen unterschiedlich sein können. Sie sind mit den entsprechenden Codes in ISO 639-2 und ISO 639-5 und den entsprechenden zweistelligen Codes in ISO 639-1 verknüpft. Die Liste enthält über 480 diskrete Codes. Sie ist auch durchsuchbar unter: MARC-Code-Liste für Sprachen."@de;
   sdo:name "Sprachen (MARC)"@de .
 
 <http://example.org/78> a wd:Q1469824;
   wdt:P126 "Library of Congress"@de;
   wdt:P973 <http://id.loc.gov/vocabulary/iso639-1>;
-  sdo:about "Sprache"@de;
+  sdo:about "Sprachen"@de;
   sdo:description "ISO 639-1 ist der erste Teil der internationalen ISO 639-Sprachcodefamilie. ISO 639-1 enthält zweistellige, klein geschriebene Buchstabenfolgen, die zur Identifizierung von Sprachen dienen. Die Liste enthält etwa 180 diskrete Codes. Für alle ISO 639-1-Sprachen gibt es auch ISO 639-2-Codes mit drei Zeichen. Diese Codes sind mit den Codes für dieselben Sprachen in ISO 639-2 und den MARC Language Codes verknüpft."@de;
   sdo:name "Sprachen ISO 639-1"@de .
 
 <http://example.org/79> a wd:Q1469824;
   wdt:P126 "Library of Congress"@de;
   wdt:P973 <http://id.loc.gov/vocabulary/iso639-2>;
-  sdo:about "Sprache"@de;
+  sdo:about "Sprachen"@de;
   sdo:description "ISO 639-2 ist Teil der ISO 639-Sprachcodefamilie, die auch einen zweistelligen Codesatz (ISO 639-1) für die Darstellung von Sprachnamen enthält. ISO 639-2 enthält Codes für alle in ISO 639-1 enthaltenen Sprachen und mehrere hundert weitere Sprachen. Die Codes von ISO 639-2 (Bibliografie) wurden für die Verwendung in bibliografischen Metadaten entwickelt, z. B. für Bibliotheken, Informationsdienste und Verlage, während ISO 639-2 (Terminologie) auf Terminologie, Lexikografie und linguistische Anwendungen ausgerichtet ist. Die Listen sind identisch, mit Ausnahme von 20 Sprachen, die unterschiedliche bibliographische und terminologische Codes haben. Die Liste enthält über 500 diskrete Codes. Die ISO 639-2 (bibliographischen) Codes entsprechen den MARC-Sprachcodes. Die ISO 639-2-Codes sind mit zweistelligen Codes für dieselbe Sprache in ISO 639-1, mit den MARC-Sprachcodes und mit entsprechenden Codes für Sprachgruppen in ISO 639-5 verknüpft."@de;
   sdo:name "Sprachen ISO 639-2"@de .
 
 <http://example.org/80> a wd:Q1469824;
   wdt:P126 "Library of Congress"@de;
   wdt:P973 <http://id.loc.gov/vocabulary/iso639-5>;
-  sdo:about "Sprache"@de;
+  sdo:about "Sprachen"@de;
   sdo:description "ISO 639-5 enthält dreistellige klein geschriebene Buchstabenfolgen, die als Bezeichner für die Darstellung von Namen lebender und ausgestorbener Sprachfamilien und Sprachgruppen dienen. Die Liste enthält über 100 diskrete Codes. Die Codes in dieser Liste umfassen alle Codes für Sprachgruppen im MARC-Sprachcodeschema und über 40 weitere Gruppen. Die Codes sind mit den entsprechenden Codes in der MARC-Sprachcodeliste und in ISO 639-2 verknüpft."@de;
   sdo:name "Sprachen ISO 6395"@de .
 
 <http://example.org/81> a wd:Q1469824;
   wdt:P126 "Learning Resource Metadata Initiative"@de;
   wdt:P973 <https://www.dublincore.org/specifications/lrmi/concept_schemes/educationalAudienceRole/>;
-  sdo:about "Zielgruppe"@de;
+  sdo:about "Zielgruppen"@de;
   sdo:description "Das LRMI Audience Role Vocabulary definiert die primären oder beabsichtigten Rollen des Publikums (Nutznießers) der beschriebenen Ressource. Es dient der Bereitstellung von Werten für die Eigenschaft lrmi educationalRole."@de;
   sdo:name "Zielgruppe"@de .
 
 <http://example.org/82> a wd:Q1469824;
   wdt:P126 "LOM"@de;
-  sdo:about "Zielgruppe"@de;
+  sdo:about "Zielgruppen"@de;
   sdo:name "Zielgruppe"@de .
 
 <http://example.org/83> a wd:Q1469824;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/intendedEndUserRole/>;
-  sdo:about "Zielgruppe"@de;
+  sdo:about "Zielgruppen"@de;
   sdo:description "Eine Werteliste für Rollen, für die die Ressource erstellt wurde. Entstanden im Kontext des OpenEduHub."@de;
   sdo:name "Zielgruppe"@de .
 
 <http://example.org/84> a wd:Q1469824;
   wdt:P126 "European Schoolnet Vocabulary Bank for Education"@de;
   wdt:P973 <http://europeanschoolnet-vbe.lexaurus.net/vbe/browse>;
-  sdo:about "Zielgruppe"@de;
+  sdo:about "Zielgruppen"@de;
   sdo:description "Werteliste von Zielgruppen des Eurpean Schoolnet."@de;
   sdo:name "Zielgruppe (EUN Target Groups,)"@de .
 
 <http://example.org/85> a wd:Q1469824;
   wdt:P126 "Library of Congress"@de;
   wdt:P973 <http://id.loc.gov/vocabulary/maudience>;
-  sdo:about "Zielgruppe"@de;
+  sdo:about "Zielgruppen"@de;
   sdo:description "Benutzerkategorie, für die der Inhalt einer Ressource bestimmt ist oder für die der Inhalt als geeignet angesehen wird."@de;
   sdo:name "Library of Congress (intended Audience),"@de .
 
 <http://example.org/86> a wd:Q1469824;
   wdt:P126 "Schulflix"@de;
   wdt:P973 <https://www.schulflix.com/kurskatalog/>;
-  sdo:about "Zielgruppe"@de;
+  sdo:about "Zielgruppen"@de;
   sdo:description "Rollen die bei Schulflix verwendet werden."@de;
   sdo:name "Zielgruppen"@de .
 
 <http://example.org/87> a wd:Q1469824;
   wdt:P126 "Come In"@de;
   wdt:P973 <https://w3id.org/comein/vocabs/educationalAudienceRole/>;
-  sdo:about "Zielgruppe"@de;
+  sdo:about "Zielgruppen"@de;
   sdo:description "Eine Werteliste für Zielgruppen als Lernende, für welche die Ressource konzipiert wurde."@de;
   sdo:name "Personengruppen"@de .
 
 <http://example.org/88> a wd:Q1469824;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/intendedEndUserRole_BIRD/>;
-  sdo:about "Zielgruppe"@de;
+  sdo:about "Zielgruppen"@de;
   sdo:description "Eine Werteliste für die Zielgruppen von Bildungsangeboten, wie sie im BIRD Referenzprojekt angelegt wurde."@de;
   sdo:name "Personengruppen"@de .
 
@@ -754,7 +754,7 @@ ISO 639-1 Sprachthesaurus"""@de .
   wdt:P1324 "https://hof-halle-wittenberg.github.io/vocabs/audience/"@de;
   wdt:P126 "???"@de;
   wdt:P973 <https://padlet.com/justushenke/erweitertes-amb-ycqitnb3y80hkvw1>;
-  sdo:about "Zielgruppe"@de;
+  sdo:about "Zielgruppen"@de;
   sdo:description "Zielgruppen Vokabular im hochschuldidaktischen Kontext"@de;
   sdo:name "Zielgruppe"@de .
 
@@ -803,7 +803,7 @@ ISO 639-1 Sprachthesaurus"""@de .
   wdt:P973 <http://w3id.org/openeduhub/vocabs/learningResourceType/>;
   sdo:about "Ressourcentyp, Medientyp"@de;
   sdo:description "Liste von Ressourcentypen. Entstanden im Kontext des OpenEduHub."@de;
-  sdo:name "\"Alter\" LRT"@de .
+  sdo:name "Alter\" LRT"@de .
 
 <http://example.org/97> a wd:Q1469824;
   wdt:P126 "SODIX"@de;
@@ -1167,4 +1167,3 @@ ISO 639-1 Sprachthesaurus"""@de .
   sdo:about "Granularität"@de;
   sdo:description "Eine Wertelliste für Einordnungen in Unterrichtsplanung, entstanden im Kontext des OpenEduHub. Erweiterung von LOMv1.0"@de;
   sdo:name "Aggregationslevel"@de .
-
