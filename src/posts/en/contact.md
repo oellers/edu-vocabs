@@ -17,22 +17,22 @@ Diese Datenbank soll die Kommunikation zwischen Zielgruppen und Stakeholdern erl
 
 ### Oellers, Manuel
 
-[Manuel Oellers](https://github.com/oellers) promoviert mit Arbeits- und Forschungsschwerpunkten im Kontext digitalisierungsbezogener Lehr-/Lernforschung zum Einsatz von Learning Analytics als Methode zur Implementierung adaptiver Lernunterstützung in videobasierten Lehr-/Lernaktivitäten im Kontext der Lehrkräftebildung. Er verantwortet Konzeption, Entwicklung, Betrieb und Vernetzung von Lehr-/Lernplattformen im Bereich der Lehrkräftebildung, darunter die Videoportale ProVision und ViU: Early Science, das MetaVideoportal unterrichtsvideos.net sowie das OER-Portal comein.nrw und damit in Zusammenhang stehende Infrastrukturprojekte zur Schaffung eines nahtlosen Nutzungserlebnisses (föderiertes Single Sign-on sowie Authentifikations- und Autorisationsnetzwerke). Er wirkt in der OER-Metadatengruppe und Curricula-Gruppe der DINI-AG-KIM mit.
+[Manuel Oellers](https://github.com/oellers) is doing his doctorate with a focus on work and research in the context of digitalisation-related teaching/learning research on the use of learning analytics as a method for implementing adaptive learning support in video-based teaching/learning activities in the context of teacher training. He is responsible for the conception, development, operation and networking of teaching/learning platforms in the field of teacher training, including the video portals ProVision and ViU: Early Science, the meta video portal unterrichtsvideos.net and the OER portal comein.nrw and related infrastructure projects to create a seamless user experience (federated single sign-on as well as authentication and authorisation networks). He is involved in the OER metadata group and curricula group of the DINI-AG-KIM.
 
 ### Rörtgen, Steffen
 
-[Steffen Rörtgen](https://github.com/sroertgen) ist seit 2019 in verschiedenen Infrastrukturprojekten im Bildungsbereich als Softwareentwickler und Metadatenarchitekt beschäftigt und befasst sich vorwiegend mit Fragen der Dateninteroperabilität und der Standardisierung. Er wirkt in der OERMetadatengruppe der DINI-AG-KIM und hat 2021 die Curricula-Gruppe gegründet, die sich mit der technischen Modellierung von Lehr- und Bildungsplänen befasst. Seit 2024 ist er Mitglied im OER-Beirat des BMBFs und bringt dort seine Expertise zu Metadateninfrastrukturen ein. Er ist außerdem an der Integration sozialer Komponenten in Bildungsplattformen interessiert.
+[Steffen Rörtgen](https://github.com/sroertgen) has been involved in various infrastructure projects in the education sector as a software developer and metadata architect since 2019 and is primarily concerned with issues of data interoperability and standardisation. He is involved in the OER metadata group of the DINI-AG-KIM and founded the Curricula Group in 2021, which deals with the technical modelling of curricula and educational plans. He has been a member of the BMBF's OER Advisory Board since 2024, where he contributes his expertise on metadata infrastructures. He is also interested in the integration of social components in educational platforms.
 
 ## Finanzierung
 
 <figure class="max-w-lg">
-  <img class="h-auto max-w-full" src="/img/foerdermittel_eu.jpg" alt="Finanziert von der Europäischen Union (Next Generation EU)">
-  <figcaption class="mt-2">Die geäußerten Ansichten und Meinungen sind ausschließlich die der Autoren und spiegeln nicht unbedingt die Ansichten der Europäischen Union oder der Europäischen Kommission wider. Weder die Europäische Union noch die Europäische Kommission können für sie verantwortlich gemacht werden.
+  <img class="h-auto max-w-full" src="/img/foerdermittel_eu.jpg" alt="Funded by the European Union (Next Generation EU)">
+  <figcaption class="mt-2">The views and opinions expressed are solely those of the authors and do not necessarily reflect the views of the European Union or the European Commission. Neither the European Union nor the European Commission can be held responsible for them.
 </figcaption>
 </figure>
 
 <figure class="max-w-lg">
-  <img class="h-auto max-w-full" src="/img/foerdermittel_bmbf.png" alt="Gefördert vom Bundesministerium für Bildung und Forschung">
-  <figcaption class="mt-2">Das Projekt wird im Rahmen der <a href="https://www.bildung-forschung.digital/digitalezukunft/de/bildung/initiative-digitale-bildung/initiative-digitale-bildung_node.html">Initiative Digitale Bildung</a> vom BMBF gefördert (FKZ 16NB008).
+  <img class="h-auto max-w-full" src="/img/foerdermittel_bmbf.png" alt="Funded by the Federal Ministry of Education and Research">
+  <figcaption class="mt-2">The project is funded by the BMBF as part of the <a href=‘https://www.bildung-forschung.digital/digitalezukunft/de/bildung/initiative-digitale-bildung/initiative-digitale-bildung_node.html’>Digital Education Initiative</a> (FKZ 16NB008).
 </figcaption>
 </figure>
