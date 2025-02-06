@@ -19,3 +19,7 @@ export const VOCAB_PROPERTIES = {
 };
 
 export const METADATA_KEYS = ['issued', 'compliesWith'];
+
+export const LANGUAGES = ['en', 'de'];
+
+export const LANGUAGE_KEY = 'sveltekit:locale';

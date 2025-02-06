@@ -6,7 +6,13 @@
 	import { t } from 'svelte-i18n';
 	import { db } from '$lib/db';
 	let { data } = $props();
-	const result = $db.index?.store?.[data.id];
+	let result = $state({});
+
+	$effect(() => {
+		if ($db.initialized) {
+			result = $db.index?.store?.[data.id] || {};
+		}
+	});
 </script>
 
 <svelte:head>

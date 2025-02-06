@@ -3,6 +3,12 @@
 	import BrandIcon from '$lib/icons/BrandIcon.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import { t } from 'svelte-i18n';
+	import { locale } from 'svelte-i18n';
+	import { LANGUAGES } from '$lib/constants';
+	import SelectLanguage from './SelectLanguage.svelte';
+	let lang = $locale.slice(0, 2);
+
+	//lang = $locale.slice(0, 2); //LANGUAGES.includes($locale.slice(0, 2)) ? $locale.slice(0, 2) : LANGUAGES[0];
 	let open = false;
 </script>
 
@@ -41,8 +47,13 @@
 			<ThemeToggle />
 		</div>
 		<a aria-label={$t('menu.search')} href="/search" class="btn btn-ghost">{$t('menu.search')}</a>
-		<a aria-label={$t('menu.contact')} href="/content/contact" class="btn btn-ghost"
-			>{$t('menu.contact')}</a
+		<a
+			aria-label={$t('menu.contact')}
+			href={`/content/${$locale.slice(0, 2)}/contact`}
+			class="btn btn-ghost"
 		>
+			{$t('menu.contact')}
+		</a>
+		<SelectLanguage />
 	</nav>
 </div>

@@ -30,7 +30,7 @@
 						aria-selected={$db.selectedFilters[filterKey].includes(filterVal)}
 						onclick={() => handleFilterSelect(filterKey, filterVal)}
 					>
-						{filterVal}
+						{$t('terms.' + filterVal)}
 					</button>
 				</li>
 			{/each}

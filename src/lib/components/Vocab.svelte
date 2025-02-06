@@ -23,6 +23,9 @@
 	}
 
 	async function getVocabs(uri) {
+		// TODO
+		// cors issue depending on the target uri
+		// fetch via backend proxy route?
 		const res = await fetch(uri);
 		const json = await res.json();
 		return json;
