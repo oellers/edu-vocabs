@@ -4,39 +4,39 @@ description: 'Project description'
 author: 'Manuel'
 date: '2025-01-01'
 keywords:
-  - kompendium
-  - didaktische metadaten
-  - vokabulardatenbank
+  - compendium
+  - educational metadaten
+  - vocabulary database
 ---
 
-## Herausforderungen in einer vernetzten Bildungslandschaft
+## Challenges in an educational landscape
 
-Bei der Gestaltung von Bildungsdiensten sind kontrollierte Vokabulare für die Erfassung von Ressourcen häufig unerlässlich, damit diese für verschiedene Bildungsakteure auffindbar und nachnutzbar werden. Durch die Vielzahl unterschiedlicher Bedarfe in einer verteilten Bildungslandschaft sind nachnutzbare Vokabulare für den Bildungsbereich jedoch nicht unmittelbar zugänglich.
+When designing educational services, controlled vocabularies are often essential for capturing resources so that they become discoverable and reusable for various educational stakeholders. However, due to the multitude of different needs in a distributed educational landscape, reusable vocabularies for the education sector are not immediately accessible.
 
-In einer zunehmend digitalen und vernetzten Bildungslandschaft stehen verschiedene Akteure vor der Herausforderung, ihre Dienste und Plattformen interoperabel zu gestalten. Ohne einheitliche Vokabulare entstehen fragmentierte Insellösungen, die den Datenaustausch und die Zusammenarbeit erschweren. Das "[Kompendium: Didaktische Metadaten](https://doi.org/10.25656/01:29235)" (Oellers & Rörtgen 2024) konnte bereits die Vielfalt von Akteuren und existierenden Vokabularen aufzeigen. Diese Datenbank adressiert den Bedarf zur Systematisierung eines Marktüberblicks.
+In an increasingly digital and networked educational landscape, various stakeholders face the challenge of making their services and platforms interoperable. Without standardized vocabularies, fragmented isolated solutions emerge, hindering data exchange and collaboration. The "[Compendium - Educational Metadata (en)](https://oellers.github.io/kompendium/)" (Oellers & Rörtgen 2025) has already highlighted the diversity of stakeholders and existing vocabularies. This database addresses the need for systematizing a market overview.
 
-## Ziele dieser interaktiven Datenbank
+## Objectives of this Interactive Database
 
-Diese Datenbank für kontrollierte Vokabulare im Bildungsbereich spielt daher eine zentrale Rolle bei der künftigen Standardisierung und Harmonisierung von Bildungsinhalten.
+This database for controlled vocabularies in the education sector therefore plays a central role in the future standardization and harmonization of educational content.
 
-Die Einführung dieser Datenbank zielt darauf ab:
+The introduction of this database aims to:
 
-- bestehende kontrollierte Vokabulare zu sammeln, zu strukturieren und zugänglich machen
-- erleichtern der Kommunikation zwischen verschiedenen Zielgruppen und Stakeholdern
-- harmonisierende Effekte in der Bildungslandschaft fördern
-- Mehraufwände bei der Entwicklung von Vokabularen reduzieren
-- Interoperabilität von Bildungsdiensten verbessern
-- Anschlussfähigkeit an nationale/internationele Entwicklungen erleichtern
-- Datenaustausch zwischen verschiedenen Diensten vereinfachen
+- Collect, structure, and make existing controlled vocabularies accessible
+- Facilitate communication between different target groups and stakeholders
+- Promote harmonizing effects in the educational landscape
+- Reduce additional efforts in vocabulary development
+- Improve the interoperability of educational services
+- Facilitate connectivity to national/international developments
+- Simplify data exchange between different services
 
-Durch die erhöhte Sichtbarkeit und Nachnutzbarkeit der Vokabulare bietet unsere Datenbank eine wertvolle Ressource für die Recherche kontrollierter Vokabulare aus nationalen, europäischen und internationalen Bildungsprojekten.
+By increasing the visibility and reusability of vocabularies, our database provides a valuable resource for researching controlled vocabularies from national, European, and international educational projects.
 
-## EduVocs - Die interaktive Vokabulardatenbank
+## EduVocs - The Interactive Vocabulary Database
 
-✅ minimiert fragmentierte Insellösungen einer heterogenen Bildungslandschaft
+✅ Minimizes fragmented isolated solutions in a heterogeneous educational landscape
 
-✅ ermöglicht Bildungsdienste anschlussfähiger an nationale und internationale Entwicklungen zu machen
+✅ Enables educational services to be more compatible with national and international developments
 
-✅ vereinfacht die Harmonisierung des Datenaustauschs zwischen verschiedenen Diensten
+✅ Simplifies the harmonization of data exchange between different services
 
-✅ erlaubt die Recherche kontrollierter Vokabulare aus nationalen, europäischen und internationalen Bildungsprojekten
+✅ Allows for the research of controlled vocabularies from national, European, and international educational projects
