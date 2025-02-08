@@ -11,7 +11,8 @@
 	"info": "Info",
 	"format": {
 		"application/json": "JSON",
-		"text/turtle": "Turtle"
+		"text/turtle": "Turtle",
+		"application/xml": "XML"
 	},
 	"buttons": {
 		"external": "Zum Anbieter",
