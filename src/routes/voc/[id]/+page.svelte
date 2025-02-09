@@ -40,9 +40,9 @@
 					title={$t('voc.report')}
 					href={url.report +
 						'?labels=invalid&body=Affected%20data%20URI%3A%20' +
-						result[vp.id] +
+						encodeURIComponent(result[vp.id]) +
 						'&title=Data%20issue%20report%3A%20' +
-						result[vp.name]}
+						encodeURIComponent(result[vp.name])}
 					class="btn btn-ghost ml-auto"
 				>
 					<ReportIcon />
