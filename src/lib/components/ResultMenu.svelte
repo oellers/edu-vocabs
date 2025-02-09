@@ -7,6 +7,7 @@
 	import ExternalLinkIcon from '$lib/icons/ExternalLinkIcon.svelte';
 	import VocabDownload from '$lib/components/VocabDownload.svelte';
 	import SourceCodeIcon from '$lib/icons/SourceCodeIcon.svelte';
+	import CloudIcon from '$lib/icons/CloudIcon.svelte';
 
 	const vocabDistribution = $derived(result[vp.distribution]?.map((e) => $db.index.store[e]));
 </script>
@@ -29,6 +30,17 @@
 		>
 			<ExternalLinkIcon />
 			{$t('buttons.external')}
+		</a>
+	{/if}
+	{#if result[vp.endpointUrl] && !hideButtons.includes(vp.endpointUrl)}
+		<a
+			class="btn btn-outline join-item btn-sm h-auto border-slate-400 py-2"
+			aria-label={$t('buttons.api')}
+			href={result[vp.endpointUrl]}
+			target="_blank"
+		>
+			<CloudIcon />
+			{$t('buttons.api')}
 		</a>
 	{/if}
 	{#if result[vp.repo] && !hideButtons.includes(vp.repo)}
