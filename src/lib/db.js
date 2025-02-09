@@ -9,6 +9,10 @@ export const db = writable({
 	results: [],
 	filters: {},
 	index: {},
+	sort: {
+		key: '',
+		order: 'asc'
+	},
 	initizialized: false,
 	filterKeys: config.filterKeys,
 	selectedFilters: initFilters()
@@ -52,6 +56,10 @@ export function resetFilters() {
 		return {
 			...db,
 			query: '',
+			sort: {
+				key: '',
+				order: 'asc'
+			},
 			selectedFilters: initFilters()
 		};
 	});
@@ -86,6 +94,31 @@ export function search(event) {
 	} else {
 		updateResults(results);
 	}
+}
+
+/**
+ * Sorts the results in the database based on the specified key and order,
+ * then updates the sorted results.
+ *
+ * @param {string} key - The property used for sorting the results.
+ * @param {string} [order='asc'] - sort order: 'asc' for ascending, 'desc' for descending.
+ */
+export function sort(key, order = 'asc') {
+	order = order.toLowerCase();
+	const results = [...get(db).results].sort((a, b) => {
+		const [valA, valB] = [a[key], b[key]];
+		if (valA == null || valB == null) return 0;
+		if (typeof valA === 'number' && typeof valB === 'number') {
+			return order === 'desc' ? valB - valA : valA - valB;
+		}
+		return order === 'desc'
+			? String(valB).localeCompare(String(valA))
+			: String(valA).localeCompare(String(valB));
+	});
+	db.update((db) => {
+		return { ...db, sort: { key, order } };
+	});
+	updateResults(results);
 }
 
 /**

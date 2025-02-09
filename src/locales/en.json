@@ -45,8 +45,14 @@
 		"last": "Last page"
 	},
 	"md": {
+		"name": "Title",
 		"issued": "Published",
 		"compliesWith": "Compatible with"
+	},
+	"sort": {
+		"choose": "Choose sorting",
+		"asc": "asc",
+		"desc": "desc"
 	},
 	"filter": {
 		"reset": "Reset filter",
