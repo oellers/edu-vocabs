@@ -5,8 +5,6 @@
 
 	function updateSort(event) {
 		const [key, order] = event.target.value.split(' ');
-		console.log('key', key);
-		console.log('order', order);
 		sort(key, order);
 	}
 </script>
