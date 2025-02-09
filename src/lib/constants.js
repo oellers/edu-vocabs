@@ -17,7 +17,7 @@ export const VOCAB_PROPERTIES = {
 	usedBy: 'P1535', // http://www.wikidata.org/prop/direct/P1535
 	repo: 'P1324', // http://www.wikidata.org/prop/direct/P1324
 	compliesWith: 'P5009', // http://www.wikidata.org/prop/direct/P5009
-	format: 'fomrat', // http://purl.org/dc/terms/format
+	format: 'format', // http://purl.org/dc/terms/format
 	fileFormat: 'fileFormat', // https://schema.org/fileFormat
 	distribution: 'distribution', // https://schema.org/distribution
 	rawVocab: 'rawVocab', // https://eduvocs/
