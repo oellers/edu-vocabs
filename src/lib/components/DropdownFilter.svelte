@@ -1,12 +1,18 @@
 <script>
-	import { db, handleFilterSelect, search } from '$lib/db';
+	import { db, handleFilterSelect } from '$lib/db';
 	import { t } from 'svelte-i18n';
 	import CaretDown from '$lib/icons/CaretDown.svelte';
 
 	let { title, filterKey } = $props();
 
 	let searchTerm = $state('');
-	let filteredValues = $state($db.filters[filterKey]);
+	let filteredValues = $state([]);
+
+	$effect(() => {
+		if ($db.initialized) {
+			filteredValues = $db.filters[filterKey] || [];
+		}
+	});
 
 	function filterByTerm() {
 		filteredValues = [...$db.filters[filterKey]].filter((filterVal) =>
@@ -33,9 +39,10 @@
 			<li class="p-2">
 				<input
 					type="text"
+					name="{$t('search')} - {title}"
 					aria-label={$t('search')}
 					bind:value={searchTerm}
-					onkeyup={filterByTerm}
+					oninput={filterByTerm}
 					placeholder={$t('search')}
 					class="input input-sm input-bordered w-full"
 				/>
@@ -48,7 +55,10 @@
 						class="btn btn-ghost font-normal"
 						class:btn-active={$db.selectedFilters[filterKey].includes(filterVal)}
 						aria-selected={$db.selectedFilters[filterKey].includes(filterVal)}
-						onclick={() => handleFilterSelect(filterKey, filterVal)}
+						onclick={() => {
+							handleFilterSelect(filterKey, filterVal);
+							searchTerm = '';
+						}}
 					>
 						{$t(`terms.${filterVal}`, { default: filterVal })}
 					</button>
