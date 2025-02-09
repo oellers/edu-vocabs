@@ -11,13 +11,23 @@
 	"info": "Info",
 	"format": {
 		"application/json": "JSON",
-		"text/turtle": "Turtle"
+		"text/turtle": "Turtle",
+		"application/xml": "XML",
+		"application/pdf": "PDF"
 	},
 	"buttons": {
-		"external": "Zum Anbieter",
+		"service": "Zum Dienst",
+		"external": "Zum Vokabular",
 		"internal": "Details",
 		"download": "Download",
-		"repo": "Repositorium"
+		"repo": "Repositorium",
+		"api": "Schnittstelle",
+		"clipboard": "Link zum Vokabular in Zwischenablage kopieren",
+		"report": "Fehler im Datensatz auf GitHub melden"
+	},
+	"event": {
+		"copy-clipboard": "Der Link wurde in die Zwischenablage kopiert.",
+		"copy-clipboard-failed": "Der Link konnte nicht kopiert werden."
 	},
 	"dropdown": {
 		"sort": "Sortieren nach {sortName}",
@@ -35,14 +45,21 @@
 		"last": "Letzte Seite"
 	},
 	"md": {
+		"name": "Titel",
 		"issued": "Veröffentlicht",
 		"compliesWith": "Kompatibel mit"
+	},
+	"sort": {
+		"choose": "Sortierung wählen",
+		"asc": "aufsteigend",
+		"desc": "absteigend"
 	},
 	"filter": {
 		"reset": "Filter zurücksetzen",
 		"remove": "Filter {filterName} entfernen",
 		"about": "Themenfeld",
-		"educationalLevel": "Bildungsstufe"
+		"educationalLevel": "Bildungsstufe",
+		"maintainedBy": "Herausgeber"
 	},
 	"terms": {
 		"Fach- und Themenzuordnung": "Fach- und Themenzuordnung",

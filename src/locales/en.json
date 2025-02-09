@@ -11,13 +11,23 @@
 	"info": "Info",
 	"format": {
 		"application/json": "JSON",
-		"text/turtle": "Turtle"
+		"text/turtle": "Turtle",
+		"application/xml": "XML",
+		"application/pdf": "PDF"
 	},
 	"buttons": {
-		"external": "To provider",
+		"service": "Service",
+		"external": "Vocabulary",
 		"internal": "Details",
 		"download": "Download",
-		"repo": "Repository"
+		"repo": "Repository",
+		"api": "API",
+		"clipboard": "Copy link to vocabulary to clipboard",
+		"report": "Report errors in the data record on GitHub"
+	},
+	"event": {
+		"copy-clipboard": "The link was copied to the clipboard.",
+		"copy-clipboard-failed": "The link could not be copied."
 	},
 	"dropdown": {
 		"sort": "Sort by {sortName}",
@@ -35,14 +45,21 @@
 		"last": "Last page"
 	},
 	"md": {
+		"name": "Title",
 		"issued": "Published",
 		"compliesWith": "Compatible with"
+	},
+	"sort": {
+		"choose": "Choose sorting",
+		"asc": "asc",
+		"desc": "desc"
 	},
 	"filter": {
 		"reset": "Reset filter",
 		"remove": "Remove filter {filterName}",
 		"about": "Subject area",
-		"educationalLevel": "Educational level"
+		"educationalLevel": "Educational level",
+		"maintainedBy": "Maintainer"
 	},
 	"terms": {
 		"Fach- und Themenzuordnung": "Subject and topic classification",

@@ -74,7 +74,7 @@ async function load() {
 
 		// Add each document to the index
 		docs.forEach((d) => {
-			const tags = [d?.['about'], d?.['educationalLevel']].filter(Boolean);
+			const tags = config.filterKeys.map((key) => d?.[key]).filter(Boolean);
 			index.add({
 				...d,
 				tag: tags

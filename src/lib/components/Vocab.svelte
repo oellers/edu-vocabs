@@ -26,9 +26,15 @@
 		// TODO
 		// cors issue depending on the target uri
 		// fetch via backend proxy route?
-		const res = await fetch(uri);
-		const json = await res.json();
-		return json;
+		try {
+			const res = await fetch(uri);
+			if (!res.ok) {
+				throw new Error(`Network error: ${res.statusText}`);
+			}
+			return await res.json();
+		} catch (error) {
+			throw new Error(`Failed to fetch vocab data: ${error}`);
+		}
 	}
 </script>
 

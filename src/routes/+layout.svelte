@@ -13,9 +13,7 @@
 	onMount(() => {
 		createIndex();
 		let savedLang = sessionStorage.getItem(lkey) || getLocaleFromNavigator() || '';
-		let lang = LANGUAGES.includes(savedLang) ? savedLang : 'en';
-		console.log('On mount lang:', lang);
-		$locale = lang;
+		$locale = LANGUAGES.includes(savedLang) ? savedLang : 'en';
 	});
 </script>
 

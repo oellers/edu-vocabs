@@ -1,5 +1,6 @@
 export const config = {
-	filterKeys: ['about', 'educationalLevel'],
+	filterKeys: ['about', 'educationalLevel', 'P126'],
+	sortKeys: ['name', 'issued', 'maintainedBy', 'about', 'educationalLevel'],
 	index: {
 		tokenize: 'forward',
 		language: 'de',
