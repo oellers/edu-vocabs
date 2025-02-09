@@ -6,14 +6,27 @@
 	import { t } from 'svelte-i18n';
 	import { db } from '$lib/db';
 	import ReportIcon from '$lib/icons/ReportIcon.svelte';
+	import ClipboardIcon from '$lib/icons/ClipboardIcon.svelte';
 	let { data } = $props();
 	let result = $state({});
+	let copyToClipboardMessage = $state('');
 
 	$effect(() => {
 		if ($db.initialized) {
 			result = $db.index?.store?.[data.id] || {};
 		}
 	});
+
+	function copyToClipboard() {
+		navigator.clipboard
+			.writeText(window.location.href)
+			.then(() => {
+				copyToClipboardMessage = $t('event.copy-clipboard');
+			})
+			.catch((err) => {
+				copyToClipboardMessage = $t('event.copy-clipboard-failed');
+			});
+	}
 </script>
 
 <svelte:head>
@@ -34,19 +47,36 @@
 						</li>
 					</ul>
 				</div>
-				<a
-					target="_blank"
-					aria-label={$t('voc.report')}
-					title={$t('voc.report')}
-					href={url.report +
-						'?labels=invalid&body=Affected%20data%20URI%3A%20' +
-						encodeURIComponent(result[vp.id]) +
-						'&title=Data%20issue%20report%3A%20' +
-						encodeURIComponent(result[vp.name])}
-					class="btn btn-ghost ml-auto"
-				>
-					<ReportIcon />
-				</a>
+				<div class="ml-auto">
+					<ul class="bg-base-400 menu menu-horizontal menu-sm rounded-box">
+						<li>
+							<a
+								class="tooltip z-30"
+								data-tip={$t('buttons.report')}
+								target="_blank"
+								aria-label={$t('buttons.report')}
+								href={url.report +
+									'?labels=invalid&body=Affected%20data%20URI%3A%20' +
+									encodeURIComponent(result[vp.id]) +
+									'&title=Data%20issue%20report%3A%20' +
+									encodeURIComponent(result[vp.name])}
+							>
+								<ReportIcon />
+							</a>
+						</li>
+						<li>
+							<button
+								class="tooltip z-30"
+								data-tip={copyToClipboardMessage || $t('buttons.clipboard')}
+								aria-label={$t('buttons.clipboard')}
+								onclick={copyToClipboard}
+								onfocusout={() => (copyToClipboardMessage = '')}
+							>
+								<ClipboardIcon />
+							</button>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<h1 class="text-2xl">{$t('voc.detailview')}</h1>
 			<Result id={data.id} hideButtons={[vp.id]} />
