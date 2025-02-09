@@ -18,13 +18,13 @@
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:description "Werteliste von Fächern im Schulbereich."@de;
   dct:title "Schulfächer"@de;
-  sdo:distribution _:G__2408, _:G__2409 .
+  sdo:distribution _:G__2411, _:G__2412 .
 
-_:G__2408 a sdo:DataDownload;
+_:G__2411 a sdo:DataDownload;
   sdo:contentUrl <https://w3id.org/kim/schulfaecher/index.json>;
   sdo:fileFormat "application/json" .
 
-_:G__2409 a sdo:DataDownload;
+_:G__2412 a sdo:DataDownload;
   sdo:contentUrl <https://raw.githubusercontent.com/dini-ag-kim/schulfaecher/refs/heads/main/schulfaecher.ttl>;
   sdo:fileFormat "text/turtle" .
 
@@ -39,13 +39,13 @@ _:G__2409 a sdo:DataDownload;
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:description "Werteliste von Fächern im Schulbereich."@de;
   dct:title "Schulfächer"@de;
-  sdo:distribution _:G__2410, _:G__2411 .
+  sdo:distribution _:G__2413, _:G__2414 .
 
-_:G__2410 a sdo:DataDownload;
+_:G__2413 a sdo:DataDownload;
   sdo:contentUrl <https://w3id.org/openeduhub/vocabs/discipline/index.json>;
   sdo:fileFormat "application/json" .
 
-_:G__2411 a sdo:DataDownload;
+_:G__2414 a sdo:DataDownload;
   sdo:contentUrl <https://raw.githubusercontent.com/openeduhub/oeh-metadata-vocabs/refs/heads/master/discipline.ttl>;
   sdo:fileFormat "text/turtle" .
 
@@ -87,9 +87,9 @@ Theater"""@de;
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:description "Fächer und Themen bei digital learning tools."@de;
   dct:title "Schulfächer"@de;
-  sdo:distribution _:G__2412 .
+  sdo:distribution _:G__2415 .
 
-_:G__2412 a sdo:DataDownload;
+_:G__2415 a sdo:DataDownload;
   sdo:contentUrl <https://digitallearningtools.de/api/subjects?format=json>;
   sdo:fileFormat "application/json" .
 
@@ -110,36 +110,66 @@ _:G__2412 a sdo:DataDownload;
   sdo:about "digitalisierungsbezogene Kompetenzen"@de;
   dct:description "Kompetenzen im digital learning lab."@de;
   dct:title "Kompetenzen in der digitalen Welt (KMK)"@de;
-  sdo:distribution _:G__2413 .
+  sdo:distribution _:G__2416 .
 
-_:G__2413 a sdo:DataDownload;
+_:G__2416 a sdo:DataDownload;
   sdo:contentUrl <https://digitallearninglab.de/api/competences?format=json>;
   sdo:fileFormat "application/json" .
 
 <http://example.org/5> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
   sdo:educationalLevel "Schule"@de;
-  dcat:endpointURL <http://europeanschoolnet-vbe.lexaurus.net/vbe/linkeddata/vocab/EUN/EUN.subjectLREValues.skos>;
+  dcat:endpointURL <http://europeanschoolnet-vbe.lexaurus.net/vbe/api>;
   wdt:P126 "European Schoolnet Vocabulary Bank for Education (VBE)"@de;
   wdt:P973 <http://europeanschoolnet-vbe.lexaurus.net/vbe/browse>;
   dct:language "de";
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:description "Dieses Wörterverzeichnis ist eine Unterliste des LRE Thesaurus."@de;
-  dct:title "EUN Fächer Werte"@de .
+  dct:title "EUN Fächer Werte"@de;
+  sdo:distribution _:G__2417, _:G__2418 .
 
-<http://example.org/6> a wd:Q1469824;
+_:G__2417 a sdo:DataDownload;
+  sdo:contentUrl <http://europeanschoolnet-vbe.lexaurus.net/vbe/linkeddata/vocab/EUN/EUN.subjectLREValues/topterms.json>;
+  sdo:fileFormat "application/json" .
+
+_:G__2418 a sdo:DataDownload;
+  sdo:contentUrl <http://europeanschoolnet-vbe.lexaurus.net/vbe/linkeddata/vocab/EUN/EUN.subjectLREValues/topterms.skos>;
+  sdo:fileFormat "application/xml" .
+
+<http://example.org/6.1> a wd:Q1469824;
   sdo:educationalLevel "Ausbildung"@de;
-  wdt:P126 "Bundesinstitut für Berufsbildung"@de;
+  wdt:P126 "Bundesinstitut für Berufsbildung (BIBB)"@de;
   wdt:P973 <https://www.bibb.de/dienst/publikationen/de/19128>;
   dct:language "de";
   dct:issued "2023-03-01"^^xsd:date;
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:description "Das Verzeichnis führt alle 327 anerkannten Ausbildungsberufe in Industrie und Handwerk, im öffentlichen Dienst, in der Hauswirtschaft, der Landwirtschaft, der Seeschifffahrt und in den freien Berufen auf. Zum Ausbildungsbeginn 2022 traten zwei neue Berufe – Binnenschifffahrtskapitän/-in und Fachkraft Küche – und zwölf modernisierte Ausbildungsberufe in Kraft. Zu allen Berufen sind hier u.a. Ausbildungsdauer, Rechtsgrundlagen, Wahlqualifikationen oder Schwerpunkte sowie die Zuordnung zum Deutschen Qualifikationsrahmen (DQR) verzeichnet. Der statistische Teil liefert Angaben zur Anzahl und zur quantitativen Entwicklung der Ausbildungsberufe sowie zur Zahl der Auszubildenden seit 1970. Das Verzeichnis wird seit 1977 vom Bundesinstitut für Berufsbildung herausgegeben und erscheint jährlich. "@de;
-  dct:title "Verzeichnis der Ausbildungsberufe"@de .
+  dct:title "Verzeichnis der Ausbildungsberufe 2023"@de;
+  sdo:distribution _:G__2419 .
+
+_:G__2419 a sdo:DataDownload;
+  sdo:contentUrl <https://www.bibb.de/dienst/publikationen/de/download/19128>;
+  sdo:fileFormat "application/pdf" .
+
+<http://example.org/6.2> a wd:Q1469824;
+  sdo:educationalLevel "Ausbildung"@de;
+  wdt:P126 "Bundesinstitut für Berufsbildung (BIBB)"@de;
+  wdt:P973 <https://www.bibb.de/dienst/publikationen/de/19757>;
+  dct:language "de";
+  dct:issued "2024-02-01"^^xsd:date;
+  sdo:about "Fach- und Themenzuordnung"@de;
+  dct:description "Das Verzeichnis führt alle 328 anerkannten Ausbildungsberufe in Industrie und Handwerk, im öffentlichen Dienst, in der Hauswirtschaft, der Landwirtschaft, der Seeschifffahrt und in den freien Berufen auf. Zum Ausbildungsbeginn 2023 traten ein neuer Beruf – Gestalter/-in für immersive Medien – und fünf modernisierte Ausbildungsberufe in Kraft. Zu allen Berufen sind u.a. Ausbildungsdauer, Rechtsgrundlagen, Schwerpunkte, Fachrichtungen, Wahlqualifikationen sowie die Zuordnung zum Deutschen Qualifikationsrahmen (DQR) aufgeführt. Der statistische Teil liefert Angaben zur Anzahl und zur quantitativen Entwicklung der Ausbildungsberufe sowie zur Zahl der Auszubildenden seit 1970. Das Verzeichnis wird seit 1977 vom Bundesinstitut für Berufsbildung herausgegeben und erscheint jährlich."@de;
+  dct:title "Verzeichnis der Ausbildungsberufe 2024"@de;
+  sdo:distribution _:G__2420 .
+
+_:G__2420 a sdo:DataDownload;
+  sdo:contentUrl <https://www.bibb.de/dienst/publikationen/de/download/19757>;
+  sdo:fileFormat "application/pdf" .
 
 <http://example.org/7> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
   sdo:educationalLevel "Hochschule"@de;
+  wdt:P1324 <https://github.com/dini-ag-kim/hochschulfaechersystematik>;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/hochschulfaechersystematik/scheme>;
   dct:language "de";
@@ -147,21 +177,23 @@ _:G__2413 a sdo:DataDownload;
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:description "Diese SKOS-Klassifikation basiert auf der Destatis-\"Systematik der Fächergruppen, Studienbereiche und Studienfächer\"."@de;
   dct:title "Hochschulfächersystematik"@de;
-  sdo:distribution _:G__2414, _:G__2415 .
+  sdo:distribution _:G__2421, _:G__2422 .
 
-_:G__2414 a sdo:DataDownload;
+_:G__2421 a sdo:DataDownload;
   sdo:contentUrl <https://w3id.org/kim/hochschulfaechersystematik/scheme.json>;
   sdo:fileFormat "application/json" .
 
-_:G__2415 a sdo:DataDownload;
+_:G__2422 a sdo:DataDownload;
   sdo:contentUrl <https://raw.githubusercontent.com/dini-ag-kim/hochschulfaechersystematik/refs/heads/master/hochschulfaechersystematik.ttl>;
   sdo:fileFormat "text/turtle" .
 
 <http://example.org/8> a wd:Q1469824;
   eduvocs:rawVocab "elixier.txt"@de;
   sdo:educationalLevel "Schule"@de;
+  dcat:endpointURL <https://www.bildungsserver.de/elixier/Elixier-API.pdf>;
   wdt:P126 "DIPF"@de;
-  wdt:P973 <https://web.archive.org/web/20221006161235/https://www.bildungsserver.de/elixier/elixiersystematikliste.php>;
+  wdt:P973 <https://www.bildungsserver.de/elixier/elixiersystematikliste.php>;
+  sdo:url <https://www.bildungsserver.de/elixier/>;
   dct:language "de";
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:description "Systematik des Bildungsservers."@de;
@@ -175,9 +207,9 @@ _:G__2415 a sdo:DataDownload;
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:description "Die bundeseinheitliche Sachgebietssystematik ordnet die Medien den wesentlichen Schulfächern und anderen wichtigen Bildungszielen und -bereichen zu. SachgebietssystematikIhre hierarchische Gliederung erlaubt die Selektion und den Ausdruck von Medienlisten und Verzeichnissen mit unterschiedlicher Informationsdichte. Für Medienzentren und Schulen ist sie zur Strukturierung des eigenen Bestands unverzichtbar. Die bundeseinheitliche Sachgebietssystematik wurde in den 1990er Jahren von der AG Mediendistribution und Dokumentation entwickelt und wird ständig aktualisiert."@de;
   dct:title "Sachgebietssystematik AG-MUD"@de;
-  sdo:distribution _:G__2416 .
+  sdo:distribution _:G__2423 .
 
-_:G__2416 a sdo:DataDownload;
+_:G__2423 a sdo:DataDownload;
   sdo:contentUrl <https://vocabs.sodix.de/sodix/educational/sachgebietssystematik/sachgebietssystematik.json>;
   sdo:fileFormat "application/json" .
 
@@ -190,9 +222,9 @@ _:G__2416 a sdo:DataDownload;
   sdo:about "Fach- und Themenzuordnung"@de;
   dct:description "Themenbaum von Lehrplanthemen."@de;
   dct:title "Taxonomie von Lehrplanthemen"@de;
-  sdo:distribution _:G__2417 .
+  sdo:distribution _:G__2424 .
 
-_:G__2417 a sdo:DataDownload;
+_:G__2424 a sdo:DataDownload;
   sdo:contentUrl <https://w3id.org/openeduhub/vocabs/oeh-topics/5e40e372-735c-4b17-bbf7-e827a5702b57.json>;
   sdo:fileFormat "application/json" .
 
@@ -1164,11 +1196,11 @@ ISO 639-1 Sprachthesaurus"""@de .
   dct:description "Allgemeine Art des in einer Computerdatei kodierten Dateninhalts"@de;
   dct:title "File Type"@de .
 
-<http://example.org/119> a wd:Q1469824;
-  wdt:P126 "Library Of Congress"@de;
+<http://example.org/119> wdt:P126 "Library Of Congress"@de;
   wdt:P973 <http://id.loc.gov/vocabulary/mediaTypes>;
   dct:language "de";
   sdo:about "Ressourcentyp, Medientyp"@de;
+  a wd:Q1469824;
   dct:creator "LC/MARC"@de;
   dct:description "Das Schema der Medientypen ist von einer kontrollierten Liste von Werten abgeleitet, die den allgemeinen Typ des Vermittlungsgeräts widerspiegeln, das erforderlich ist, um den Inhalt einer Ressource anzuzeigen, abzuspielen, auszuführen usw., und das hauptsächlich in der RDA-Katalogisierung verwendet wird."@de;
   dct:title "Media Types"@de .
