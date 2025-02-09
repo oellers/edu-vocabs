@@ -12,14 +12,22 @@
 	"format": {
 		"application/json": "JSON",
 		"text/turtle": "Turtle",
-		"application/xml": "XML"
+		"application/xml": "XML",
+		"application/pdf": "PDF"
 	},
 	"buttons": {
-		"external": "To provider",
+		"service": "Service",
+		"external": "Vocabulary",
 		"internal": "Details",
 		"download": "Download",
 		"repo": "Repository",
-		"api": "API"
+		"api": "API",
+		"clipboard": "Copy link to vocabulary to clipboard",
+		"report": "Report errors in the data record on GitHub"
+	},
+	"event": {
+		"copy-clipboard": "The link was copied to the clipboard.",
+		"copy-clipboard-failed": "The link could not be copied."
 	},
 	"dropdown": {
 		"sort": "Sort by {sortName}",
@@ -93,8 +101,7 @@
 		"label": "Vocabulary",
 		"detailview": "Vocabulary: Detail view",
 		"preview": "Vocabulary preview",
-		"notfound": "Vocabulary not found",
-		"report": "Report errors in the data record on GitHub"
+		"notfound": "Vocabulary not found"
 	},
 	"error": {
 		"404": "Could not find content"

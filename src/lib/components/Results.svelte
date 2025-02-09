@@ -22,7 +22,7 @@
 			</div>
 			<div>
 				{#each $paginatedResults as result (result.id)}
-					<Result id={result.id} hideButtons={[vp.repo, vp.distribution, vp.endpointUrl]} />
+					<Result id={result.id} hideButtons={[vp.repo, vp.distribution, vp.endpointUrl, vp.url]} />
 				{/each}
 			</div>
 		</div>

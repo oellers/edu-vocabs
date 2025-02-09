@@ -12,14 +12,22 @@
 	"format": {
 		"application/json": "JSON",
 		"text/turtle": "Turtle",
-		"application/xml": "XML"
+		"application/xml": "XML",
+		"application/pdf": "PDF"
 	},
 	"buttons": {
-		"external": "Zum Anbieter",
+		"service": "Zum Dienst",
+		"external": "Zum Vokabular",
 		"internal": "Details",
 		"download": "Download",
 		"repo": "Repositorium",
-		"api": "Schnittstelle"
+		"api": "Schnittstelle",
+		"clipboard": "Link zum Vokabular in Zwischenablage kopieren",
+		"report": "Fehler im Datensatz auf GitHub melden"
+	},
+	"event": {
+		"copy-clipboard": "Der Link wurde in die Zwischenablage kopiert.",
+		"copy-clipboard-failed": "Der Link konnte nicht kopiert werden."
 	},
 	"dropdown": {
 		"sort": "Sortieren nach {sortName}",
@@ -93,8 +101,7 @@
 		"label": "Vokabular",
 		"detailview": "Vokabular: Detailansicht",
 		"preview": "Vokabular-Vorschau",
-		"notfound": "Vokabular nicht gefunden",
-		"report": "Fehler im Datensatz auf GitHub melden"
+		"notfound": "Vokabular nicht gefunden"
 	},
 	"error": {
 		"404": "Could not find content"

@@ -8,6 +8,7 @@
 	import VocabDownload from '$lib/components/VocabDownload.svelte';
 	import SourceCodeIcon from '$lib/icons/SourceCodeIcon.svelte';
 	import CloudIcon from '$lib/icons/CloudIcon.svelte';
+	import ServiceIcon from '$lib/icons/ServiceIcon.svelte';
 
 	const vocabDistribution = $derived(result[vp.distribution]?.map((e) => $db.index.store[e]));
 </script>
@@ -19,6 +20,17 @@
 			aria-label={$t('voc.preview')}
 			href={`/voc/${encodeURIComponent(result[vp.id])}`}
 			><InternalLinkIcon /> {$t('details')}
+		</a>
+	{/if}
+	{#if result[vp.url] && !hideButtons.includes(vp.url)}
+		<a
+			class="btn btn-outline join-item btn-sm h-auto border-slate-400 py-2"
+			aria-label={$t('buttons.service')}
+			href={result[vp.url]}
+			target="_blank"
+		>
+			<ServiceIcon />
+			{$t('buttons.service')}
 		</a>
 	{/if}
 	{#if result[vp.describedAt] && !hideButtons.includes(vp.describedAt)}

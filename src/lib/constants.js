@@ -1,5 +1,6 @@
 export const VOCAB_PROPERTIES = {
 	id: 'id', // http://purl.org/dc/terms/identifier
+	url: 'url', // https://schema.org/url
 	type: 'type', // http://www.w3.org/1999/02/22-rdf-syntax-ns#type
 	name: 'title', // http://purl.org/dc/terms/title
 	description: 'description', // http://purl.org/dc/terms/description
