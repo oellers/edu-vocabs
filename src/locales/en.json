@@ -18,7 +18,8 @@
 		"external": "To provider",
 		"internal": "Details",
 		"download": "Download",
-		"repo": "Repository"
+		"repo": "Repository",
+		"api": "API"
 	},
 	"dropdown": {
 		"sort": "Sort by {sortName}",
@@ -92,7 +93,8 @@
 		"label": "Vocabulary",
 		"detailview": "Vocabulary: Detail view",
 		"preview": "Vocabulary preview",
-		"notfound": "Vocabulary not found"
+		"notfound": "Vocabulary not found",
+		"report": "Report errors in the data record on GitHub"
 	},
 	"error": {
 		"404": "Could not find content"
