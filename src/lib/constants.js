@@ -11,7 +11,7 @@ export const VOCAB_PROPERTIES = {
 	language: 'language', // http://purl.org/dc/terms/language
 	license: 'license', // http://purl.org/dc/terms/license
 	educationalLevel: 'educationalLevel', // https://schema.org/educationalLevel
-	endpointUrl: 'endpointUrl', // https://www.w3.org/ns/dcat#endpointURL
+	endpointUrl: 'dcat#endpointURL', // https://www.w3.org/ns/dcat#endpointURL
 	describedAt: 'P973', // http://www.wikidata.org/prop/direct/P973
 	maintainedBy: 'P126', // http://www.wikidata.org/prop/direct/P126
 	usedBy: 'P1535', // http://www.wikidata.org/prop/direct/P1535
@@ -23,6 +23,10 @@ export const VOCAB_PROPERTIES = {
 	rawVocab: 'rawVocab', // https://eduvocs/
 	keywords: 'keywords', // https://schema.org/keywords
 	contentUrl: 'contentUrl' // https://schema.org/contentUrl
+};
+
+export const PROJECT_URL = {
+	report: 'https://github.com/sroertgen/edu-vocabs/issues/new'
 };
 
 export const METADATA_KEYS = ['issued', 'compliesWith'];
