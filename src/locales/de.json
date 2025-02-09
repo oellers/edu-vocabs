@@ -52,7 +52,8 @@
 		"reset": "Filter zurücksetzen",
 		"remove": "Filter {filterName} entfernen",
 		"about": "Themenfeld",
-		"educationalLevel": "Bildungsstufe"
+		"educationalLevel": "Bildungsstufe",
+		"maintainedBy": "Herausgeber"
 	},
 	"terms": {
 		"Fach- und Themenzuordnung": "Fach- und Themenzuordnung",

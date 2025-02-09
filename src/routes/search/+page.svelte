@@ -4,6 +4,7 @@
 	import Results from '$lib/components/Results.svelte';
 	import SearchIcon from '$lib/icons/SearchIcon.svelte';
 	import ResetFilters from '$lib/components/ResetFilters.svelte';
+	import { VOCAB_PROPERTIES as vp } from '$lib/constants';
 	import { t } from 'svelte-i18n';
 </script>
 
@@ -28,8 +29,13 @@
 				</label>
 			</div>
 			<div class="flex flex-row flex-wrap gap-2">
-				<DropdownFilter title={$t('filter.about')} filterKey="about" />
-				<DropdownFilter title={$t('filter.educationalLevel')} filterKey="educationalLevel" />
+				<DropdownFilter title={$t('filter.about')} filterKey={vp.about} />
+				<DropdownFilter title={$t('filter.educationalLevel')} filterKey={vp.educationalLevel} />
+				<DropdownFilter
+					title={$t('filter.maintainedBy')}
+					filterKey={vp.maintainedBy}
+					translate={false}
+				/>
 				<div class="ml-auto">
 					<ResetFilters />
 				</div>

@@ -52,7 +52,8 @@
 		"reset": "Reset filter",
 		"remove": "Remove filter {filterName}",
 		"about": "Subject area",
-		"educationalLevel": "Educational level"
+		"educationalLevel": "Educational level",
+		"maintainedBy": "Maintainer"
 	},
 	"terms": {
 		"Fach- und Themenzuordnung": "Subject and topic classification",
