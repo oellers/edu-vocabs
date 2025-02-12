@@ -22,7 +22,7 @@
 		"download": "Download",
 		"repo": "Repository",
 		"api": "API",
-		"clipboard": "Copy link to vocabulary to clipboard",
+		"clipboard": "Copy vocabulary link to clipboard",
 		"report": "Report errors in the data record on GitHub"
 	},
 	"event": {
