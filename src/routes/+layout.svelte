@@ -19,7 +19,7 @@
 
 <div class="mt-4 flex flex-row overflow-x-hidden max-lg:px-2 lg:px-8">
 	{#if !$isLoading}
-		<div class="w-full max-lg:pr-8 lg:w-3/4">
+		<div class="mx-auto w-full max-lg:pr-8 lg:w-3/4">
 			<Menu />
 			{@render children()}
 		</div>
