@@ -6,7 +6,9 @@
 </script>
 
 <div class="dropdown dropdown-left">
-	<button class="btn btn-outline join-item btn-sm h-auto w-full border-slate-400 py-2">
+	<button
+		class="btn btn-outline join-item btn-sm flex h-auto w-full justify-start border-slate-400 py-2"
+	>
 		<DownloadIcon />
 		{$t('download')}
 	</button>
