@@ -13,7 +13,7 @@
 </script>
 
 <!--- Top Navigation -->
-<nav class="navbar sticky top-0 z-30 mb-4 bg-base-100 shadow-md">
+<nav class="navbar sticky top-0 z-30 mb-4 bg-base-100">
 	<button aria-label={$t('menu.home')} class="btn btn-primary" onclick={() => (open = !open)}>
 		<MenuIcon />
 	</button>
