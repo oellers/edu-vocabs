@@ -13,8 +13,8 @@
 </script>
 
 <!--- Top Navigation -->
-<nav class="navbar sticky top-0 z-30 mb-4 bg-base-100 p-0">
-	<button aria-label={$t('menu.home')} class="btn btn-primary" onclick={() => (open = !open)}>
+<nav class="navbar top-0 mb-4 bg-base-100 p-0 pt-2">
+	<button aria-label={$t('menu.home')} class="btn btn-outline" onclick={() => (open = !open)}>
 		<MenuIcon />
 	</button>
 	<div class="ml-auto">
