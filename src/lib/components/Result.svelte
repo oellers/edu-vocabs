@@ -26,7 +26,7 @@
 				<div class="w-3/4 lg:pr-5">
 					<!-- Card title -->
 					<div class="ml-4 mt-2">
-						<div class="text-lg font-medium">
+						<div class="flex items-center text-lg font-medium">
 							<!-- Name of vocabulary and maintainer -->
 							<a
 								class="hover:text-accent"
