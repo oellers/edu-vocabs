@@ -91,7 +91,11 @@ export function search(event) {
 		enrich: true,
 		tag: tags
 	});
-	const results = groupedResults.map((g) => g.result.map((r) => r.doc)).flat();
+	const resultSet = Array.from(
+		new Map([...groupedResults.map((e) => e.result).flat()].map((item) => [item.id, item])).values()
+	);
+
+	const results = resultSet.map((r) => r.doc);
 	if (results.length === 0 && Object.values(get(db).selectedFilters).flat()) {
 		fillResults();
 	} else {
