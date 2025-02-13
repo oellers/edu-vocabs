@@ -16,7 +16,7 @@
 				<p>Could not load vocabulary for {id}</p>
 			{:else}
 				<h2 class="card-title text-xl">{$t('voc.preview')}</h2>
-				{#each entries.hasTopConcept as topConcept (topConcept.id)}
+				{#each entries.hasTopConcept as topConcept (topConcept)}
 					<VocabConcept concept={topConcept} />
 				{/each}
 			{/if}

@@ -63,7 +63,11 @@ export async function getVocabEntries(id) {
 	const jsonLink = vocabDistribution?.find((d) => d[vp.fileFormat].includes('application/json'));
 	const rawVocab = result[vp.rawVocab]?.[0] ?? '';
 
-	if (jsonLink) {
+	if (rawVocab.length) {
+		const vocabData = parseToSkos(rawVocab);
+		updateVocabEntries(id, vocabData);
+		return vocabData;
+	} else if (jsonLink) {
 		try {
 			const vocabData = await getVocabs(jsonLink.contentUrl);
 			updateVocabEntries(id, vocabData);
@@ -73,10 +77,6 @@ export async function getVocabEntries(id) {
 			updateVocabEntries(id, { error: e });
 			throw e;
 		}
-	} else if (rawVocab.length) {
-		const vocabData = parseToSkos(rawVocab);
-		updateVocabEntries(id, vocabData);
-		return vocabData;
 	} else {
 		updateVocabEntries(id, { error: 'No distribution found' });
 		return { error: 'No distribution found' };
