@@ -11,7 +11,7 @@
 	<LoadingSpinner />
 {:then entries}
 	<div class="card mt-1 flex flex-row justify-between bg-base-100 shadow-md">
-		<div class="card-body flex flex-col overflow-y-auto">
+		<div class="card-body mt-1 flex flex-col overflow-y-auto p-0">
 			{#if entries.error}
 				<p>Could not load vocabulary for {id}</p>
 			{:else}
