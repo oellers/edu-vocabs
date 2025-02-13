@@ -26,7 +26,7 @@
 				<div class="w-3/4 lg:pr-5">
 					<!-- Card title -->
 					<div class="ml-4 mt-2">
-						<div class="flex items-center text-lg font-medium">
+						<div class="flex flex-wrap items-center text-lg font-medium">
 							<!-- Name of vocabulary and maintainer -->
 							<a
 								class="hover:text-accent"
@@ -69,7 +69,7 @@
 					<ResultMenu {result} {hideButtons} />
 				</div>
 				<!-- Card footer -->
-				<div class="flex w-full flex-wrap content-start p-2">
+				<div class="flex w-full flex-wrap content-start items-center p-2">
 					<div class="divider !m-0 w-full"></div>
 					{#each config.filterKeys as key}
 						{#if result[vp[key]]}
