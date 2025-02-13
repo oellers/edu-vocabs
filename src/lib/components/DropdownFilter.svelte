@@ -47,7 +47,7 @@
 					class="input input-sm input-bordered w-full"
 				/>
 			</li>
-			{#each filteredValues as filterVal}
+			{#each [...filteredValues].sort() as filterVal}
 				<li class="overflow-hidden rounded">
 					<button
 						type="button"
