@@ -2,7 +2,14 @@ import { get } from 'svelte/store';
 import { db, vocabEntries } from '$lib/db';
 import { VOCAB_PROPERTIES as vp } from '$lib/constants';
 
-export function parseToSkos(input) {
+export async function parseToSkos(input) {
+	// file or string, we can handle both 💪
+	if (input.split('.')[1] === 'txt') {
+		const res = await fetch('/' + input);
+		const r = await res.text();
+		input = r;
+	}
+
 	const lines = input.split('\n');
 	const stack = [];
 	const result = { hasTopConcept: [] };
@@ -64,7 +71,7 @@ export async function getVocabEntries(id) {
 	const rawVocab = result[vp.rawVocab]?.[0] ?? '';
 
 	if (rawVocab.length) {
-		const vocabData = parseToSkos(rawVocab);
+		const vocabData = await parseToSkos(rawVocab);
 		updateVocabEntries(id, vocabData);
 		return vocabData;
 	} else if (jsonLink) {
