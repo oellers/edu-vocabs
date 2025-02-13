@@ -13,7 +13,7 @@
 </script>
 
 <!--- Top Navigation -->
-<nav class="navbar top-0 mb-4 bg-base-100 p-0 pt-2">
+<nav class="navbar mb-4 bg-base-100 p-0 pt-2">
 	<button aria-label={$t('menu.home')} class="btn btn-outline" onclick={() => (open = !open)}>
 		<MenuIcon />
 	</button>
