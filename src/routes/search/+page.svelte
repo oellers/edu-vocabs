@@ -32,7 +32,7 @@
 					<ResetFilters />
 				</div>
 			</div>
-			<div class="flex flex-row flex-wrap gap-2">
+			<div class="flex flex-row flex-wrap items-center gap-2">
 				<DropdownFilter title={$t('filter.about')} filterKey={vp.about} />
 				<DropdownFilter title={$t('filter.educationalLevel')} filterKey={vp.educationalLevel} />
 				<DropdownFilter title={$t('filter.maintainedBy')} filterKey={vp.maintainedBy} />
