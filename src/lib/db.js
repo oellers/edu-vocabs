@@ -15,7 +15,8 @@ export const db = writable({
 	},
 	initizialized: false,
 	filterKeys: config.filterKeys,
-	selectedFilters: initFilters()
+	selectedFilters: initFilters(),
+	selectedVocabs: []
 });
 
 export const paginatedResults = derived(db, ($db) => {
@@ -193,4 +194,14 @@ export async function createIndex() {
 		return { ...db, initialized: true };
 	});
 	fillResults();
+}
+
+export function toggleSelected(dbKey, val) {
+	db.update((db) => {
+		if (db[dbKey].includes(val)) {
+			return { ...db, [dbKey]: [...db[dbKey].filter((v) => v !== val)] };
+		} else {
+			return { ...db, [dbKey]: [...db[dbKey], val] };
+		}
+	});
 }

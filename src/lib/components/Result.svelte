@@ -1,5 +1,5 @@
 <script>
-	import { db } from '$lib/db';
+	import { db, toggleSelected } from '$lib/db';
 	import { VOCAB_PROPERTIES as vp, METADATA_KEYS as mdk } from '$lib/constants';
 	import { config } from '$lib/config';
 	import { t } from 'svelte-i18n';
@@ -76,6 +76,17 @@
 							<ResultBadge badgeLabel={$t('terms.' + result[vp[key]])} />
 						{/if}
 					{/each}
+					<div class="form-control md:ml-auto md:mr-0">
+						<label class="label cursor-pointer gap-1">
+							<input
+								onclick={() => toggleSelected('selectedVocabs', result[vp.id])}
+								type="checkbox"
+								checked={$db.selectedVocabs.includes(result[vp.id])}
+								class="checkbox checkbox-sm"
+							/>
+							<span class="label-text">{$t('notepad.add')}</span>
+						</label>
+					</div>
 				</div>
 			</li>
 		</ul>
