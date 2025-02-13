@@ -5,7 +5,7 @@ import { VOCAB_PROPERTIES as vp } from '$lib/constants';
 export async function parseToSkos(input) {
 	// file or string, we can handle both 💪
 	if (input.split('.')[1] === 'txt') {
-		const res = await fetch('/' + input);
+		const res = await fetch('/vocs/' + input);
 		const r = await res.text();
 		input = r;
 	}
