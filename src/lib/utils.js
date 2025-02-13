@@ -1,3 +1,7 @@
+import { get } from 'svelte/store';
+import { db, vocabEntries } from '$lib/db';
+import { VOCAB_PROPERTIES as vp } from '$lib/constants';
+
 export function parseToSkos(input) {
 	const lines = input.split('\n');
 	const stack = [];
@@ -26,4 +30,55 @@ export function parseToSkos(input) {
 		stack.push({ entry, indentLevel });
 	});
 	return result;
+}
+
+async function getVocabs(uri) {
+	// TODO
+	// cors issue depending on the target uri
+	// fetch via backend proxy route?
+	try {
+		const res = await fetch(uri);
+		if (!res.ok) {
+			throw new Error(`Network error: ${res.statusText}`);
+		}
+		return await res.json();
+	} catch (error) {
+		throw new Error(`Failed to fetch vocab data: ${error}`);
+	}
+}
+
+const updateVocabEntries = (id, entries) => {
+	vocabEntries.update((db) => {
+		return { ...db, [id]: entries };
+	});
+};
+
+export async function getVocabEntries(id) {
+	const ves = get(vocabEntries);
+	if (id in ves) {
+		return ves[id];
+	}
+	const result = get(db).index?.store?.[id] ?? {};
+	const vocabDistribution = result[vp.distribution]?.map((e) => get(db).index.store[e]);
+	const jsonLink = vocabDistribution?.find((d) => d[vp.fileFormat].includes('application/json'));
+	const rawVocab = result[vp.rawVocab]?.[0] ?? '';
+
+	if (jsonLink) {
+		try {
+			const vocabData = await getVocabs(jsonLink.contentUrl);
+			updateVocabEntries(id, vocabData);
+			return vocabData;
+		} catch (e) {
+			console.log('error', e);
+			updateVocabEntries(id, { error: e });
+			throw e;
+		}
+	} else if (rawVocab.length) {
+		const vocabData = parseToSkos(rawVocab);
+		updateVocabEntries(id, vocabData);
+		return vocabData;
+	} else {
+		updateVocabEntries(id, { error: 'No distribution found' });
+		return { error: 'No distribution found' };
+	}
 }

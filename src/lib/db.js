@@ -26,6 +26,8 @@ export const paginatedResults = derived(db, ($db) => {
 	return paginatedResults;
 });
 
+export const vocabEntries = writable({});
+
 const { Document } = pkg;
 const index = new Document({ ...config.index });
 const filterKeys = get(db).filterKeys;
