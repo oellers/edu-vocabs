@@ -32,9 +32,12 @@
 								class="hover:text-accent"
 								aria-label={$t('voc.preview')}
 								href={`/voc/${encodeURIComponent(result[vp.id])}`}
-								>{result[vp.name]}
+							>
+								<span>{result[vp.name]}</span>
 							</a>
-							{result[vp.maintainedBy] ? `(${result[vp.maintainedBy]})` : ''}
+							{#if result[vp.maintainedBy]}
+								<span>&nbsp({result[vp.maintainedBy]})</span>
+							{/if}
 							<!-- Year issued (Year "last updated" would be better) -->
 							{#if result[vp.issued] && !isNaN(new Date(result[vp.issued]).getFullYear())}
 								<ResultBadge
