@@ -31,10 +31,12 @@
 					<Menu />
 					<!-- Notepad button -->
 					{#if $db.selectedVocabs.length}
-						<div class="fixed bottom-16 right-2 z-30 flex flex-col md:hidden">
-							<label for="my-drawer" class="btn btn-outline">
-								<NotepadIcon />
-							</label>
+						<div class="fixed bottom-0 right-0 h-32 w-16 rounded-tl-lg bg-base-100 md:hidden">
+							<div class="absolute bottom-16 right-2">
+								<label for="my-drawer" class="btn btn-outline">
+									<NotepadIcon />
+								</label>
+							</div>
 						</div>
 						<div class="fixed right-0 top-16 z-30 hidden origin-bottom-right -rotate-90 md:flex">
 							<label for="my-drawer" class="btn flex border-slate-400 py-2">
