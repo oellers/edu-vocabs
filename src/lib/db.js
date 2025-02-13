@@ -87,7 +87,7 @@ export function search(event) {
 	event.preventDefault();
 	const tags = Object.values(get(db).selectedFilters).flat();
 	const groupedResults = get(db).index.search(get(db).query, {
-		index: ['id', 'title', 'about'],
+		index: ['id', 'title', 'about', 'P126'],
 		enrich: true,
 		tag: tags
 	});
