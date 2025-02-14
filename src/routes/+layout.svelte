@@ -13,10 +13,16 @@
 	let { children } = $props();
 
 	// Initialize the search index and load locale
-	onMount(() => {
-		createIndex();
+	onMount(async () => {
+		await createIndex();
 		let savedLang = sessionStorage.getItem(lkey) || getLocaleFromNavigator() || '';
 		$locale = LANGUAGES.includes(savedLang) ? savedLang : 'en';
+
+		// get selected vocabs from localStorage
+		const selectedVocabsString =
+			sessionStorage.getItem('eduvocs:selectedVocabs') || '{"selectedVocabs": []}';
+		const selectedVocabs = await JSON.parse(selectedVocabsString);
+		db.update((db) => ({ ...db, ...selectedVocabs }));
 	});
 </script>
 

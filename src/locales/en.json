@@ -116,6 +116,7 @@
 	"notepad": {
 		"title": "Notepad",
 		"close": "Close",
-		"add": "Add to Notepad"
+		"add": "Add to Notepad",
+		"reset": "Delete Entries"
 	}
 }

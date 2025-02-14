@@ -205,9 +205,21 @@ export async function createIndex() {
 export function toggleSelected(dbKey, val) {
 	db.update((db) => {
 		if (db[dbKey].includes(val)) {
-			return { ...db, [dbKey]: [...db[dbKey].filter((v) => v !== val)] };
+			const updated = { [dbKey]: [...db[dbKey].filter((v) => v !== val)] };
+			sessionStorage.setItem(`eduvocs:${dbKey}`, JSON.stringify(updated));
+			return { ...db, ...updated };
 		} else {
-			return { ...db, [dbKey]: [...db[dbKey], val] };
+			const updated = { [dbKey]: [...db[dbKey], val] };
+			sessionStorage.setItem(`eduvocs:${dbKey}`, JSON.stringify(updated));
+			return { ...db, ...updated };
 		}
+	});
+}
+
+export function resetSelected(dbKey) {
+	db.update((db) => {
+		const updated = { [dbKey]: [] };
+		sessionStorage.setItem(`eduvocs:${dbKey}`, JSON.stringify(updated));
+		return { ...db, ...updated };
 	});
 }

@@ -116,6 +116,7 @@
 	"notepad": {
 		"title": "Merkzettel",
 		"close": "Schließen",
-		"add": "Zu Merkzettel hinzufügen"
+		"add": "Zu Merkzettel hinzufügen",
+		"reset": "Alle Einträge löschen"
 	}
 }
