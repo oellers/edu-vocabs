@@ -34,11 +34,7 @@
 								href={`/voc/${encodeURIComponent(result[vp.id])}`}
 							>
 								<span>
-									{#if $locale.slice(0, 2) == 'de'}
-										{result[vp.name][1]}
-									{:else}
-										{result[vp.name][0]}
-									{/if}
+									{$locale.slice(0, 2) == 'de' ? result[vp.name]?.[1] : result[vp.name]?.[0]}
 								</span>
 							</a>
 							{#if result[vp.maintainedBy]}
