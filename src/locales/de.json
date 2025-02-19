@@ -59,7 +59,7 @@
 		"reset": "Filter zurücksetzen",
 		"remove": "Filter {filterName} entfernen",
 		"about": "Themenfeld",
-		"educationalLevel": "Bildungsstufe",
+		"educationalLevel": "Bildungsstufen",
 		"maintainedBy": "Herausgeber"
 	},
 	"terms": {
@@ -68,7 +68,7 @@
 		"Lernkontrollen": "Lernkontrollen",
 		"Zielgruppen": "Zielgruppen",
 		"Themenfeld": "Themenfeld",
-		"Bildungsstufe": "Bildungsstufe",
+		"Bildungsstufen": "Bildungsstufen",
 		"Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten": "Bildungsstandards sowie Lehrplan-/Curricula-orientierte Wertelisten",
 		"Lehr-/Lernform (Interaktivitätstyp)": "Lehr-/Lernform (Interaktivitätstyp)",
 		"Sprachen": "Sprachen",
