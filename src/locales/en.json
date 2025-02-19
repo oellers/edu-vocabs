@@ -5,6 +5,7 @@
 	"searchresults": "Search results",
 	"download": "Download",
 	"preview": "Preview",
+	"loading": "Loading...",
 	"details": "Details",
 	"article": "Article",
 	"vocab": "Vocabulary",
@@ -111,7 +112,8 @@
 		"notfound": "Vocabulary not found"
 	},
 	"error": {
-		"404": "Could not find content"
+		"404": "Could not find content",
+		"vocab": "The vocabulary {vocabName} is not retrievable."
 	},
 	"notepad": {
 		"title": "Notepad",

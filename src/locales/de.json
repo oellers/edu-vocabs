@@ -5,6 +5,7 @@
 	"searchresults": "Suchergebnisse",
 	"download": "Download",
 	"preview": "Vorschau",
+	"loading": "Wird geladen...",
 	"details": "Details",
 	"article": "Artikel",
 	"vocab": "Vokabular",
@@ -111,7 +112,8 @@
 		"notfound": "Vokabular nicht gefunden"
 	},
 	"error": {
-		"404": "Could not find content"
+		"404": "Could not find content",
+		"vocab": "Das Vokabular {vocabName} ist nicht abrufbar."
 	},
 	"notepad": {
 		"title": "Merkzettel",
