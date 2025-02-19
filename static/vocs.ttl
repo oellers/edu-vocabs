@@ -80,7 +80,7 @@ _:G__2421 a sdo:DataDownload;
   wdt:P126 "Digital Learning Lab"@de;
   wdt:P973 <https://digitallearninglab.de/>;
   dct:language "de";
-  sdo:about "digitalisierungsbezogene Kompetenzen"@de;
+  sdo:about "digitalisierungsbezogene Kompetenzen, Kompetenzen"@de;
   dct:description "Competencies in the digital learning lab."@en, "Kompetenzen im digital learning lab."@de;
   dct:title "Competencies in the digital world (KMK)"@en, "Kompetenzen in der digitalen Welt (KMK)"@de;
   sdo:distribution _:G__2422 .
@@ -405,7 +405,7 @@ _:G__2446 a sdo:DataDownload;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/orientierungsrahmenNRW/>;
   dct:language "de";
-  sdo:about "digitalisierungsbezogene Kompetenzen"@de;
+  sdo:about "digitalisierungsbezogene Kompetenzen, Kompetenzen"@de;
   dct:creator "Eickelmann 2020"@de;
   dct:description "With the orientation framework, the state of North Rhine-Westphalia has created a binding basis for teacher training and further education in the digitalized world. Based on the well-known fields of action for teachers - teaching, educating, promoting learning and achievement, advising and developing schools - the orientation framework shows which new - but central in the future under the conditions of digitalization - competencies that need to be trained. The orientation framework makes it transparent which pedagogical and didactic competencies the state considers to be essential for teachers to respond to the challenges and opportunities of digitalization. This paves the way for the future of teacher training and further education."@en,
     "Mit dem Orientierungsrahmen hat das Land Nordrhein-Westfalen eine verbindliche Grundlage für die Lehreraus- und Lehrerfortbildung in der digitalisierten Welt geschaffen. Anknüpfend an die bekannten Handlungsfelder für Lehrerinnen und Lehrer – Unterrichten, Erziehen, Lernen und Leisten fördern, Beraten und Schule entwickeln – zeigt der Orientierungsrahmen auf, welche neuen – unter den Bedingungen der Digitalisierung künftig aber zentralen – Kompetenzen, es auszubilden gilt. Der Orientierungsrahmen macht transparent, welche pädagogischen und didaktischen Kompetenzen das Land bei Lehrkräften für grundlegend hält, den Herausforderungen und Chancen der Digitalisierung gestaltend zu begegnen. Für die Lehreraus- und Lehrerfortbildung sind damit zukunftsweisende Weichen gestellt worden."@de;
@@ -427,7 +427,7 @@ _:G__2448 a sdo:DataDownload;
   wdt:P973 <https://curriculumredesign.org/framework/>;
   dct:language "de";
   dct:issued "Januar 2024"^^xsd:date;
-  sdo:about "digitalisierungsbezogene Kompetenzen"@de;
+  sdo:about "digitalisierungsbezogene Kompetenzen, Kompetenzen"@de;
   dct:creator "CCR 2020"@de;
   dct:description "The CCR's Four Dimensional (4D) Educational Framework is so named to illustrate that today's students must develop in four dimensions - knowledge, skills, character and meta-learning - to best serve themselves and society. The core principle of a 4D education is to link knowledge transfer with the other three dimensions. But how is this done? By dividing these three dimensions into a framework of competencies and sub-competencies, teachers can make their teaching more effective, targeted, logical and relevant."@en,
     "Der vierdimensionale (4D) Bildungsrahmen der CCR wurde so benannt, um zu verdeutlichen, dass die Schüler von heute sich in vier Dimensionen entwickeln müssen - Wissen, Fähigkeiten, Charakter und Meta-Lernen - um sich selbst und der Gesellschaft so gut wie möglich zu dienen. Das Kernprinzip einer 4D-Bildung besteht darin, die Wissensvermittlung mit den anderen drei Dimensionen zu verknüpfen. Aber wie wird das gemacht? Indem diese drei Dimensionen in einen Rahmen von Kompetenzen und Teilkompetenzen unterteilt werden, können Lehrkräfte ihren Unterricht effektiver, zielgerichteter, logischer und relevanter gestalten."@de;
@@ -438,7 +438,7 @@ _:G__2448 a sdo:DataDownload;
   wdt:P126 "ComeIn"@de;
   wdt:P973 <https://w3id.org/comein/vocabs/ude-modell/>;
   dct:language "de";
-  sdo:about "digitalisierungsbezogene Kompetenzen"@de;
+  sdo:about "digitalisierungsbezogene Kompetenzen, Kompetenzen"@de;
   dct:description """The UDE model describes both basic requirements and institutional and teaching-related aspects of teachers' digitalization-related skills.
 The inner core of the model is the promotion of students’ subject-specific and digitalization-related skills. All surrounding areas are geared towards this."""@en,
     """Das UDE-Modell beschreibt sowohl grundlegende Voraussetzungen als auch institutionelle und unterrichtsbezogene Aspekte der digitalisierungsbezogenen Kompetenzen von Lehrkräften.
@@ -460,7 +460,7 @@ _:G__2449 a sdo:DataDownload;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/digitalCompetencies/>;
   dct:language "de";
-  sdo:about "digitalisierungsbezogene Kompetenzen"@de;
+  sdo:about "digitalisierungsbezogene Kompetenzen, Kompetenzen"@de;
   dct:description """Digitalization and mediatization have had an impact on all areas of our lives and work.
 led to decisive changes in the world. These go beyond a purely technical one
 progress and lead to a broad cultural and social
@@ -491,7 +491,7 @@ _:G__2451 a sdo:DataDownload;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <http://w3id.org/kim/kmk-vocabs/digitalisierungsbezogene-kompetenzen/>;
   dct:language "de";
-  sdo:about "digitalisierungsbezogene Kompetenzen"@de;
+  sdo:about "digitalisierungsbezogene Kompetenzen, Kompetenzen"@de;
   dct:description """Digitalization and mediatization have had an impact on all areas of our lives and work.
 led to decisive changes in the world. These go beyond a purely technical one
 progress and lead to a broad cultural and social
@@ -520,7 +520,7 @@ _:G__2453 a sdo:DataDownload;
   wdt:P126 "SODIX"@de;
   wdt:P973 <https://vocabs.sodix.de/index.de.html>;
   dct:language "de";
-  sdo:about "digitalisierungsbezogene Kompetenzen"@de;
+  sdo:about "digitalisierungsbezogene Kompetenzen, Kompetenzen"@de;
   dct:description """Digitalization and mediatization have had an impact on all areas of our lives and work.
 led to decisive changes in the world. These go beyond a purely technical one
 progress and lead to a broad cultural and social
@@ -540,7 +540,7 @@ auswirkt."""@de;
   wdt:P126 "Open Edu Hub/WirLernenOnline/ComeIn"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/medienkompetenzrahmenNRW/>;
   dct:language "de";
-  sdo:about "digitalisierungsbezogene Kompetenzen"@de;
+  sdo:about "digitalisierungsbezogene Kompetenzen, Kompetenzen"@de;
   dct:description "Standard for school and teaching development to promote media competence at primary and lower secondary level as well as to promote key digital skills at vocational colleges"@en,
     "Standard für die Schul- und Unterrichtsentwicklung zur Förderung von Medienkompetenz in der Primarstufe und der Sekundarstufe I sowie zur Förderung digitaler Schlüsselkompetenzen am Berufskolleg"@de;
   dct:title "Media Competence Framework NRW,"@en, "Medienkompetenzrahmen NRW,"@de;
@@ -559,7 +559,7 @@ _:G__2455 a sdo:DataDownload;
   wdt:P126 "ComeIn"@de;
   wdt:P973 <http://w3id.org/comein/vocabs/dazkom/>;
   dct:language "de";
-  sdo:about "digitalisierungsbezogene Kompetenzen"@de;
+  sdo:about "digitalisierungsbezogene Kompetenzen, Kompetenzen"@de;
   dct:description "The DaZKom project is a cooperation project between the Leuphana University of Lüneburg and the University of Bielefeld. The project is funded by the BMBF as part of the transfer project \"Competence models and instruments for assessing competence in the higher education sector - validations and methodological innovations\" (KoKoHs)\" (https://www.dazkom.de/links/). The aim of the project is to theoretically model and empirically test competencies in the area of ​​German as a second language (DaZ), which teachers must possess in addition to their disciplinary expertise in order to teach, in particular, students with a non-German language of origin in the regular to support teaching appropriately."@en,
     "Das DaZKom-Projekt ist ein Kooperationsprojekt der Leuphana Universität Lüneburg und der Universität Bielefeld. Gefördert wird das Projekt vom BMBF im Rahmen des Transferprojektes „Kompetenzmodelle und Instrumente der Kompetenzerfassung im Hochschulsektor – Validierungen und methodische Innovationen“ (KoKoHs)\" (https://www.dazkom.de/links/). Das Projekt hat das Ziel der theoretischen Modellierung und empirischen Überprüfung von Kompetenzen im Bereich Deutsch als Zweitsprache (DaZ), die Lehrer*innen zusätzlich zu ihrer disziplinären Expertise besitzen müssen, um v.a. SchülerInnen mit nichtdeutscher Herkunftssprache im regulären Unterricht angemessen fördern zu können."@de;
   dct:title "DaZKom: A model of professional skills for prospective teachers in the field of German as a second language,"@en,
