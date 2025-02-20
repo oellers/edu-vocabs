@@ -1,6 +1,6 @@
 <script>
 	import { db, toggleSelected } from '$lib/db';
-	import { VOCAB_PROPERTIES as vp, METADATA_KEYS as mdk } from '$lib/constants';
+	import { VOCAB_PROPERTIES as vp, METADATA_KEYS as mdk, STORAGE_KEYS as sk } from '$lib/constants';
 	import { config } from '$lib/config';
 	import { t, locale } from 'svelte-i18n';
 	import ResultBadge from '$lib/components/ResultBadge.svelte';
@@ -96,7 +96,7 @@
 					<div class="form-control md:ml-auto md:mr-0">
 						<label class="label cursor-pointer gap-1">
 							<input
-								onclick={() => toggleSelected('selectedVocabs', result[vp.id])}
+								onclick={() => toggleSelected(sk.notepad, result[vp.id])}
 								type="checkbox"
 								checked={$db.selectedVocabs.includes(result[vp.id])}
 								class="checkbox checkbox-sm"
