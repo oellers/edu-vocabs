@@ -9,7 +9,9 @@
 	import Notepad from '$lib/components/Notepad.svelte';
 	import { LANGUAGES, STORAGE_KEYS as sk } from '$lib/constants';
 	import Menu from '$lib/components/Menu.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import ScrollTop from '$lib/components/ScrollTop.svelte';
+
 	let { children } = $props();
 
 	// Initialize the search index, load locale and selected vocabs
@@ -36,7 +38,7 @@
 					<!-- page content -->
 					<!-- Navbar -->
 					<Menu />
-					<!-- Notepad button -->
+					<!-- Right Sidebar -->
 					{#if $db.selectedVocabs.length}
 						<div class="fixed bottom-0 right-0 h-32 w-16 rounded-tl-lg bg-base-100 md:hidden">
 							<div class="absolute bottom-16 right-2">
@@ -54,6 +56,8 @@
 						<ScrollTop />
 					{/if}
 					{@render children()}
+					<!-- Footer -->
+					<Footer />
 				</div>
 			</div>
 		</div>
