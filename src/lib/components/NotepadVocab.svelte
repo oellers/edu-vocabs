@@ -1,6 +1,6 @@
 <script>
 	import Vocab from '$lib/components/Vocab.svelte';
-	import { VOCAB_PROPERTIES as vp, METADATA_KEYS as mdk } from '$lib/constants';
+	import { VOCAB_PROPERTIES as vp, METADATA_KEYS as mdk, STORAGE_KEYS as sk } from '$lib/constants';
 	import InternalLinkIcon from '$lib/icons/InternalLinkIcon.svelte';
 
 	import ResultInfo from './ResultInfo.svelte';
@@ -36,7 +36,7 @@
 				><InternalLinkIcon />
 			</a>
 			<button
-				onclick={() => toggleSelected('selectedVocabs', id)}
+				onclick={() => toggleSelected(sk.notepad, id)}
 				class="btn join-item btn-sm ml-auto mr-0 flex h-auto py-2"><CloseIcon /></button
 			>
 		</div>

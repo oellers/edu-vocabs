@@ -7,20 +7,21 @@
 	import { t } from 'svelte-i18n';
 	import NotepadIcon from '$lib/icons/NotepadIcon.svelte';
 	import Notepad from '$lib/components/Notepad.svelte';
-	import { LANGUAGES, LANGUAGE_KEY as lkey } from '$lib/constants';
+	import { LANGUAGES, STORAGE_KEYS as sk } from '$lib/constants';
 	import Menu from '$lib/components/Menu.svelte';
 	import ScrollTop from '$lib/components/ScrollTop.svelte';
 	let { children } = $props();
 
-	// Initialize the search index and load locale
+	// Initialize the search index, load locale and selected vocabs
 	onMount(async () => {
 		await createIndex();
-		let savedLang = sessionStorage.getItem(lkey) || getLocaleFromNavigator() || '';
+
+		// get language
+		let savedLang = sessionStorage.getItem(sk.language) || getLocaleFromNavigator() || '';
 		$locale = LANGUAGES.includes(savedLang) ? savedLang : 'en';
 
 		// get selected vocabs from localStorage
-		const selectedVocabsString =
-			sessionStorage.getItem('eduvocs:selectedVocabs') || '{"selectedVocabs": []}';
+		const selectedVocabsString = sessionStorage.getItem(sk.notepad) || '{"selectedVocabs": []}';
 		const selectedVocabs = await JSON.parse(selectedVocabsString);
 		db.update((db) => ({ ...db, ...selectedVocabs }));
 	});
