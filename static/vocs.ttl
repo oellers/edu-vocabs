@@ -452,7 +452,7 @@ _:G__2450 a sdo:DataDownload;
   wdt:P126 "Centre for Curriculum Redesign"@de;
   wdt:P973 <https://curriculumredesign.org/framework/>;
   dct:language "de";
-  dct:issued "Januar 2024"^^xsd:date;
+  dct:issued "2024-01"^^xsd:date;
   sdo:about "digitalisierungsbezogene Kompetenzen"@de;
   dct:creator "CCR 2020"@de;
   dct:description "The CCR's Four Dimensional (4D) Educational Framework is so named to illustrate that today's students must develop in four dimensions - knowledge, skills, character and meta-learning - to best serve themselves and society. The core principle of a 4D education is to link knowledge transfer with the other three dimensions. But how is this done? By dividing these three dimensions into a framework of competencies and sub-competencies, teachers can make their teaching more effective, targeted, logical and relevant."@en,
@@ -519,6 +519,7 @@ _:G__2454 a sdo:DataDownload;
 
 <https://w3id.org/eduvocs/id/2700> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
+  wdt:P1324 <https://github.com/dini-ag-kim/kmk-vocabs/>;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <http://w3id.org/kim/kmk-vocabs/digitalisierungsbezogene-kompetenzen/>;
   dct:language "de";
@@ -548,6 +549,7 @@ _:G__2456 a sdo:DataDownload;
 
 <https://w3id.org/eduvocs/id/2900> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
+  wdt:P1324 <https://github.com/openeduhub/oeh-metadata-vocabs>;
   wdt:P126 "Open Edu Hub/WirLernenOnline/ComeIn"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/medienkompetenzrahmenNRW/>;
   dct:language "de";
@@ -636,6 +638,7 @@ _:G__2459 a sdo:DataDownload;
 <https://w3id.org/eduvocs/id/3700> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
   sdo:educationalLevel "Lehrerbildung"@de;
+  wdt:P1324 <https://github.com/dini-ag-kim/kmk-vocabs/>;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <http://w3id.org/kim/kmk-vocabs/bildungswissenschaften/>;
   dct:language "de";
@@ -747,6 +750,7 @@ _:G__2465 a sdo:DataDownload;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/isced-1997/scheme>;
   dct:language "de";
+  dct:issued "1997"^^xsd:date;
   sdo:about "Bildungsstufen"@de;
   dct:creator "UNESCO"@de;
   dct:description "This is a SKOS representation of ISCED educational levels in 1997."@en,
@@ -768,6 +772,7 @@ _:G__2467 a sdo:DataDownload;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/isced-2011/scheme>;
   dct:language "de";
+  dct:issued "2011"^^xsd:date;
   sdo:about "Bildungsstufen"@de;
   dct:creator "UNESCO"@de;
   dct:description "This is a SKOS representation of ISCED education levels in 2011."@en,
@@ -789,6 +794,7 @@ _:G__2469 a sdo:DataDownload;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/isced-2013/scheme>;
   dct:language "de";
+  dct:issued "2013"^^xsd:date;
   sdo:about "Bildungsstufen"@de;
   dct:creator "UNESCO"@de;
   dct:description "This is a SKOS representation of ISCED education levels in 2013."@en,
@@ -935,6 +941,7 @@ _:G__2482 a sdo:DataDownload;
 
 <https://w3id.org/eduvocs/id/5800> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
+  wdt:P1324 <https://github.com/openeduhub/oeh-metadata-vocabs>;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/schoolType/>;
   dct:language "de";
@@ -994,7 +1001,7 @@ _:G__2487 a sdo:DataDownload;
 
 <https://w3id.org/eduvocs/id/6200> a wd:Q1469824;
   wdt:P126 "fobizz"@de;
-  wdt:P973 <https://plattform.fobizz.com/fortbildungen>;
+  sdo:url <https://plattform.fobizz.com/fortbildungen>;
   dct:language "de";
   sdo:about "Schularten, Schultypen, Schulformen"@de;
   dct:creator "Fobizz"@de;
@@ -1004,7 +1011,7 @@ _:G__2487 a sdo:DataDownload;
 <https://w3id.org/eduvocs/id/6300> a wd:Q1469824;
   wdt:P1324 <https://github.com/unterrichtsvideos/vocabs>;
   wdt:P126 "unterrichtsvideos.net"@de;
-  wdt:P973 <https://unterrichtsvideos.net/metaportal/>;
+  sdo:url <https://unterrichtsvideos.net/metaportal/>;
   dct:language "de";
   sdo:about "Schularten, Schultypen, Schulformen"@de;
   dct:description "Types of schools from türrrichtsvideos.net"@en, "Schularten von unterrrichtsvideos.net"@de;
@@ -1012,7 +1019,7 @@ _:G__2487 a sdo:DataDownload;
 
 <https://w3id.org/eduvocs/id/6400> a wd:Q1469824;
   wdt:P126 "MeinUnterrricht"@de;
-  wdt:P973 <https://www.meinunterricht.de/>;
+  sdo:url <https://www.meinunterricht.de/>;
   dct:language "de";
   sdo:about "Schularten, Schultypen, Schulformen"@de;
   dct:creator "meinUnterricht"@de;
@@ -1022,7 +1029,6 @@ _:G__2487 a sdo:DataDownload;
 <https://w3id.org/eduvocs/id/6500> a wd:Q1469824;
   dcat:endpointURL <https://digitallearninglab.de/api/schoolTypes>;
   wdt:P126 "digital.learning.lab"@de;
-  wdt:P973 <https://digitallearninglab.de/api/schoolTypes>;
   dct:language "de";
   sdo:about "Schularten, Schultypen, Schulformen"@de;
   dct:description "Types of schools at digitallearninglab.de"@en, "Schularten des digitallearninglab.de"@de;
@@ -1059,6 +1065,7 @@ _:G__2489 a sdo:DataDownload;
 <https://w3id.org/eduvocs/id/6800> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
   sdo:educationalLevel "Schule"@de;
+  wdt:P1324 <https://github.com/dini-ag-kim/schulabschluesse>;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/schulabschluesse/>;
   dct:language "de";
@@ -1083,19 +1090,20 @@ _:G__2491 a sdo:DataDownload;
   sdo:about "Abschlüsse"@de;
   dct:description "University degrees according to XHochschule with ISCED mapping."@en,
     "Hochschulabschlüsse nach XHochschule mit ISCED Mapping."@de;
-  dct:title "University degrees"@en, "Hochschulabschlüsse"@de;
-  sdo:distribution _:G__2492 .
+  dct:title "University degrees"@en, "Hochschulabschlüsse"@de .
 
 _:G__2492 a sdo:DataDownload;
   sdo:contentUrl <https://xhochschule.de/def/xhochschule/1.0/spec/xhs_spezifikation_1.0.pdf>;
   sdo:fileFormat "application/pdf" .
 
-<https://w3id.org/eduvocs/id/7000> sdo:educationalLevel "Hochschule"@de;
+<https://w3id.org/eduvocs/id/6900> sdo:distribution _:G__2492 .
+
+<https://w3id.org/eduvocs/id/7000> a wd:Q1469824;
+  sdo:educationalLevel "Hochschule"@de;
   wdt:P1324 <https://github.com/dini-ag-kim/destatis-schluesseltabellen>;
   wdt:P126 "Destatis"@de;
   wdt:P973 <https://erhebungsportal.estatistik.de/Erhebungsportal/informationen/statistik-der-studenten-372>;
   dct:language "de";
-  a wd:Q1469824;
   sdo:about "Abschlüsse"@de;
   dct:description "University degrees according to Destatis."@en, "Hochschulabschlüsse nach Destatis."@de;
   dct:title "Destatis key tables for qualifications in the survey portal"@en, "Destatis Schlüsseltabellen für Abschlüsse im Erhebungsportal"@de .
@@ -1113,6 +1121,7 @@ _:G__2492 a sdo:DataDownload;
 <https://w3id.org/eduvocs/id/7200> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
   sdo:educationalLevel "Hochschule"@de;
+  wdt:P1324 <https://github.com/dini-ag-kim/kmk-vocabs/>;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/kmk-vocabs/lehramtstypen/>;
   dct:language "de";
@@ -1162,6 +1171,7 @@ _:G__2494 a sdo:DataDownload;
 <https://w3id.org/eduvocs/id/7600> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
   sdo:educationalLevel "Bildungsbereichsübergreifend"@de;
+  wdt:P1324 <https://github.com/openeduhub/oeh-metadata-vocabs>;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <https://w3id.org/openeduhub/vocabs/graduation/>;
   dct:language "de";
@@ -1323,6 +1333,7 @@ _:G__2504 a sdo:DataDownload;
 
 <https://w3id.org/eduvocs/id/9000> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
+  wdt:P1324 <https://github.com/ComeIn-NRW/vocabs>;
   wdt:P126 "Come In"@de;
   wdt:P973 <https://w3id.org/comein/vocabs/educationalAudienceRole/>;
   dct:language "de";
@@ -1339,6 +1350,7 @@ _:G__2505 a sdo:DataDownload;
 
 <https://w3id.org/eduvocs/id/9100> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
+  wdt:P1324 <https://github.com/openeduhub/oeh-metadata-vocabs>;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/intendedEndUserRole_BIRD/>;
   dct:language "de";
@@ -1381,6 +1393,7 @@ _:G__2508 a sdo:DataDownload;
 
 <https://w3id.org/eduvocs/id/9600> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
+  wdt:P1324 <https://github.com/dini-ag-kim/hcrt>;
   wdt:P1535 "AMB, HS-OER-LOM"@de;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/hcrt/scheme>;
@@ -1410,6 +1423,7 @@ _:G__2510 a sdo:DataDownload;
 
 <https://w3id.org/eduvocs/id/9800> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
+  wdt:P1324 <https://github.com/openeduhub/oeh-metadata-vocabs>;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/new_lrt/>;
   dct:language "de";
@@ -1430,6 +1444,7 @@ _:G__2512 a sdo:DataDownload;
 
 <https://w3id.org/eduvocs/id/9900> a wd:Q1469824;
   wdt:P5009 "SKOS"@de;
+  wdt:P1324 <https://github.com/openeduhub/oeh-metadata-vocabs>;
   wdt:P126 "WirLernenOnline"@de;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/learningResourceType/>;
   dct:language "de";
