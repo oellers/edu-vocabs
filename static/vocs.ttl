@@ -395,7 +395,7 @@ _:G__2446 a sdo:DataDownload;
   wdt:P973 <http://w3id.org/openeduhub/vocabs/digCompEdu/>;
   sdo:url <https://wirlernenonline.de/>;
   dct:language "de";
-  sdo:about "Kompetenzen, digitalisierungsbezogene Kompetenzen"@de;
+  sdo:about "digitalisierungsbezogene Kompetenzen"@de;
   dct:creator "(European Commission. Joint Research Centre., Redecker, and Punie 2017)"@de;
   dct:description """The European Framework for Digital Literacy for Teachers is aimed at teachers at all levels of education, from early childhood to higher and adult education, including education and training, special education and non-formal learning contexts. 
 
