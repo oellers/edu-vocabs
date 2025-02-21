@@ -1397,11 +1397,12 @@ _:G__2508 a sdo:DataDownload;
   wdt:P1535 "AMB, HS-OER-LOM"@de;
   wdt:P126 "DINI-AG-KIM"@de;
   wdt:P973 <https://w3id.org/kim/hcrt/scheme>;
+  sdo:url <https://w3id.org/dini-ag-kim/hs-oer-lom-profil/latest/>;
   dct:language "de";
   sdo:about "Ressourcentyp, Medientyp"@de;
-  dct:description "A value list for types of learning resources (Learning Resource Type), created in the context of the metadata schema \"LOM for Higher Education OER Repositories\" (https://w3id.org/dini-ag-kim/hs-oer-lom-profil/latest/)."@en,
-    "Eine Wertelliste für Typen von Lernressourcen (Learning Resource Type), entstanden im Kontext des Metadatenschemas \"LOM for Higher Education OER Repositories\" (https://w3id.org/dini-ag-kim/hs-oer-lom-profil/latest/)."@de;
-  dct:title " College Campus Resource Types (HCRT)"@en, " Hochschulcampus Ressourcentypen (HCRT)"@de;
+  dct:description "A list of values ​​for types of learning resources (Learning Resource Type), created in the context of the metadata schema \"LOM for Higher Education OER Repositories\"."@en,
+    "Eine Wertelliste für Typen von Lernressourcen (Learning Resource Type), entstanden im Kontext des Metadatenschemas \"LOM for Higher Education OER Repositories\"."@de;
+  dct:title "College Campus Resource Types (HCRT)"@en, "Hochschulcampus Ressourcentypen (HCRT)"@de;
   sdo:distribution _:G__2509, _:G__2510 .
 
 _:G__2509 a sdo:DataDownload;
@@ -1515,8 +1516,8 @@ _:G__2517 a sdo:DataDownload;
   dct:language "de";
   sdo:about "Ressourcentyp, Medientyp"@de;
   dct:creator "Common Education Data Standard"@de;
-  dct:description "The media or file type of the digital resource is based on the media types defined by the Internet Assigned Numbers Authority (AINA) at http://www.iana.org/assignments/media-types."@en,
-    "Der Medien- oder Dateityp der digitalen Ressource basiert auf den von der Internet Assigned Numbers Authority (AINA) unter http://www.iana.org/assignments/media-types definierten Medientypen."@de;
+  dct:description "The media or file type of the digital resource (based on the media types defined by the Internet Assigned Numbers Authority (IANA): http://www.iana.org/assignments/media-types"@en,
+    "Der Medien- oder Dateityp der digitalen Ressource(basiert auf den von der Internet Assigned Numbers Authority (IANA) definierten Medientypen: http://www.iana.org/assignments/media-types"@de;
   dct:title "Digital Media Type"@en, "Dgital Media Type"@de .
 
 <https://w3id.org/eduvocs/id/10600> a wd:Q1469824;
@@ -1618,8 +1619,8 @@ _:G__2522 a sdo:DataDownload;
   dct:language "de";
   sdo:about "Ressourcentyp, Medientyp"@de;
   dct:creator "euroCRIS"@de;
-  dct:description "This schema contains CERIF vocabulary terms applicable in the cfResultPublication_Classification, cfResultPatent_Classification, cfResultProduct_Classification, cfEvent_Class link entities and thus represent output types."@en,
-    "Dieses Schema enthält CERIF-Vokabularbegriffe, die in den Verknüpfungsentitäten cfResultPublication_Classification, cfResultPatent_Classification, cfResultProduct_Classification, cfEvent_Class anwendbar sind und somit Ausgabetypen darstellen."@de;
+  dct:description "This schema contains CERIF vocabulary terms that are applicable in link entities and thus represent output types."@en,
+    "Dieses Schema enthält CERIF-Vokabularbegriffe, die in Verknüpfungsentitäten anwendbar sind und somit Ausgabetypen darstellen."@de;
   dct:title "Output types"@en, "Output Types"@de .
 
 <https://w3id.org/eduvocs/id/11400> a wd:Q1469824;
