@@ -1,7 +1,6 @@
 <script>
 	import { db, resetSelected } from '$lib/db';
 	import { t } from 'svelte-i18n';
-	import { STORAGE_KEYS as sk } from '$lib/constants';
 	import NotepadVocab from '$lib/components/NotepadVocab.svelte';
 </script>
 
@@ -10,7 +9,7 @@
 		<label
 			for="my-drawer"
 			aria-label="close sidebar"
-			onclick={() => resetSelected(sk.notepad)}
+			onclick={() => resetSelected('selectedVocabs')}
 			class="btn btn-outline ml-2">{$t('notepad.reset')}</label
 		>
 		<label
