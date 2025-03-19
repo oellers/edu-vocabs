@@ -29,5 +29,7 @@
 		<div class="flex justify-center">
 			<Pagination />
 		</div>
+	{:else}
+		<p>{@html $t('result.noResults')}</p>
 	{/if}
 </div>

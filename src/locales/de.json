@@ -37,7 +37,8 @@
 	},
 	"result": {
 		"info": "Weitere Informationen anzeigen",
-		"expand": "Weiteren Inhalt anzeigen"
+		"expand": "Weiteren Inhalt anzeigen",
+		"noResults": "Leider nichts gefunden. Willst du selbst ein Vokabular anlegen? Schau doch mal <a class='' style='text-decoration: underline;' href='https://blog.skohub.io/2024-03-21-skohub-pages'>hier</a>."
 	},
 	"pagination": {
 		"previous": "Zurück",

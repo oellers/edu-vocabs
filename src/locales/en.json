@@ -37,7 +37,8 @@
 	},
 	"result": {
 		"info": "Show more information",
-		"expand": "Show more content"
+		"expand": "Show more content",
+		"noResults": "Did not find anything. Want to create your own vocabulary? Have a look <a class='' style='text-decoration: underline;' href='https://blog.skohub.io/2024-03-21-skohub-pages'>here</a>."
 	},
 	"pagination": {
 		"previous": "Previous",

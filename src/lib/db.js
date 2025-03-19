@@ -97,7 +97,7 @@ export function search(event) {
 
 	const results = resultSet.map((r) => r.doc);
 	if (results.length === 0 && Object.values(get(db).selectedFilters).flat()) {
-		fillResults();
+		updateResults([]);
 	} else {
 		updateResults(results);
 	}
