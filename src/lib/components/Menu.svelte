@@ -5,7 +5,9 @@
 	import { t } from 'svelte-i18n';
 	import { locale } from 'svelte-i18n';
 	import SelectLanguage from './SelectLanguage.svelte';
+	import SearchIcon from '$lib/icons/SearchIcon.svelte';
 	let open = false;
+	import { page } from '$app/state';
 </script>
 
 <!--- Top Navigation -->
@@ -13,6 +15,12 @@
 	<button aria-label={$t('menu.home')} class="btn btn-outline" onclick={() => (open = !open)}>
 		<MenuIcon />
 	</button>
+	{#if page.url.pathname !== '/search'}
+		<a href="/search" class="btn btn-outline ml-2">
+			<span class="hidden md:inline">{$t('buttons.gotoSearch')}</span>
+			<SearchIcon />
+		</a>
+	{/if}
 	<div class="ml-auto">
 		<p class="tracking-wide antialiased max-sm:hidden">
 			{$t('claim')}

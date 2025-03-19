@@ -24,7 +24,8 @@
 		"repo": "Repository",
 		"api": "API",
 		"clipboard": "Copy vocabulary link to clipboard",
-		"report": "Report errors in the data record on GitHub"
+		"report": "Report errors in the data record on GitHub",
+		"gotoSearch": "Go to Search"
 	},
 	"event": {
 		"copy-clipboard": "The link was copied to the clipboard.",

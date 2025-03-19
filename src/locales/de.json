@@ -24,7 +24,8 @@
 		"repo": "Repositorium",
 		"api": "Schnittstelle",
 		"clipboard": "Link zum Vokabular in Zwischenablage kopieren",
-		"report": "Fehler im Datensatz auf GitHub melden"
+		"report": "Fehler im Datensatz auf GitHub melden",
+		"gotoSearch": "Zur Suche"
 	},
 	"event": {
 		"copy-clipboard": "Der Link wurde in die Zwischenablage kopiert.",
