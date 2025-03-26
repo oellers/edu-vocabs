@@ -86,8 +86,15 @@ export function fillResults() {
  */
 export function search(event) {
 	event.preventDefault();
+	const searchTerm = get(db).query;
+	// show results when searchterm is empty string
+	if (searchTerm === '') {
+		fillResults();
+		return;
+	}
+
 	const tags = Object.values(get(db).selectedFilters).flat();
-	const groupedResults = get(db).index.search(get(db).query, {
+	const groupedResults = get(db).index.search(searchTerm, {
 		index: ['id', 'title', 'about', 'P126'],
 		enrich: true,
 		tag: tags
