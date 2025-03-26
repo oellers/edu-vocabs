@@ -55,7 +55,13 @@ npm run preview
 
 ### Deployment
 
-Deploy the app, e.g. with Vercel by using the `@sveltejs/adapter-vercel` (see [Documentation](https://svelte.dev/docs/kit/adapter-vercel)).
+You have multiple options:
+
+1. Build and deploy on a server as you wish.
+1. Build and deploy with Docker:
+  - `docker build -t edu-vocabs .`
+  - `docker run -p 3000:3000 edu-vocabs:latest`
+
 
 ## Scripts
 

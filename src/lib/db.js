@@ -1,6 +1,7 @@
 import { writable, get, derived } from 'svelte/store';
 import { config } from '$lib/config';
 import pkg from 'flexsearch';
+import { prepareAndExportIndex } from '$lib/prepareIndex';
 
 export const db = writable({
 	resultsPerPage: 10,
@@ -184,8 +185,13 @@ export async function createFilterOptions() {
  * Creates and populates the search index
  */
 export async function createIndex() {
-	const res = await fetch('/api/search-index');
-	const keys = await res.json();
+	const data = await fetch(`/vocs.ttl`, {
+		headers: { Accept: 'text/turtle' }
+	});
+	const ttl = await data.text();
+	console.log('✅ RDF File Loaded');
+
+	const keys = await prepareAndExportIndex(ttl);
 	for (const key in keys) {
 		await index.import(key, keys[key]);
 	}

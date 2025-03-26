@@ -1,15 +1,10 @@
 import { Parser, Store } from 'n3';
 import { config } from '$lib/config';
 import pkg from 'flexsearch';
-import { json } from '@sveltejs/kit';
-import { VERCEL_URL, VERCEL_ENV, VERCEL_PROJECT_PRODUCTION_URL } from '$env/static/private';
 
 const { Document: FlexDocument } = pkg;
 
-let data = null;
 const store = new Store();
-const index = await load();
-const exported = await exportedIndex(index);
 
 /**
  * Processes an RDF subject node by extracting its properties from the store and
@@ -36,6 +31,16 @@ function processSubject(subjectNode) {
 	return obj;
 }
 
+async function exportedIndex(index) {
+	const exportedIndex = {};
+
+	await index.export((key, data) => {
+		exportedIndex[key] = data;
+	});
+
+	return exportedIndex;
+}
+
 /**
  * Asynchronously loads an RDF Turtle file, parses it, processes the RDF quads,
  * and indexes the resulting documents using a FlexSearch index.
@@ -44,17 +49,10 @@ function processSubject(subjectNode) {
  * @function load
  * @returns {Promise<FlexDocument>} A promise that resolves to a populated FlexSearch Document index
  */
-async function load() {
+export async function prepareAndExportIndex(ttl) {
+	console.log('preparing index...');
 	const index = new FlexDocument({ ...config.index });
 	try {
-		// Fetch the RDF Turtle file
-		const baseURL = getBaseUrl();
-		data = await fetch(`${baseURL}/vocs.ttl`, {
-			headers: { Accept: 'text/turtle' }
-		});
-		const ttl = await data.text();
-		console.log('✅ RDF File Loaded');
-
 		// Parse the Turtle content into RDF quads
 		const parser = new Parser();
 		console.log('Parsing Turtle...');
@@ -83,55 +81,7 @@ async function load() {
 	} catch (error) {
 		console.error('❌ Error loading RDF file:', error);
 	}
-	return index;
-}
 
-/**
- * Determines the base URL for the application based on the current Vercel environment.
- *
- * @returns {string} The base URL constructed according to the current environment.
- */
-function getBaseUrl() {
-	return VERCEL_ENV === 'production'
-		? `https://${VERCEL_PROJECT_PRODUCTION_URL}`
-		: VERCEL_ENV === 'preview'
-			? `https://${VERCEL_URL}`
-			: VERCEL_ENV === 'development'
-				? `http://${VERCEL_URL}`
-				: 'http://localhost:5173';
-}
-
-/**
- * Exports the data from the provided index.
- *
- * This function asynchronously exports the contents of a search index
- * @async
- * @param {Object} index - The index instance to export data from
- * @returns {Promise<Object>} A promise that resolves to an object containing the exported index data.
- */
-async function exportedIndex(index) {
-	const exportedIndex = {};
-
-	await index.export((key, data) => {
-		exportedIndex[key] = data;
-	});
-
-	return exportedIndex;
-}
-
-/**
- * HTTP GET handler for serving exported data.
- *
- * This function handles GET requests by returning a JSON response containing the exported data.
- * If the data has not been loaded, it returns an HTTP 500 error.
- *
- * @async
- * @returns {Promise<Response>} A promise that resolves to an HTTP response containing the exported data in JSON format,
- * or an error message if the data is not loaded.
- */
-export async function GET() {
-	if (!exported) {
-		return new Response('Data not loaded', { status: 500 });
-	}
-	return json(exported);
+	const exportIndex = exportedIndex(index);
+	return exportIndex;
 }
