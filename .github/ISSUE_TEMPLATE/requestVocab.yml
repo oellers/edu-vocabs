@@ -1,0 +1,207 @@
+name: "Vocabulary Metadata"
+description: "Use this form to submit structured vocabulary metadata."
+body:
+  # Title
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: A short, descriptive title for the vocabulary.
+      placeholder: "Enter the vocabulary title"
+    validations:
+      required: true
+
+  # Description
+  - type: input
+    id: description
+    attributes:
+      label: Description
+      description: Detailed description of the vocabulary.
+      placeholder: "Provide a vocabulary description"
+    validations:
+      required: true
+
+  # About
+  - type: dropdown
+    id: about
+    attributes:
+      label: About
+      description: Select the primary facet of this vocabulary.
+      multiple: false
+      options:
+        - Degrees
+        - Accessibility
+        - Educational standards and curriculum-oriented value lists
+        - Educational level
+        - Didactic contextualization
+        - Intended audience
+        - Elementary education plans
+        - Subject and topic classification
+        - Granularity
+        - Standards and module catalogs
+        - Grade levels, academic years, or semesters
+        - Competencies
+        - Teaching/learning format (interactivity type)
+        - Teaching format, event format, teaching mode
+        - Learning assessments
+        - Licenses
+        - Resource type, media type
+        - Keywords
+        - School types, categories, and forms
+        - Languages
+    validations:
+      required: true
+
+  # Educational Level
+  - type: dropdown
+    id: educationalLevel
+    attributes:
+      label: Educational Level
+      description: Select the relevant educational context.
+      multiple: false
+      options:
+        - School
+        - Vocational education
+        - University
+        - Cross-educational sector
+        - Teacher education
+        - Primary education
+        - Elementary education
+        - Further education
+    validations:
+      required: true
+
+  # Issued date
+  - type: input
+    id: issued
+    attributes:
+      label: Issued Date
+      description: Date the vocabulary was issued (YYYY‑MM‑DD).
+      placeholder: "2025-04-18"
+
+  # Described at (URL)
+  - type: input
+    id: described_at
+    attributes:
+      label: Described At
+      description: URL where the vocabulary is described.
+      placeholder: "https://example.org/description"
+    validations:
+      required: true
+
+  # Language (ISO 639-1)
+  - type: input
+    id: language
+    attributes:
+      label: Language Code
+      description: ISO 639-1 language code (e.g. “de”).
+      placeholder: "de"
+
+  # Maintained by
+  - type: input
+    id: maintained_by
+    attributes:
+      label: Maintained By
+      description: Name of the maintainer or organization.
+      placeholder: "Organization or person"
+
+  # Creator
+  - type: input
+    id: creator
+    attributes:
+      label: Creator
+      description: Name of the creator.
+      placeholder: "Person or organization"
+
+  # Endpoint URL
+  - type: input
+    id: endpointUrl
+    attributes:
+      label: Endpoint URL
+      description: Service endpoint URL.
+      placeholder: "https://api.example.org/vocab"
+
+  # Format
+  - type: dropdown
+    id: Format
+    attributes:
+      label: Format (MIME type)
+      description: Select the content format.
+      multiple: false
+      options:
+        - application/json
+        - application/ld+json
+        - application/pdf
+        - application/rdf+json
+        - application/rdf+xml
+        - application/rtf
+        - application/vnd.ms-excel
+        - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+        - application/x-ld+ndjson
+        - application/x-ndjson
+        - application/xml
+        - text/csv
+        - text/n3
+        - text/plain
+        - text/turtle
+        - other
+
+  # Content URL fields
+  - type: input
+    id: contentUrlTTL
+    attributes:
+      label: Content URL (TTL)
+      description: URL to Turtle version.
+      placeholder: "https://example.org/vocab.ttl"
+
+  - type: input
+    id: contentUrlJSON
+    attributes:
+      label: Content URL (JSON)
+      description: URL to JSON version.
+      placeholder: "https://example.org/vocab.json"
+
+  - type: input
+    id: contentUrlXML
+    attributes:
+      label: Content URL (XML)
+      description: URL to XML version.
+      placeholder: "https://example.org/vocab.xml"
+
+  - type: input
+    id: contentUrlPDF
+    attributes:
+      label: Content URL (PDF)
+      description: URL to PDF version.
+      placeholder: "https://example.org/vocab.pdf"
+
+  - type: input
+    id: contentUrlCSV
+    attributes:
+      label: Content URL (CSV)
+      description: URL to CSV version.
+      placeholder: "https://example.org/vocab.csv"
+
+  # Repository URL
+  - type: input
+    id: repo
+    attributes:
+      label: Repository
+      description: URL of the vocabulary repository.
+      placeholder: "https://github.com/org/vocab"
+
+  # Service URL
+  - type: input
+    id: url
+    attributes:
+      label: Service URL
+      description: Website URL for the web service or database.
+      placeholder: "https://example.org/service"
+
+  # Raw Vocabulary
+  - type: textarea
+    id: rawVocab
+    attributes:
+      label: Raw Vocabulary
+      description: Paste the raw vocabulary content, one term per line, if there is no url.
+      placeholder: "Term1\nTerm2\nTerm3"
