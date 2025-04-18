@@ -52,6 +52,13 @@
 		</div>
 		<a aria-label={$t('menu.search')} href="/search" class="btn btn-ghost">{$t('menu.search')}</a>
 		<a
+			aria-label={$t('menu.contribute')}
+			href={`/content/${$locale.slice(0, 2)}/contribute`}
+			class="btn btn-ghost"
+		>
+			{$t('menu.contribute')}
+		</a>
+		<a
 			aria-label={$t('menu.contact')}
 			href={`/content/${$locale.slice(0, 2)}/contact`}
 			class="btn btn-ghost"
